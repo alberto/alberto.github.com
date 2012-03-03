@@ -4,7 +4,7 @@
   <title><![CDATA[Category: deadline driven development | sharp bites]]></title>
   <link href="http://www.sharpbites.com/categories/deadline-driven-development/atom.xml" rel="self"/>
   <link href="http://www.sharpbites.com/"/>
-  <updated>2012-03-03T21:30:34+01:00</updated>
+  <updated>2012-03-03T21:31:56+01:00</updated>
   <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
@@ -30,7 +30,7 @@
     <updated>2008-12-04T00:00:00+01:00</updated>
     <id>http://www.sharpbites.com/2008/12/04/quality</id>
     <content type="html"><![CDATA[<div class='post'>
-<blockquote>Quality means doing it right when no one is looking.</blockquote><cite>- Henry Ford</cite></div>
+<blockquote>Quality means doing it right when no one is looking.</blockquote><cite> Henry Ford</cite></div>
 
 ]]></content>
   </entry>
@@ -41,7 +41,7 @@
     <updated>2008-06-18T00:00:00+02:00</updated>
     <id>http://www.sharpbites.com/2008/06/18/how-does-project-get-to-be-year-behind</id>
     <content type="html"><![CDATA[<div class='post'>
-<blockquote>One day at a time.<br /><cite>- <a href="http://www.cs.unc.edu/~brooks/">Fred Brooks</a>, <a href="http://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959">The Mythical Man-Month</a>.</cite></blockquote></div>
+<blockquote>One day at a time.<br /><cite> <a href="http://www.cs.unc.edu/~brooks/">Fred Brooks</a>, <a href="http://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959">The Mythical Man-Month</a>.</cite></blockquote></div>
 
 ]]></content>
   </entry>
@@ -52,7 +52,7 @@
     <updated>2007-12-04T00:00:00+01:00</updated>
     <id>http://www.sharpbites.com/2007/12/04/did-you-think-your-shit-didnt-stink</id>
     <content type="html"><![CDATA[<div class='post'>
-<blockquote>"No matter how good the code you write is, it’s crap to another developer."<br /></blockquote><cite>- <a href="http://haacked.com/archive/2007/10/07/the-greatest-compliment-a-developer-can-receive.aspx">Phil Haack</a></cite><br /><br />Next time I am honored with some unmanageable code, before I start swearing, I'll try to remeber all the crap I endep up doing under deadline pressures.</div>
+<blockquote>"No matter how good the code you write is, it’s crap to another developer."<br /></blockquote><cite> <a href="http://haacked.com/archive/2007/10/07/the-greatest-compliment-a-developer-can-receive.aspx">Phil Haack</a></cite><br /><br />Next time I am honored with some unmanageable code, before I start swearing, I'll try to remeber all the crap I endep up doing under deadline pressures.</div>
 
 ]]></content>
   </entry>

@@ -4,7 +4,7 @@
   <title><![CDATA[sharp bites]]></title>
   <link href="http://www.sharpbites.com/atom.xml" rel="self"/>
   <link href="http://www.sharpbites.com/"/>
-  <updated>2012-03-03T21:30:34+01:00</updated>
+  <updated>2012-03-03T21:31:56+01:00</updated>
   <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
@@ -149,7 +149,7 @@ Or how I am moving to a PHP team to free myself from WebForms.<br /><br />So exp
     <updated>2009-10-16T00:00:00+02:00</updated>
     <id>http://www.sharpbites.com/2009/10/16/java-and-lack-of-coc</id>
     <content type="html"><![CDATA[<div class='post'>
-<blockquote>   <p>&quot;Java is a DSL to transform big Xml documents into long exception stack traces.&quot;</p>   <cite>- Scott Bellware</cite></blockquote>  </div>
+<blockquote>   <p>&quot;Java is a DSL to transform big Xml documents into long exception stack traces.&quot;</p>   <cite> Scott Bellware</cite></blockquote>  </div>
 ]]></content>
   </entry>
   

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: wtf | sharp bites]]></title>
   <link href="http://www.sharpbites.com/categories/wtf/atom.xml" rel="self"/>
   <link href="http://www.sharpbites.com/"/>
-  <updated>2012-03-03T21:30:34+01:00</updated>
+  <updated>2012-03-03T21:31:56+01:00</updated>
   <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
@@ -19,7 +19,7 @@
     <updated>2009-10-16T00:00:00+02:00</updated>
     <id>http://www.sharpbites.com/2009/10/16/java-and-lack-of-coc</id>
     <content type="html"><![CDATA[<div class='post'>
-<blockquote>   <p>&quot;Java is a DSL to transform big Xml documents into long exception stack traces.&quot;</p>   <cite>- Scott Bellware</cite></blockquote>  </div>
+<blockquote>   <p>&quot;Java is a DSL to transform big Xml documents into long exception stack traces.&quot;</p>   <cite> Scott Bellware</cite></blockquote>  </div>
 
 ]]></content>
   </entry>
@@ -41,7 +41,7 @@
     <updated>2008-09-26T00:00:00+02:00</updated>
     <id>http://www.sharpbites.com/2008/09/26/why-svn-sucks</id>
     <content type="html"><![CDATA[<div class='post'>
-<div dir="ltr" style="text-align: left;" trbidi="on"><blockquote>"A common desire is to refactor source code, especially in Java-based software projects. Files and directories are shuffled around and renamed, often causing great disruption to everyone working on the project. Sounds like a perfect case to use a branch, doesn't it? Just create a branch, shuffle things around, and then merge the branch back to the trunk, right?<br /><br />Alas, this scenario doesn't work so well right now and is considered one of Subversion's current weak spots."</blockquote><cite>- Subversion book</cite><br /><br />The fact that subversion lacks a true rename operation (it is done via copy &amp; delete) you can get into a lot of troubles if you rename or move files in subversion if somebody else modifies the same file meanwhile. And by troubles I mean losing data! (If you want more info about it, check <a href="http://subversion.tigris.org/issues/show_bug.cgi?id=2282">this bug entry</a>. You will find the detailed use cases in the attached files there.)<br /><br />For a fast rename (or move, which is exactly the same operation) &amp; commit, there is a low probability you run into this issue (assuming the other guy also updates frequently), so things aren't so critical here. But, when working with branches, it's a whole new story. They will live much longer (from days to weeks or months) so the probability of somebody modifying a file renamed in another branch increases a lot. That effectively means you cannot rename or move files if you use branches. Yeah, you read it right. If you use branches, moving files <span style="font-weight: bold;">is not safe</span>. End of story.<br /><br />So, what svn is forcing us to do is either:<br />a) Don't rename files.<br />b) Don't use branches.<br />c) Don't use subversion.<br /><br />a) is simply stupid, so let's forget it. b) might be ok for some people/enviroments. c) is what you really should be doing if b) is not an option (which makes perfect sense).<br /><br />If you are looking for alternatives, use git or mercurial.</div></div>
+<div dir="ltr" style="text-align: left;" trbidi="on"><blockquote>"A common desire is to refactor source code, especially in Java-based software projects. Files and directories are shuffled around and renamed, often causing great disruption to everyone working on the project. Sounds like a perfect case to use a branch, doesn't it? Just create a branch, shuffle things around, and then merge the branch back to the trunk, right?<br /><br />Alas, this scenario doesn't work so well right now and is considered one of Subversion's current weak spots."</blockquote><cite> Subversion book</cite><br /><br />The fact that subversion lacks a true rename operation (it is done via copy &amp; delete) you can get into a lot of troubles if you rename or move files in subversion if somebody else modifies the same file meanwhile. And by troubles I mean losing data! (If you want more info about it, check <a href="http://subversion.tigris.org/issues/show_bug.cgi?id=2282">this bug entry</a>. You will find the detailed use cases in the attached files there.)<br /><br />For a fast rename (or move, which is exactly the same operation) &amp; commit, there is a low probability you run into this issue (assuming the other guy also updates frequently), so things aren't so critical here. But, when working with branches, it's a whole new story. They will live much longer (from days to weeks or months) so the probability of somebody modifying a file renamed in another branch increases a lot. That effectively means you cannot rename or move files if you use branches. Yeah, you read it right. If you use branches, moving files <span style="font-weight: bold;">is not safe</span>. End of story.<br /><br />So, what svn is forcing us to do is either:<br />a) Don't rename files.<br />b) Don't use branches.<br />c) Don't use subversion.<br /><br />a) is simply stupid, so let's forget it. b) might be ok for some people/enviroments. c) is what you really should be doing if b) is not an option (which makes perfect sense).<br /><br />If you are looking for alternatives, use git or mercurial.</div></div>
 
 ]]></content>
   </entry>
