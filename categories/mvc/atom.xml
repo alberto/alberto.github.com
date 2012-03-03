@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: mvc | sharp bites]]></title>
-  <link href="http://alberto.github.com/categories/mvc/atom.xml" rel="self"/>
-  <link href="http://alberto.github.com/"/>
-  <updated>2012-03-03T20:07:36+01:00</updated>
-  <id>http://alberto.github.com/</id>
+  <link href="http://www.sharpbites.com/categories/mvc/atom.xml" rel="self"/>
+  <link href="http://www.sharpbites.com/"/>
+  <updated>2012-03-03T20:11:45+01:00</updated>
+  <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[2008 will be the year of...]]></title>
-    <link href="http://alberto.github.com/2008/01/12/2008-will-be-year-of/"/>
+    <link href="http://www.sharpbites.com/2008/01/12/2008-will-be-year-of/"/>
     <updated>2008-01-12T00:00:00+01:00</updated>
-    <id>http://alberto.github.com/2008/01/12/2008-will-be-year-of</id>
+    <id>http://www.sharpbites.com/2008/01/12/2008-will-be-year-of</id>
     <content type="html"><![CDATA[<div class='post'>
 Linux.<br />Hehe, I'm kidding. I think 2008 will be the year of <a href="http://www.agiledata.org/essays/tdd.html">Test Driven <span style="font-weight:bold;">Design</span></a>. I know it has been already there for a long time already, but I hope that it will become mainstream with the final release of the <a href="http://weblogs.asp.net/scottgu/archive/2007/10/14/asp-net-mvc-framework.aspx">ASP.NET MVC</a> framework Microsoft is releasing this year.<br /><br />Well, in fact, depending how long it takes for them to ship it, it may actually take a bit longer to be widely used tough, but I'm happy this is going to be finally adopted for web development.</div>
 

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: deadline driven development | sharp bites]]></title>
-  <link href="http://alberto.github.com/categories/deadline-driven-development/atom.xml" rel="self"/>
-  <link href="http://alberto.github.com/"/>
-  <updated>2012-03-03T20:07:36+01:00</updated>
-  <id>http://alberto.github.com/</id>
+  <link href="http://www.sharpbites.com/categories/deadline-driven-development/atom.xml" rel="self"/>
+  <link href="http://www.sharpbites.com/"/>
+  <updated>2012-03-03T20:11:45+01:00</updated>
+  <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Programming for the Mob sharks? No, thanks.]]></title>
-    <link href="http://alberto.github.com/2009/02/22/programming-for-mob-sharks-no-thanks/"/>
+    <link href="http://www.sharpbites.com/2009/02/22/programming-for-mob-sharks-no-thanks/"/>
     <updated>2009-02-22T00:00:00+01:00</updated>
-    <id>http://alberto.github.com/2009/02/22/programming-for-mob-sharks-no-thanks</id>
+    <id>http://www.sharpbites.com/2009/02/22/programming-for-mob-sharks-no-thanks</id>
     <content type="html"><![CDATA[<div class='post'>
 <a href="http://c2.com/">Ward Cunniham</a>, of <a href="http://c2.com/cgi/wiki">Ward's Wiki</a> fame, was the coiner of the term "technical debt". He made an interesting clarification in the following video:<br /><object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/pqeJFYwnkjE&hl=es&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/pqeJFYwnkjE&hl=es&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object><br /><br />According to his intention, the term is usually misused to reflect (and even encourage) the writing of sloppy code with the excuse that it will be refactored later. His original vision was more aligned with the XP style of simple design.<br /><br />Doing bad code with the excuse of refactoring somewhere in the future is not technical debt we are going to pay, but rather asking money from loan mob sharks at an astronomic interest rate and the expenses of losing a few body parts in the way.<br /><br />PS: It is funny how the metaphor was coined as an analogy that his boss could understand, but it has grown to be used and abused by everybody in the industry. Maybe that's also related to the debt culture that has drawn our uneducated society into the current situation.</div>
 
@@ -26,9 +26,9 @@
   
   <entry>
     <title type="html"><![CDATA[Quality]]></title>
-    <link href="http://alberto.github.com/2008/12/04/quality/"/>
+    <link href="http://www.sharpbites.com/2008/12/04/quality/"/>
     <updated>2008-12-04T00:00:00+01:00</updated>
-    <id>http://alberto.github.com/2008/12/04/quality</id>
+    <id>http://www.sharpbites.com/2008/12/04/quality</id>
     <content type="html"><![CDATA[<div class='post'>
 <blockquote>Quality means doing it right when no one is looking.</blockquote><cite>-- Henry Ford</cite></div>
 
@@ -37,9 +37,9 @@
   
   <entry>
     <title type="html"><![CDATA[How does a project get to be a year behind schedule?]]></title>
-    <link href="http://alberto.github.com/2008/06/18/how-does-project-get-to-be-year-behind/"/>
+    <link href="http://www.sharpbites.com/2008/06/18/how-does-project-get-to-be-year-behind/"/>
     <updated>2008-06-18T00:00:00+02:00</updated>
-    <id>http://alberto.github.com/2008/06/18/how-does-project-get-to-be-year-behind</id>
+    <id>http://www.sharpbites.com/2008/06/18/how-does-project-get-to-be-year-behind</id>
     <content type="html"><![CDATA[<div class='post'>
 <blockquote>One day at a time.<br /><cite>-- <a href="http://www.cs.unc.edu/~brooks/">Fred Brooks</a>, <a href="http://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959">The Mythical Man-Month</a>.</cite></blockquote></div>
 
@@ -48,9 +48,9 @@
   
   <entry>
     <title type="html"><![CDATA[Did you think your shit didn't stink?]]></title>
-    <link href="http://alberto.github.com/2007/12/04/did-you-think-your-shit-didnt-stink/"/>
+    <link href="http://www.sharpbites.com/2007/12/04/did-you-think-your-shit-didnt-stink/"/>
     <updated>2007-12-04T00:00:00+01:00</updated>
-    <id>http://alberto.github.com/2007/12/04/did-you-think-your-shit-didnt-stink</id>
+    <id>http://www.sharpbites.com/2007/12/04/did-you-think-your-shit-didnt-stink</id>
     <content type="html"><![CDATA[<div class='post'>
 <blockquote>"No matter how good the code you write is, it’s crap to another developer."<br /></blockquote><cite>-- <a href="http://haacked.com/archive/2007/10/07/the-greatest-compliment-a-developer-can-receive.aspx">Phil Haack</a></cite><br /><br />Next time I am honored with some unmanageable code, before I start swearing, I'll try to remeber all the crap I endep up doing under deadline pressures.</div>
 

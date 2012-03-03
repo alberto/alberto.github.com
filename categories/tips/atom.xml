@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: tips | sharp bites]]></title>
-  <link href="http://alberto.github.com/categories/tips/atom.xml" rel="self"/>
-  <link href="http://alberto.github.com/"/>
-  <updated>2012-03-03T20:07:36+01:00</updated>
-  <id>http://alberto.github.com/</id>
+  <link href="http://www.sharpbites.com/categories/tips/atom.xml" rel="self"/>
+  <link href="http://www.sharpbites.com/"/>
+  <updated>2012-03-03T20:11:45+01:00</updated>
+  <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[New Year resolutions]]></title>
-    <link href="http://alberto.github.com/2011/01/01/new-year-resolutions/"/>
+    <link href="http://www.sharpbites.com/2011/01/01/new-year-resolutions/"/>
     <updated>2011-01-01T00:00:00+01:00</updated>
-    <id>http://alberto.github.com/2011/01/01/new-year-resolutions</id>
+    <id>http://www.sharpbites.com/2011/01/01/new-year-resolutions</id>
     <content type="html"><![CDATA[<div class='post'>
 Here are my resolutions for the present year:<br />- Read LESS. Yes, less reading, more doing.<br />- Keep learning ruby.<br />- Practice! I'm resolved to do a kata EVERY day, one kata each month. Wanna join? Use the hashtag&nbsp;<a href="http://search.twitter.com/search?q=12months12katas">#12months12katas</a>.<br />- Rediscover enjoyment, on many aspects. This is a tough one, since I&nbsp;first&nbsp;need to find direction, then courage to act in consequence.</div>
 
@@ -26,9 +26,9 @@ Here are my resolutions for the present year:<br />- Read LESS. Yes, less readin
   
   <entry>
     <title type="html"><![CDATA[Targetting .NET 2.0 with Nant and Visual Studio 2008]]></title>
-    <link href="http://alberto.github.com/2009/03/10/targetting-net-20-with-nant-and-visual/"/>
+    <link href="http://www.sharpbites.com/2009/03/10/targetting-net-20-with-nant-and-visual/"/>
     <updated>2009-03-10T00:00:00+01:00</updated>
-    <id>http://alberto.github.com/2009/03/10/targetting-net-20-with-nant-and-visual</id>
+    <id>http://www.sharpbites.com/2009/03/10/targetting-net-20-with-nant-and-visual</id>
     <content type="html"><![CDATA[<div class='post'>
 If you try to migrate a solution to VS2008 and you are using nant, you'll probably find a few problems. This is one of them I am documenting for you.<br />I wanted to use VS2008 and nant, but still want target the .net 2.0 framework. I read somewhere I needed to install the .net 2.0 sdk, but I was still having issues, where msbuild was complaining it didn't recognize the format of the solution file.<br />It turns out you need to change nant.settings.currentframework to "net-3.5", so that it is the version of msbuild that comes with msbuild who compiles the solution (so I am not sure anymore you need the .net 2.0 sdk). It will still target the .net 2.0 framework for your projects if you set that that way in VS, as msbuild uses that info for the target.<br /><br />Hope it helps someone out there.</div>
 
@@ -37,9 +37,9 @@ If you try to migrate a solution to VS2008 and you are using nant, you'll probab
   
   <entry>
     <title type="html"><![CDATA[Fix: Can't install updates on Windows XP after installing SP2]]></title>
-    <link href="http://alberto.github.com/2008/10/15/fix-cant-install-updates-on-windows-xp/"/>
+    <link href="http://www.sharpbites.com/2008/10/15/fix-cant-install-updates-on-windows-xp/"/>
     <updated>2008-10-15T00:00:00+02:00</updated>
-    <id>http://alberto.github.com/2008/10/15/fix-cant-install-updates-on-windows-xp</id>
+    <id>http://www.sharpbites.com/2008/10/15/fix-cant-install-updates-on-windows-xp</id>
     <content type="html"><![CDATA[<div class='post'>
 Just in case it happens to me (or you) again.<br /><br />1. Open command prompt (or use a for a <a href="http://sourceforge.net/projects/console/">better console</a>).<br />2. net stop wuauserv<br />3. regsvr32 %windir%\system32\wups2.dll (regsvr32 %windir%\syswow64\wups2.dll for win64)<br />4. net start wuauserv<br />5. exit<br /><br /><br />http://forums.cnet.com/5208-6142_102-0.html?forumID=5&threadID=276886&messageID=2660716<br />http://support.microsoft.com/kb/943144</div>
 

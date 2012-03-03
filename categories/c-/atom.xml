@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: c# | sharp bites]]></title>
-  <link href="http://alberto.github.com/categories/c-/atom.xml" rel="self"/>
-  <link href="http://alberto.github.com/"/>
-  <updated>2012-03-03T20:07:36+01:00</updated>
-  <id>http://alberto.github.com/</id>
+  <link href="http://www.sharpbites.com/categories/c-/atom.xml" rel="self"/>
+  <link href="http://www.sharpbites.com/"/>
+  <updated>2012-03-03T20:11:45+01:00</updated>
+  <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[On value types vs reference types and premature optimization]]></title>
-    <link href="http://alberto.github.com/2009/04/27/on-value-types-vs-reference-types-and/"/>
+    <link href="http://www.sharpbites.com/2009/04/27/on-value-types-vs-reference-types-and/"/>
     <updated>2009-04-27T00:00:00+02:00</updated>
-    <id>http://alberto.github.com/2009/04/27/on-value-types-vs-reference-types-and</id>
+    <id>http://www.sharpbites.com/2009/04/27/on-value-types-vs-reference-types-and</id>
     <content type="html"><![CDATA[<div class='post'>
 Eric Lippert, wrote a great post about value types vs reference types, and how, many times, the discussion is shifted to the-heap-and-the-stack, when it should really be about the differences when those types are passed (by value) as parameters.<br /><br />He nails it when he says:<br /><blockquote>Making the nano-optimization of making a type that really should be a ref type into a value type for a few nanoseconds of perf gain is probably not worth it. I would only be making that choice if profiling data showed that there was a large, real-world-customer-impacting performance problem directly mitigated by using value types. Absent such data, I’d always make the choice of value type vs reference type based on whether the type is semantically representing a value or semantically a reference to something.</blockquote></div>
 
@@ -26,9 +26,9 @@ Eric Lippert, wrote a great post about value types vs reference types, and how, 
   
   <entry>
     <title type="html"><![CDATA[[SPAM-LOW] Isolator for SharePoint]]></title>
-    <link href="http://alberto.github.com/2008/11/24/spam-low-isolator-for-sharepoint/"/>
+    <link href="http://www.sharpbites.com/2008/11/24/spam-low-isolator-for-sharepoint/"/>
     <updated>2008-11-24T00:00:00+01:00</updated>
-    <id>http://alberto.github.com/2008/11/24/spam-low-isolator-for-sharepoint</id>
+    <id>http://www.sharpbites.com/2008/11/24/spam-low-isolator-for-sharepoint</id>
     <content type="html"><![CDATA[<div class='post'>
 The Typemock guys have released a version of Typemock isolator for SharePoint. This is the announcement (which will hopefully grant me a license to try Typemock):<br /><br />Typemock are offering their new product for <a href="http://www.typemock.com/sharepointpage.php?utm_source=sp_bb&utm_medium=blog_4sp&utm_campaign=sp_bb">unit testing SharePoint</a> called Isolator For SharePoint, for a special introduction price. it is the only tool that allows you to <a href="http://blog.typemock.com/2008/11/newisolatorforsharepointtoolforunittest.html?utm_source=typeblog&utm_medium=sp_bb&utm_campaign=typeblog">unit test SharePoint</a> without a SharePoint server. To learn more <a href="http://www.typemock.com/sharepointpage.php?utm_source=sp_bb&utm_medium=blog_4sp&utm_campaign=sp_bb">click here</a>.<br /><span style="font-weight:bold;"><br />The first 50 bloggers</span> who blog this text in their blog and tell us about it, will get <font color="#ff0000">a Full Isolator license</font>, Free. for rules and info <a href="http://blog.typemock.com/2008/11/newisolatorforsharepointtoolforunittest.html">click here</a>.</div>
 
@@ -37,9 +37,9 @@ The Typemock guys have released a version of Typemock isolator for SharePoint. T
   
   <entry>
     <title type="html"><![CDATA[Exce(r)ptions]]></title>
-    <link href="http://alberto.github.com/2008/06/01/exceptions/"/>
+    <link href="http://www.sharpbites.com/2008/06/01/exceptions/"/>
     <updated>2008-06-01T00:00:00+02:00</updated>
-    <id>http://alberto.github.com/2008/06/01/exceptions</id>
+    <id>http://www.sharpbites.com/2008/06/01/exceptions</id>
     <content type="html"><![CDATA[<div class='post'>
 Just a few notes on exceptions to remind, from <a href="http://codebetter.com/blogs/karlseguin/default.aspx">Karl Seguin</a>.<br /><span style="font-weight:bold;">Handling exceptions</span><br />1 - Only handle exceptions that you can actually do something about, and<br />2 - You can't do anything about the vast majority of exceptions<br /><br /><span style="font-weight:bold;">Logging</span><br />You should log every exception. Ideally you'll centralize your logging - an HttpModule's OnError event is your best choice for an ASP.NET application or web service.<br /><br /><span style="font-weight:bold;">Handling database access (and its possible exceptions):</span><br /><code>using (SqlConnection connection = new SqlConnection(FROM_CONFIGURATION))  <br />using (SqlCommand command = new SqlCommand("SomeSQL", connection))  <br />{  <br />   connection.Open();  <br />   command.ExecuteNonQuery();  <br />} </code><br /><br /><span style="font-weight:bold;">throw vs. throw ex</span><br />On occasion you'll need to rethrow an exception because, while you can't handle the exception, you still need to execute some code when an exception occurs. In this case you should use <span style="font-weight:bold;">throw</span> to preserve the full exception stack. Contrary, if you find yourself in a situation where you think you want to rethrow an exception with your handler as the source, a better approach is to use a nested exception:<br /><code>catch (HibernateException ex)<br />{<br />  if (transaction != null) { transaction.Rollback(); }<br />  throw new Exception("Email already in use", ex);<br />}</code><br /><br /><span style="font-weight:bold;">When to throw</span><br />A method should throw when it wasn't able to do what it was suppossed to do.<br /><br />If you want a more in-depth explanation on the subject, I recommend you go and read the <a href="http://codebetter.com/blogs/karlseguin/archive/2008/05/29/foundations-of-programming-pt-8-back-to-basics-exceptions.aspx">article</a></div>
 
@@ -48,9 +48,9 @@ Just a few notes on exceptions to remind, from <a href="http://codebetter.com/bl
   
   <entry>
     <title type="html"><![CDATA[Ayende's Challenge]]></title>
-    <link href="http://alberto.github.com/2008/04/09/ayendes-challenge/"/>
+    <link href="http://www.sharpbites.com/2008/04/09/ayendes-challenge/"/>
     <updated>2008-04-09T00:00:00+02:00</updated>
-    <id>http://alberto.github.com/2008/04/09/ayendes-challenge</id>
+    <id>http://www.sharpbites.com/2008/04/09/ayendes-challenge</id>
     <content type="html"><![CDATA[<div class='post'>
 <a href="http://www.ayende.com/">Ayende</a> <a href="http://www.ayende.com/Blog/archive/2008/04/09/A-challenge-Getting-a-list-of-products.aspx">challenged</a> the whole intarweb to resolve a problem similar to the ones he uses in his job interviews. It goes like this:<br /><blockquote>The task is listing the first 10 products that we can sell to a customer. The UI is console application, and the database design and data access method are whatever you want.</blockquote><br />Additionally you have to filter those products according to some arguments given as input parameters to the application (representing different categorizations of products).<br /><br />Now, my solution. :)<br /><pre name="code" class="c-sharp"><br />    public enum Category<br />    {<br />        PG13,<br />        Vegetarian<br />    }<br /><br />    public class Product<br />    {<br />        public string Name { get; set; }<br />        public decimal Price { get; set; }<br />        public IList<Category> Categories { get; set;}<br /><br />        public override string ToString()<br />        {<br />            return string.Format("{0}\t{1}", Name, Price);<br />        }<br />    }<br /><br />    public class Filter<br />    {<br />        public static IEnumerable<Product> ApplyFilter(IEnumerable<Product> products, Category category)<br />        {<br />            return from p in products where p.Categories.Contains(category) select p; <br />        }<br />    }<br /><br />    class Program<br />    {<br />        static void Main(string[] args)<br />        {<br />            var categoryMapper = new Dictionary<string, Category><br />                                     {<br />                                         {"-pg13", Category.PG13},<br />                                         {"-vegetarian", Category.Vegetarian}<br />                                     };<br /><br />            var products = new List<Product><br />                               {<br />                                   new Product {Name = "Milk", Price = 1.0M, <br />                                       Categories = new List<Category> {Category.PG13, Category.Vegetarian}}, <br />                                   new Product {Name = "Bread", Price = 1.3M, <br />                                       Categories = new List<Category> {Category.PG13, Category.Vegetarian}},<br />                                   new Product {Name = "Sausage", Price = 2.5M, <br />                                       Categories = new List<Category> {Category.PG13}},<br />                                   new Product {Name = "Horror Movie", Price = 5.0M, <br />                                       Categories = new List<Category> {Category.Vegetarian}}<br />                               };<br /><br />            var filteredResults = (IEnumerable<Product>) products;<br />            foreach (string arg in args)<br />            {<br />                if (categoryMapper.ContainsKey(arg))<br />                {<br />                    filteredResults = Filter.ApplyFilter(filteredResults, categoryMapper[arg]);<br />                }<br />            }<br /><br />            filteredResults = filteredResults.Take(10);<br /><br />            foreach (Product product in filteredResults)<br />            {<br />                Console.Out.WriteLine(product);<br />            }<br />        }<br />    }<br /><br /></pre></div>
 
@@ -59,9 +59,9 @@ Just a few notes on exceptions to remind, from <a href="http://codebetter.com/bl
   
   <entry>
     <title type="html"><![CDATA[Returning null vs. Empty Collection/Default Object]]></title>
-    <link href="http://alberto.github.com/2008/01/24/returning-null-vs-empty/"/>
+    <link href="http://www.sharpbites.com/2008/01/24/returning-null-vs-empty/"/>
     <updated>2008-01-24T00:00:00+01:00</updated>
-    <id>http://alberto.github.com/2008/01/24/returning-null-vs-empty</id>
+    <id>http://www.sharpbites.com/2008/01/24/returning-null-vs-empty</id>
     <content type="html"><![CDATA[<div class='post'>
 In a nice thread on the <a href="http://tech.groups.yahoo.com/group/cli_dev/message/9849">cli_dev list (formerly altdotnet)</a> they discuss whether you should return null or an Empty Collection/Default Object when a query returns no results.<br /><br />There is a more or less common approach I agree with of returning a null collection when your query yields no results, like in GetUsers(), being therefore able to iterate it with a foreach(User user in GetUsers()) witout having to use safe-guards.<br /><br />I think Luke Breuer makes a good point too in <a href="http://tech.groups.yahoo.com/group/cli_dev/message/9855">this post</a> when talking about retrieving a particular result:<br /><blockquote>I like null checks to actually have significant meaning.  I've actually adopted a convention -- GetAwesomeObject will return a valid object or throw; FindAwesomeObject might return null.  The idea is that a NullReferenceException means you really screwed up somewhere -- you have a glaring logic error, because you didn't account for possible emptiness. </blockquote></div>
 

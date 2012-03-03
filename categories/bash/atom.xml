@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: bash | sharp bites]]></title>
-  <link href="http://alberto.github.com/categories/bash/atom.xml" rel="self"/>
-  <link href="http://alberto.github.com/"/>
-  <updated>2012-03-03T20:07:36+01:00</updated>
-  <id>http://alberto.github.com/</id>
+  <link href="http://www.sharpbites.com/categories/bash/atom.xml" rel="self"/>
+  <link href="http://www.sharpbites.com/"/>
+  <updated>2012-03-03T20:11:45+01:00</updated>
+  <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Bash completion for symfony]]></title>
-    <link href="http://alberto.github.com/2010/02/27/bash-completion-for-symfony/"/>
+    <link href="http://www.sharpbites.com/2010/02/27/bash-completion-for-symfony/"/>
     <updated>2010-02-27T00:00:00+01:00</updated>
-    <id>http://alberto.github.com/2010/02/27/bash-completion-for-symfony</id>
+    <id>http://www.sharpbites.com/2010/02/27/bash-completion-for-symfony</id>
     <content type="html"><![CDATA[<div class='post'>
 <a href="http://www.tatai.es/">Fran</a>&nbsp;(a.k.a. tatai), one of my teammates at Biko, was kind enough to make us a nice (and unreadable) script to get <a href="http://github.com/biko2/symfony_complete">symfony bash completion</a>. Get it while it's hot!<br /><br />You can read more about the script on <a href="http://www.tatai.es/2010/02/26/bash-completion-for-symfony/">tatai's blog</a>.<br /><br />Kudos @tatai for your work!</div>
 

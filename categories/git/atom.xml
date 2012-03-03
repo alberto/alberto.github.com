@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: git | sharp bites]]></title>
-  <link href="http://alberto.github.com/categories/git/atom.xml" rel="self"/>
-  <link href="http://alberto.github.com/"/>
-  <updated>2012-03-03T20:07:36+01:00</updated>
-  <id>http://alberto.github.com/</id>
+  <link href="http://www.sharpbites.com/categories/git/atom.xml" rel="self"/>
+  <link href="http://www.sharpbites.com/"/>
+  <updated>2012-03-03T20:11:45+01:00</updated>
+  <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[git started #1. Using git with a svn server]]></title>
-    <link href="http://alberto.github.com/2011/11/06/git-started-1-using-git-with-svn-server/"/>
+    <link href="http://www.sharpbites.com/2011/11/06/git-started-1-using-git-with-svn-server/"/>
     <updated>2011-11-06T00:00:00+01:00</updated>
-    <id>http://alberto.github.com/2011/11/06/git-started-1-using-git-with-svn-server</id>
+    <id>http://www.sharpbites.com/2011/11/06/git-started-1-using-git-with-svn-server</id>
     <content type="html"><![CDATA[<div class='post'>
 <div dir="ltr" style="text-align: left;" trbidi="on">So, you already know that <a href="http://www.sharpbites.com/2008/09/why-svn-sucks.html">svn sucks</a> and you want to switch to git because you know it's awesome, but you are stuck in a team environment of svn-zombies.<br /><br />What can you do? You can try to convert all the non-deads at once... or you can use git-svn and get them into git one by one.<br /><br />git-svn let's you interact with a svn server using git as your client.&nbsp;Some git GUIs support git svn. On Mac OSX you can use <a href="http://gitx.laullon.com/">GitX(L)</a>&nbsp;or <a href="http://www.sourcetreeapp.com/">SourceTree</a>. Here is how to do it using the commandline.<br /><br />To get a copy of your svn repo (assuming you have the de facto standard structure of trunk, branches and tags dirs) do:<br /><br /><code>git svn init -s http://path/to/your/svn/project</code><br /><br />From here, use your local repo as usually, i.e. do some hacking, add your files and commit them. Rinse, repeat. <br /><br /><code>git add somefile&nbsp;</code><br /><code>git commit</code><br /><code>...</code><br /><br />When you are ready to commit your changes, get the changes from the svn repo:<br /><br /><code>git svn rebase</code><br /><br />and commit your changes:<br /><br /><code>git svn dcommit</code><br /><br />That's it!</div></div>
 

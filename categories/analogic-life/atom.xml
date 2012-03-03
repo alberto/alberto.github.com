@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: analogic life | sharp bites]]></title>
-  <link href="http://alberto.github.com/categories/analogic-life/atom.xml" rel="self"/>
-  <link href="http://alberto.github.com/"/>
-  <updated>2012-03-03T20:07:36+01:00</updated>
-  <id>http://alberto.github.com/</id>
+  <link href="http://www.sharpbites.com/categories/analogic-life/atom.xml" rel="self"/>
+  <link href="http://www.sharpbites.com/"/>
+  <updated>2012-03-03T20:11:45+01:00</updated>
+  <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[New Year resolutions]]></title>
-    <link href="http://alberto.github.com/2011/01/01/new-year-resolutions/"/>
+    <link href="http://www.sharpbites.com/2011/01/01/new-year-resolutions/"/>
     <updated>2011-01-01T00:00:00+01:00</updated>
-    <id>http://alberto.github.com/2011/01/01/new-year-resolutions</id>
+    <id>http://www.sharpbites.com/2011/01/01/new-year-resolutions</id>
     <content type="html"><![CDATA[<div class='post'>
 Here are my resolutions for the present year:<br />- Read LESS. Yes, less reading, more doing.<br />- Keep learning ruby.<br />- Practice! I'm resolved to do a kata EVERY day, one kata each month. Wanna join? Use the hashtag&nbsp;<a href="http://search.twitter.com/search?q=12months12katas">#12months12katas</a>.<br />- Rediscover enjoyment, on many aspects. This is a tough one, since I&nbsp;first&nbsp;need to find direction, then courage to act in consequence.</div>
 
@@ -26,9 +26,9 @@ Here are my resolutions for the present year:<br />- Read LESS. Yes, less readin
   
   <entry>
     <title type="html"><![CDATA[Sometimes You Have To Take A Step Back Before You Can Move Forward]]></title>
-    <link href="http://alberto.github.com/2009/11/08/sometimes-you-have-to-take-step-back/"/>
+    <link href="http://www.sharpbites.com/2009/11/08/sometimes-you-have-to-take-step-back/"/>
     <updated>2009-11-08T00:00:00+01:00</updated>
-    <id>http://alberto.github.com/2009/11/08/sometimes-you-have-to-take-step-back</id>
+    <id>http://www.sharpbites.com/2009/11/08/sometimes-you-have-to-take-step-back</id>
     <content type="html"><![CDATA[<div class='post'>
 Or how I am moving to a PHP team to free myself from WebForms.<br /><br />So expect to find some stuff (probably including some rants) here about PHP from now on.</div>
 
@@ -37,9 +37,9 @@ Or how I am moving to a PHP team to free myself from WebForms.<br /><br />So exp
   
   <entry>
     <title type="html"><![CDATA[Back from holydays]]></title>
-    <link href="http://alberto.github.com/2008/07/20/back-from-holydays/"/>
+    <link href="http://www.sharpbites.com/2008/07/20/back-from-holydays/"/>
     <updated>2008-07-20T00:00:00+02:00</updated>
-    <id>http://alberto.github.com/2008/07/20/back-from-holydays</id>
+    <id>http://www.sharpbites.com/2008/07/20/back-from-holydays</id>
     <content type="html"><![CDATA[<div class='post'>
 <a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://2.bp.blogspot.com/_kQ7iivKjVno/SIMYnCtkH5I/AAAAAAAAAGU/KKTZAgii9cA/s1600-h/unread.png"><img style="float:left; margin:0 10px 10px 0;cursor:pointer; cursor:hand;" src="http://2.bp.blogspot.com/_kQ7iivKjVno/SIMYnCtkH5I/AAAAAAAAAGU/KKTZAgii9cA/s400/unread.png" border="0" alt=""id="BLOGGER_PHOTO_ID_5225047051701854098" /></a><br />Oh, my.</div>
 
@@ -48,9 +48,9 @@ Or how I am moving to a PHP team to free myself from WebForms.<br /><br />So exp
   
   <entry>
     <title type="html"><![CDATA[Experience]]></title>
-    <link href="http://alberto.github.com/2008/06/15/experience/"/>
+    <link href="http://www.sharpbites.com/2008/06/15/experience/"/>
     <updated>2008-06-15T00:00:00+02:00</updated>
-    <id>http://alberto.github.com/2008/06/15/experience</id>
+    <id>http://www.sharpbites.com/2008/06/15/experience</id>
     <content type="html"><![CDATA[<div class='post'>
 <blockquote>Experience is what you get when you don't get what you want.</blockquote><cite>-- Dan Stanford</cite></div>
 
@@ -59,9 +59,9 @@ Or how I am moving to a PHP team to free myself from WebForms.<br /><br />So exp
   
   <entry>
     <title type="html"><![CDATA[Don't let that wall stop you]]></title>
-    <link href="http://alberto.github.com/2008/05/11/dont-let-that-wall-stop-you/"/>
+    <link href="http://www.sharpbites.com/2008/05/11/dont-let-that-wall-stop-you/"/>
     <updated>2008-05-11T00:00:00+02:00</updated>
-    <id>http://alberto.github.com/2008/05/11/dont-let-that-wall-stop-you</id>
+    <id>http://www.sharpbites.com/2008/05/11/dont-let-that-wall-stop-you</id>
     <content type="html"><![CDATA[<div class='post'>
 <blockquote>Brick walls are there for a reason: they let us prove how bad we want things.</blockquote><cite>-- <a href="http://es.youtube.com/watch?v=ji5_MqicxSo">Randy Pausch</a></cite><br /><br /><object width="425" height="355"><param name="movie" value="http://www.youtube.com/v/ji5_MqicxSo&hl=es"></param><param name="wmode" value="transparent"></param><embed src="http://www.youtube.com/v/ji5_MqicxSo&hl=es" type="application/x-shockwave-flash" wmode="transparent" width="425" height="355"></embed></object></div>
 

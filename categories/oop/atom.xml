@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: oop | sharp bites]]></title>
-  <link href="http://alberto.github.com/categories/oop/atom.xml" rel="self"/>
-  <link href="http://alberto.github.com/"/>
-  <updated>2012-03-03T20:07:36+01:00</updated>
-  <id>http://alberto.github.com/</id>
+  <link href="http://www.sharpbites.com/categories/oop/atom.xml" rel="self"/>
+  <link href="http://www.sharpbites.com/"/>
+  <updated>2012-03-03T20:11:45+01:00</updated>
+  <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Writing Better Object Oriented Code]]></title>
-    <link href="http://alberto.github.com/2010/11/30/writing-better-object-oriented-code/"/>
+    <link href="http://www.sharpbites.com/2010/11/30/writing-better-object-oriented-code/"/>
     <updated>2010-11-30T00:00:00+01:00</updated>
-    <id>http://alberto.github.com/2010/11/30/writing-better-object-oriented-code</id>
+    <id>http://www.sharpbites.com/2010/11/30/writing-better-object-oriented-code</id>
     <content type="html"><![CDATA[<div class='post'>
 <a href="http://twitter.com/#!/gregyoung">Greg Young</a> did a great presentation at <a href="http://www.oredev.org/">Oredev</a> about <a href="http://vimeo.com/17151526">writing Object Oriented code the right way</a>. It's so full of good stuff I could not bother to make a summary out of it. Go watch the original video. Now.</div>
 

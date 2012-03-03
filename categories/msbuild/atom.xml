@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: msbuild | sharp bites]]></title>
-  <link href="http://alberto.github.com/categories/msbuild/atom.xml" rel="self"/>
-  <link href="http://alberto.github.com/"/>
-  <updated>2012-03-03T20:07:36+01:00</updated>
-  <id>http://alberto.github.com/</id>
+  <link href="http://www.sharpbites.com/categories/msbuild/atom.xml" rel="self"/>
+  <link href="http://www.sharpbites.com/"/>
+  <updated>2012-03-03T20:11:45+01:00</updated>
+  <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Targetting .NET 2.0 with Nant and Visual Studio 2008]]></title>
-    <link href="http://alberto.github.com/2009/03/10/targetting-net-20-with-nant-and-visual/"/>
+    <link href="http://www.sharpbites.com/2009/03/10/targetting-net-20-with-nant-and-visual/"/>
     <updated>2009-03-10T00:00:00+01:00</updated>
-    <id>http://alberto.github.com/2009/03/10/targetting-net-20-with-nant-and-visual</id>
+    <id>http://www.sharpbites.com/2009/03/10/targetting-net-20-with-nant-and-visual</id>
     <content type="html"><![CDATA[<div class='post'>
 If you try to migrate a solution to VS2008 and you are using nant, you'll probably find a few problems. This is one of them I am documenting for you.<br />I wanted to use VS2008 and nant, but still want target the .net 2.0 framework. I read somewhere I needed to install the .net 2.0 sdk, but I was still having issues, where msbuild was complaining it didn't recognize the format of the solution file.<br />It turns out you need to change nant.settings.currentframework to "net-3.5", so that it is the version of msbuild that comes with msbuild who compiles the solution (so I am not sure anymore you need the .net 2.0 sdk). It will still target the .net 2.0 framework for your projects if you set that that way in VS, as msbuild uses that info for the target.<br /><br />Hope it helps someone out there.</div>
 
@@ -26,9 +26,9 @@ If you try to migrate a solution to VS2008 and you are using nant, you'll probab
   
   <entry>
     <title type="html"><![CDATA[nant vs. msbuild]]></title>
-    <link href="http://alberto.github.com/2008/09/05/nant-vs-msbuild/"/>
+    <link href="http://www.sharpbites.com/2008/09/05/nant-vs-msbuild/"/>
     <updated>2008-09-05T00:00:00+02:00</updated>
-    <id>http://alberto.github.com/2008/09/05/nant-vs-msbuild</id>
+    <id>http://www.sharpbites.com/2008/09/05/nant-vs-msbuild</id>
     <content type="html"><![CDATA[<div class='post'>
 Yes, this is yet another post on <a href="http://nant.sourceforge.net/">nant</a> vs. <a href="http://msdn.microsoft.com/en-us/library/0k6kkbsd.aspx">msbuild</a>.<br />I had to choose which one of the two to use at the company I work for. After doing a lot of research, it looks like there aren't many differences between them. Here are some of the pro/cons I found:<br /><br />- msbuild comes from Microsoft (yes, that usually matters to some (not all, like me) people)<br />- msbuild is already installed in every .net developer machine (not a big deal)<br />- msbuild has probably better integration with VS build process<br />- msbuild supports parallel builds since .net 3.5 (not that it really matters, since you usually use msbuild from nant to build your projects, anyway).<br />- msbuild evaluates filesets at startup. This seems to cause some headaches when you want to manipulate files generated during the building process.<br />- you can redefine targets in msbuild. in nant you can define general targets and just make your build files call those (or create and use hooks, which is a solution I don't really like).<br />- nant has more examples and better documentation<br />- there is much more information about nant than about msbuild on the web, according to <a href="http://www.google.es/trends?q=msbuild%2C+nant">google trends</a> and google search results (both in english and spanish)<br />- nant has some more tasks, but with <a href="http://msbuildtasks.tigris.org/">msbuildtasks</a>/<a href="http://www.codeplex.com/sdctasks">sdc tasks</a> it's on par with nant and <a href="http://nantcontrib.sourceforge.net/">nantcontrib</a>.<br />- nant helper functions and expressions are better ¿?<br />- I like nant syntax better.<br />- nant is more mature, msbuild was born as an alternative (alt.alt.net :D) to nant for companies with ridiculous "no open source here" and Microsoft "I can't support an open source project I don't control" way of life.<br />- most open source projects tend to use nant over msbuild, so there are plenty of build files and task you can make good use of or have as a reference.<br />- I have already played with nant a little, so I know it's syntax better.<br />- I have started to use nant to automatically generate config files from templates for the different enviroments, and didn't find the way to do so in msbuild.<br />- nant is open source, so people can contribute to it.<br />- nant is not tied to microsoft release cycle, msbuild is.<br /><br /><br />There isn't any strong reason in itself to pick one, but adding them up, things favoured significantly nant over msbuild, so I ended up choosing the former.<br /><br />If you want to read more on the subject, here are some of the links I used in my research (in no particular order):<br />http://ayende.com/Blog/archive/2008/02/25/Zero-Friction-and-why-Defaults-Matters.aspx<br />http://www.winterdom.com/weblog/2007/09/21/MSBuildVsNAnt.aspx<br />http://www.paraesthesia.com/archive/2008/01/08/why-nant-is-better-than-msbuild.aspx<br />http://www.innoq.com/blog/hw/2007/09/24/msbuild_vs_nant.html<br />http://www.codeproject.com/KB/books/msbuild.aspx<br />http://brandonbyars.com/blog/articles/2008/01/10/Managing-Config-Files<br />http://www.paraesthesia.com/archive/2008/01/08/why-nant-is-better-than-msbuild.aspx<br />http://kentb.blogspot.com/2008/02/fail-early-with-full-builds-from-within.html<br />http://weblogs.asp.net/rosherove/archive/2008/01/18/trying-out-team-city-looks-promising.aspx<br />http://codebetter.com/blogs/jeremy.miller/archive/2007/09/20/is-there-a-good-reason-to-switch-to-msbuild.aspx<br />http://codebetter.com/blogs/jeffrey.palermo/archive/2007/09/25/demo-on-automating-your-build-with-nant-and-ccnet.aspx<br />http://www.distribucon.com/blog/WhyMSBuildSucks.aspx<br />http://www.tkachenko.com/blog/archives/000643.html</div>
 

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: katas | sharp bites]]></title>
-  <link href="http://alberto.github.com/categories/katas/atom.xml" rel="self"/>
-  <link href="http://alberto.github.com/"/>
-  <updated>2012-03-03T20:07:36+01:00</updated>
-  <id>http://alberto.github.com/</id>
+  <link href="http://www.sharpbites.com/categories/katas/atom.xml" rel="self"/>
+  <link href="http://www.sharpbites.com/"/>
+  <updated>2012-03-03T20:11:45+01:00</updated>
+  <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[New Year resolutions]]></title>
-    <link href="http://alberto.github.com/2011/01/01/new-year-resolutions/"/>
+    <link href="http://www.sharpbites.com/2011/01/01/new-year-resolutions/"/>
     <updated>2011-01-01T00:00:00+01:00</updated>
-    <id>http://alberto.github.com/2011/01/01/new-year-resolutions</id>
+    <id>http://www.sharpbites.com/2011/01/01/new-year-resolutions</id>
     <content type="html"><![CDATA[<div class='post'>
 Here are my resolutions for the present year:<br />- Read LESS. Yes, less reading, more doing.<br />- Keep learning ruby.<br />- Practice! I'm resolved to do a kata EVERY day, one kata each month. Wanna join? Use the hashtag&nbsp;<a href="http://search.twitter.com/search?q=12months12katas">#12months12katas</a>.<br />- Rediscover enjoyment, on many aspects. This is a tough one, since I&nbsp;first&nbsp;need to find direction, then courage to act in consequence.</div>
 
@@ -26,9 +26,9 @@ Here are my resolutions for the present year:<br />- Read LESS. Yes, less readin
   
   <entry>
     <title type="html"><![CDATA[12 months, 12 katas: January. String calculator]]></title>
-    <link href="http://alberto.github.com/2011/01/01/12-months-12-katas-january-string/"/>
+    <link href="http://www.sharpbites.com/2011/01/01/12-months-12-katas-january-string/"/>
     <updated>2011-01-01T00:00:00+01:00</updated>
-    <id>http://alberto.github.com/2011/01/01/12-months-12-katas-january-string</id>
+    <id>http://www.sharpbites.com/2011/01/01/12-months-12-katas-january-string</id>
     <content type="html"><![CDATA[<div class='post'>
 As recommended by <a href="http://www.twitter.com/plagelao">@plagelao</a> on twitter, the kata for January will be <a href="http://www.osherove.com/tdd-kata-1/">String Calculator</a>.<br />Here are the specs:<br /><span class="Apple-style-span" style="color: #0a0606; font-family: Tahoma, Arial, Helvetica, Geneva, sans-serif; font-size: 14px; line-height: 18px;"></span><br /><ol><li>Create a simple String calculator with a method&nbsp;<strong>int Add(string numbers)</strong><ol><li>The method can take 0, 1 or 2 numbers, and will return their sum (for an empty string it will return 0) for example<strong>&nbsp;“” or “1” or “1,2”</strong></li><li>Start with the simplest test case of an empty string and move to 1 and two numbers</li><li>Remember to solve things as simply as possible so that you force yourself to write tests you did not think about</li><li>Remember to refactor after each passing test</li></ol></li><li>Allow the Add method to handle an unknown amount of numbers</li><li>Allow the Add method to handle new lines between numbers (instead of commas).<ol><li>the following input is ok:&nbsp; “1\n2,3”&nbsp; (will equal 6)</li><li>the following input is NOT&nbsp;ok:&nbsp; “1,\n”&nbsp;</li><li>Make sure you only test for correct inputs. there is no need to test for invalid inputs for these katas</li></ol></li><li>Allow the Add method to handle a different delimiter:<ol><li>to change a delimiter, the beginning of the string will contain a separate line that looks like this:&nbsp;&nbsp; “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter is ‘;’ .</li><li>the first line is optional. all existing scenarios should still be supported</li></ol></li><li>Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed.if there are multiple negatives, show all of them in the exception message<hr /><strong>stop here if you are a beginner</strong>. Continue if you can finish the steps so far in less than 30 minutes.<hr /></li><li>Numbers bigger than 1000 should be ignored, so adding 2 + 1001 &nbsp;= 2</li><li>Delimiters can be of any length with the following format:&nbsp; “//[delimiter]\n” for example: “//[***]\n1***2***3” should return 6</li><li>Allow multiple delimiters like this:&nbsp; “//[delim1][delim2]\n” for example “//[*][%]\n1*2%3” should return 6.</li><li>make sure you can also handle multiple delimiters with length longer than one char</li></ol><br />Enjoy!</div>
 
