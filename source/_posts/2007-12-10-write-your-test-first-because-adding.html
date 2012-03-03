@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Write your test first... because adding them later sucks"
+date: 2007-12-10
+comments: true
+categories:
+ - bits
+ - software development
+ - tdd
+ - bdd
+---
+
+<div class='post'>
+So true. As <a href="http://www.jasonbock.net/JB/Default.aspx?blog=entry.a44b94d177ed4c139029e8cca6efe90f">jason</a> points out:<br /><ul><li>It's boring. Write the obvious tests. Check code coverage - what did I miss? Write more tests capturing more edge cases. Wash, rinse, repeat. Ugh.</li><li>It's not trivial. I'm trying to put tests around code that was created months ago, and trying to capture the mental state of the coder and what he was doing is damn near impossible.</li></ul>If you write the test first, you get all the benefits of TDD.<br /><ul><li>You don't get just unit testing, but instead you let your design lead your development.</li><li>As you are writing the minimum code necessary to achieve the <span style="font-weight: bold;">behaviour </span>your test is checking, you end up with full code coverage.</li><li>You can refactor as you test-and-code (and test, and code,...), and you have your tests to cover your ass as you go. If you need to refactor when it's all finished, poor you. You are just left out in the wild.</li></ul></div>

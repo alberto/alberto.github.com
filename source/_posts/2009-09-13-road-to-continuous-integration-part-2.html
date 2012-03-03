@@ -1,0 +1,12 @@
+---
+layout: post
+title: "The road to Continuous Integration. Part 2: Shake your tree"
+date: 2009-09-13
+comments: true
+categories:
+ - project automation
+ - continuous integration
+---
+
+<div class='post'>
+<p>As I stated in the <a href="http://sharpbites.blogspot.com/2009/09/road-to-continuous-integration-part-1.html">first part</a> of this <a href="http://sharpbites.blogspot.com/2009/09/road-to-continuous-integration.html">Continuous Integration series</a>, one of the aims of storing your stuff under source control is being able to build your project from a fresh checkout, without needing to manually install or configure anything.</p>  <p>To accomplish this, it is always useful to use a standardized tree structure. You can have a look at some of the popular open source projects you use and love to get ideas on how to organize things. Now that your have <a href="http://sharpbites.blogspot.com/2009/09/road-to-continuous-integration-part-1.html">everything under source control</a> (don't you?), we can start moving a few things around.</p>  <p><img align="right" src="http://4.bp.blogspot.com/_kQ7iivKjVno/SpghIOjZSzI/AAAAAAAAALc/SkfsSCTd74E/s400/project-structure.jpg" /> On the picture you can see a very typical structure for a project.</p>  <p>The <strong>src</strong> folder contains the different projects in their respective folders.     <br />The <strong>lib</strong> folder will contain any third-party library needed to run our project. This is, any dependency that has to be deployed with our project (e.g. NHibernate, Windsor, etc).     <br /></p>  <p>The <strong>tools</strong> folders will contain any tools needed to build our project. It will contain tools like nant, nunit or fxcop, which we will use but won't distribute with our application.     <br /></p>  <p>The <strong>build</strong> folder will hold the artifacts of the build.</p>  <p>   <br />Again, the purpose of putting all these libraries and frameworks under source control is to make EVERITHING needed to build and run your project available. Any new developer getting into your team should then be able to checkout your code and build it successfully, without needing to download and/or install anything from the Internet or hunt down any other dependencies your project builds upon. </p>  <p>If you need further info, I would recommend you to watch <a href="http://www.dimecasts.net/Casts/CastDetails/16">this screencast</a> by <a href="http://codebetter.com/blogs/kyle.baley/">Kyle &quot;Dissociative identity disorder&quot; Baley</a>.</p>  </div>

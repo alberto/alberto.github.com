@@ -1,0 +1,14 @@
+---
+layout: post
+title: "Returning null vs. Empty Collection/Default Object"
+date: 2008-01-24
+comments: true
+categories:
+ - bits
+ - software development
+ - .net
+ - c#
+---
+
+<div class='post'>
+In a nice thread on the <a href="http://tech.groups.yahoo.com/group/cli_dev/message/9849">cli_dev list (formerly altdotnet)</a> they discuss whether you should return null or an Empty Collection/Default Object when a query returns no results.<br /><br />There is a more or less common approach I agree with of returning a null collection when your query yields no results, like in GetUsers(), being therefore able to iterate it with a foreach(User user in GetUsers()) witout having to use safe-guards.<br /><br />I think Luke Breuer makes a good point too in <a href="http://tech.groups.yahoo.com/group/cli_dev/message/9855">this post</a> when talking about retrieving a particular result:<br /><blockquote>I like null checks to actually have significant meaning.  I've actually adopted a convention -- GetAwesomeObject will return a valid object or throw; FindAwesomeObject might return null.  The idea is that a NullReferenceException means you really screwed up somewhere -- you have a glaring logic error, because you didn't account for possible emptiness. </blockquote></div>

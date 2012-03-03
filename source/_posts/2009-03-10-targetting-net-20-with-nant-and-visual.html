@@ -1,0 +1,15 @@
+---
+layout: post
+title: "Targetting .NET 2.0 with Nant and Visual Studio 2008"
+date: 2009-03-10
+comments: true
+categories:
+ - nant
+ - .net
+ - tips
+ - msbuild
+ - continuous integration
+---
+
+<div class='post'>
+If you try to migrate a solution to VS2008 and you are using nant, you'll probably find a few problems. This is one of them I am documenting for you.<br />I wanted to use VS2008 and nant, but still want target the .net 2.0 framework. I read somewhere I needed to install the .net 2.0 sdk, but I was still having issues, where msbuild was complaining it didn't recognize the format of the solution file.<br />It turns out you need to change nant.settings.currentframework to "net-3.5", so that it is the version of msbuild that comes with msbuild who compiles the solution (so I am not sure anymore you need the .net 2.0 sdk). It will still target the .net 2.0 framework for your projects if you set that that way in VS, as msbuild uses that info for the target.<br /><br />Hope it helps someone out there.</div>

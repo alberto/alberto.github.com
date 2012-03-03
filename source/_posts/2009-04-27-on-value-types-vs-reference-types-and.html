@@ -1,0 +1,12 @@
+---
+layout: post
+title: "On value types vs reference types and premature optimization"
+date: 2009-04-27
+comments: true
+categories:
+ - .net
+ - c#
+---
+
+<div class='post'>
+Eric Lippert, wrote a great post about value types vs reference types, and how, many times, the discussion is shifted to the-heap-and-the-stack, when it should really be about the differences when those types are passed (by value) as parameters.<br /><br />He nails it when he says:<br /><blockquote>Making the nano-optimization of making a type that really should be a ref type into a value type for a few nanoseconds of perf gain is probably not worth it. I would only be making that choice if profiling data showed that there was a large, real-world-customer-impacting performance problem directly mitigated by using value types. Absent such data, I’d always make the choice of value type vs reference type based on whether the type is semantically representing a value or semantically a reference to something.</blockquote></div>

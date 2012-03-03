@@ -1,0 +1,12 @@
+---
+layout: post
+title: "Exce(r)ptions"
+date: 2008-06-01
+comments: true
+categories:
+ - .net
+ - c#
+---
+
+<div class='post'>
+Just a few notes on exceptions to remind, from <a href="http://codebetter.com/blogs/karlseguin/default.aspx">Karl Seguin</a>.<br /><span style="font-weight:bold;">Handling exceptions</span><br />1 - Only handle exceptions that you can actually do something about, and<br />2 - You can't do anything about the vast majority of exceptions<br /><br /><span style="font-weight:bold;">Logging</span><br />You should log every exception. Ideally you'll centralize your logging - an HttpModule's OnError event is your best choice for an ASP.NET application or web service.<br /><br /><span style="font-weight:bold;">Handling database access (and its possible exceptions):</span><br /><code>using (SqlConnection connection = new SqlConnection(FROM_CONFIGURATION))  <br />using (SqlCommand command = new SqlCommand("SomeSQL", connection))  <br />{  <br />   connection.Open();  <br />   command.ExecuteNonQuery();  <br />} </code><br /><br /><span style="font-weight:bold;">throw vs. throw ex</span><br />On occasion you'll need to rethrow an exception because, while you can't handle the exception, you still need to execute some code when an exception occurs. In this case you should use <span style="font-weight:bold;">throw</span> to preserve the full exception stack. Contrary, if you find yourself in a situation where you think you want to rethrow an exception with your handler as the source, a better approach is to use a nested exception:<br /><code>catch (HibernateException ex)<br />{<br />  if (transaction != null) { transaction.Rollback(); }<br />  throw new Exception("Email already in use", ex);<br />}</code><br /><br /><span style="font-weight:bold;">When to throw</span><br />A method should throw when it wasn't able to do what it was suppossed to do.<br /><br />If you want a more in-depth explanation on the subject, I recommend you go and read the <a href="http://codebetter.com/blogs/karlseguin/archive/2008/05/29/foundations-of-programming-pt-8-back-to-basics-exceptions.aspx">article</a></div>

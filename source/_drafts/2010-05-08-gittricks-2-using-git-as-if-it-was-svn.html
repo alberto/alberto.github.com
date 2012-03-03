@@ -1,0 +1,9 @@
+---
+layout: post
+title: "gittricks #2. Using git as if it was svn"
+date: 2010-05-08
+comments: true
+---
+
+<div class='post'>
+So you are migrating from svn and want to use git the same way you used to do things in svn? Not ready to mess with the index and local branches?<br /><br />Use this simple alias:<br /><br />[alias]<br />&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;cosh = !sh -c 'git add -A &amp;&amp; git commit -m \"$1\" &amp;&amp; git push' -<br /><div><br /></div><div>Now you can just use:</div><div><br /></div><div>git cosh "Commiting like it is 1999"</div></div>

@@ -1,0 +1,9 @@
+---
+layout: post
+title: "Generating burndown graphs using jpgraph"
+date: 2010-03-12
+comments: true
+---
+
+<div class='post'>
+<a href="http://www.cs.utk.edu/~plank/plank/jgraph/jgraph.html">Jgraph</a> is a little app I use to generate our burndown graphs. Here is a little how-to use it.<br />First install the application:<br />sudo aptitude install jgraph<br /><br />Create a script to execute it:<br /><br /><br />#!/bin/bash<br /><br />jgraph -P -L burndown-1-week.jgr | ps2pdf - burndown.pdf<br /><div><br /></div><div><br /></div></div>
