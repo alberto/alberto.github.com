@@ -1,0 +1,576 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>sharp bites</title>
+  <meta name="author" content="alberto">
+
+  
+  <meta name="description" content="
+Change is expensive, no question about it. However, consider the alternative—stagnation.&#8211; Jim Highsmith
+">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://alberto.github.com/page/4">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="sharp bites" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">sharp bites</a></h1>
+  
+    <h2>standing on the shoulders of giants</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:alberto.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/03/12/price-of-change/">The price of change</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-12T00:00:00+01:00" pubdate data-updated="true">Mar 12<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<blockquote>Change is expensive, no question about it. However, consider the alternative—stagnation.</blockquote><cite>&#8211; Jim Highsmith</cite></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/03/10/targetting-net-20-with-nant-and-visual/">Targetting .NET 2.0 with Nant and Visual Studio 2008</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-10T00:00:00+01:00" pubdate data-updated="true">Mar 10<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+If you try to migrate a solution to VS2008 and you are using nant, you&#8217;ll probably find a few problems. This is one of them I am documenting for you.<br />I wanted to use VS2008 and nant, but still want target the .net 2.0 framework. I read somewhere I needed to install the .net 2.0 sdk, but I was still having issues, where msbuild was complaining it didn&#8217;t recognize the format of the solution file.<br />It turns out you need to change nant.settings.currentframework to &#8220;net-3.5&#8221;, so that it is the version of msbuild that comes with msbuild who compiles the solution (so I am not sure anymore you need the .net 2.0 sdk). It will still target the .net 2.0 framework for your projects if you set that that way in VS, as msbuild uses that info for the target.<br /><br />Hope it helps someone out there.</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/02/22/programming-for-mob-sharks-no-thanks/">Programming for the Mob sharks? No, thanks.</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-02-22T00:00:00+01:00" pubdate data-updated="true">Feb 22<span>nd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<a href="http://c2.com/">Ward Cunniham</a>, of <a href="http://c2.com/cgi/wiki">Ward&#8217;s Wiki</a> fame, was the coiner of the term &#8220;technical debt&#8221;. He made an interesting clarification in the following video:<br /><object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/pqeJFYwnkjE&hl=es&fs=1"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/pqeJFYwnkjE&hl=es&fs=1" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object><br /><br />According to his intention, the term is usually misused to reflect (and even encourage) the writing of sloppy code with the excuse that it will be refactored later. His original vision was more aligned with the XP style of simple design.<br /><br />Doing bad code with the excuse of refactoring somewhere in the future is not technical debt we are going to pay, but rather asking money from loan mob sharks at an astronomic interest rate and the expenses of losing a few body parts in the way.<br /><br />PS: It is funny how the metaphor was coined as an analogy that his boss could understand, but it has grown to be used and abused by everybody in the industry. Maybe that&#8217;s also related to the debt culture that has drawn our uneducated society into the current situation.</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/12/04/quality/">Quality</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-04T00:00:00+01:00" pubdate data-updated="true">Dec 4<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<blockquote>Quality means doing it right when no one is looking.</blockquote><cite>&#8211; Henry Ford</cite></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/12/04/assumptions/">Assumptions</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-04T00:00:00+01:00" pubdate data-updated="true">Dec 4<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<blockquote>Assumption is the mother of all screw-ups.</blockquote><cite>&#8211; Wethern&#8217;s Law of Suspended Judgment</cite></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/12/04/achieving-mastery/">Achieving Mastery</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-12-04T00:00:00+01:00" pubdate data-updated="true">Dec 4<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<blockquote>First, master the fundamentals.</blockquote><cite>&#8211; Larry Bird</cite></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/11/24/spam-low-isolator-for-sharepoint/">[SPAM-LOW] Isolator for SharePoint</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-11-24T00:00:00+01:00" pubdate data-updated="true">Nov 24<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+The Typemock guys have released a version of Typemock isolator for SharePoint. This is the announcement (which will hopefully grant me a license to try Typemock):<br /><br />Typemock are offering their new product for <a href="http://www.typemock.com/sharepointpage.php?utm_source=sp_bb&utm_medium=blog_4sp&utm_campaign=sp_bb">unit testing SharePoint</a> called Isolator For SharePoint, for a special introduction price. it is the only tool that allows you to <a href="http://blog.typemock.com/2008/11/newisolatorforsharepointtoolforunittest.html?utm_source=typeblog&utm_medium=sp_bb&utm_campaign=typeblog">unit test SharePoint</a> without a SharePoint server. To learn more <a href="http://www.typemock.com/sharepointpage.php?utm_source=sp_bb&utm_medium=blog_4sp&utm_campaign=sp_bb">click here</a>.<br /><span style="font-weight:bold;"><br />The first 50 bloggers</span> who blog this text in their blog and tell us about it, will get <font color="#ff0000">a Full Isolator license</font>, Free. for rules and info <a href="http://blog.typemock.com/2008/11/newisolatorforsharepointtoolforunittest.html">click here</a>.</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/10/15/fix-cant-install-updates-on-windows-xp/">Fix: Can&#8217;t install updates on Windows XP after installing SP2</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-10-15T00:00:00+02:00" pubdate data-updated="true">Oct 15<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+Just in case it happens to me (or you) again.<br /><br />1. Open command prompt (or use a for a <a href="http://sourceforge.net/projects/console/">better console</a>).<br />2. net stop wuauserv<br />3. regsvr32 %windir%\system32\wups2.dll (regsvr32 %windir%\syswow64\wups2.dll for win64)<br />4. net start wuauserv<br />5. exit<br /><br /><br />http://forums.cnet.com/5208-6142_102-0.html?forumID=5&threadID=276886&messageID=2660716<br />http://support.microsoft.com/kb/943144</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/09/26/why-svn-sucks/">Why SVN sucks</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-09-26T00:00:00+02:00" pubdate data-updated="true">Sep 26<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<div dir="ltr" style="text-align: left;" trbidi="on"><blockquote>&#8220;A common desire is to refactor source code, especially in Java-based software projects. Files and directories are shuffled around and renamed, often causing great disruption to everyone working on the project. Sounds like a perfect case to use a branch, doesn&#8217;t it? Just create a branch, shuffle things around, and then merge the branch back to the trunk, right?<br /><br />Alas, this scenario doesn&#8217;t work so well right now and is considered one of Subversion&#8217;s current weak spots.&#8221;</blockquote><cite>&#8211; Subversion book</cite><br /><br />The fact that subversion lacks a true rename operation (it is done via copy &amp; delete) you can get into a lot of troubles if you rename or move files in subversion if somebody else modifies the same file meanwhile. And by troubles I mean losing data! (If you want more info about it, check <a href="http://subversion.tigris.org/issues/show_bug.cgi?id=2282">this bug entry</a>. You will find the detailed use cases in the attached files there.)<br /><br />For a fast rename (or move, which is exactly the same operation) &amp; commit, there is a low probability you run into this issue (assuming the other guy also updates frequently), so things aren&#8217;t so critical here. But, when working with branches, it&#8217;s a whole new story. They will live much longer (from days to weeks or months) so the probability of somebody modifying a file renamed in another branch increases a lot. That effectively means you cannot rename or move files if you use branches. Yeah, you read it right. If you use branches, moving files <span style="font-weight: bold;">is not safe</span>. End of story.<br /><br />So, what svn is forcing us to do is either:<br />a) Don&#8217;t rename files.<br />b) Don&#8217;t use branches.<br />c) Don&#8217;t use subversion.<br /><br />a) is simply stupid, so let&#8217;s forget it. b) might be ok for some people/enviroments. c) is what you really should be doing if b) is not an option (which makes perfect sense).<br /><br />If you are looking for alternatives, use git or mercurial.</div></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/09/05/nant-vs-msbuild/">nant vs. msbuild</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-09-05T00:00:00+02:00" pubdate data-updated="true">Sep 5<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+Yes, this is yet another post on <a href="http://nant.sourceforge.net/">nant</a> vs. <a href="http://msdn.microsoft.com/en-us/library/0k6kkbsd.aspx">msbuild</a>.<br />I had to choose which one of the two to use at the company I work for. After doing a lot of research, it looks like there aren&#8217;t many differences between them. Here are some of the pro/cons I found:<br /><br />- msbuild comes from Microsoft (yes, that usually matters to some (not all, like me) people)<br />- msbuild is already installed in every .net developer machine (not a big deal)<br />- msbuild has probably better integration with VS build process<br />- msbuild supports parallel builds since .net 3.5 (not that it really matters, since you usually use msbuild from nant to build your projects, anyway).<br />- msbuild evaluates filesets at startup. This seems to cause some headaches when you want to manipulate files generated during the building process.<br />- you can redefine targets in msbuild. in nant you can define general targets and just make your build files call those (or create and use hooks, which is a solution I don&#8217;t really like).<br />- nant has more examples and better documentation<br />- there is much more information about nant than about msbuild on the web, according to <a href="http://www.google.es/trends?q=msbuild%2C+nant">google trends</a> and google search results (both in english and spanish)<br />- nant has some more tasks, but with <a href="http://msbuildtasks.tigris.org/">msbuildtasks</a>/<a href="http://www.codeplex.com/sdctasks">sdc tasks</a> it&#8217;s on par with nant and <a href="http://nantcontrib.sourceforge.net/">nantcontrib</a>.<br />- nant helper functions and expressions are better ¿?<br />- I like nant syntax better.<br />- nant is more mature, msbuild was born as an alternative (alt.alt.net :D) to nant for companies with ridiculous &#8220;no open source here&#8221; and Microsoft &#8220;I can&#8217;t support an open source project I don&#8217;t control&#8221; way of life.<br />- most open source projects tend to use nant over msbuild, so there are plenty of build files and task you can make good use of or have as a reference.<br />- I have already played with nant a little, so I know it&#8217;s syntax better.<br />- I have started to use nant to automatically generate config files from templates for the different enviroments, and didn&#8217;t find the way to do so in msbuild.<br />- nant is open source, so people can contribute to it.<br />- nant is not tied to microsoft release cycle, msbuild is.<br /><br /><br />There isn&#8217;t any strong reason in itself to pick one, but adding them up, things favoured significantly nant over msbuild, so I ended up choosing the former.<br /><br />If you want to read more on the subject, here are some of the links I used in my research (in no particular order):<br />http://ayende.com/Blog/archive/2008/02/25/Zero-Friction-and-why-Defaults-Matters.aspx<br />http://www.winterdom.com/weblog/2007/09/21/MSBuildVsNAnt.aspx<br />http://www.paraesthesia.com/archive/2008/01/08/why-nant-is-better-than-msbuild.aspx<br />http://www.innoq.com/blog/hw/2007/09/24/msbuild_vs_nant.html<br />http://www.codeproject.com/KB/books/msbuild.aspx<br />http://brandonbyars.com/blog/articles/2008/01/10/Managing-Config-Files<br />http://www.paraesthesia.com/archive/2008/01/08/why-nant-is-better-than-msbuild.aspx<br />http://kentb.blogspot.com/2008/02/fail-early-with-full-builds-from-within.html<br />http://weblogs.asp.net/rosherove/archive/2008/01/18/trying-out-team-city-looks-promising.aspx<br />http://codebetter.com/blogs/jeremy.miller/archive/2007/09/20/is-there-a-good-reason-to-switch-to-msbuild.aspx<br />http://codebetter.com/blogs/jeffrey.palermo/archive/2007/09/25/demo-on-automating-your-build-with-nant-and-ccnet.aspx<br />http://www.distribucon.com/blog/WhyMSBuildSucks.aspx<br />http://www.tkachenko.com/blog/archives/000643.html</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/page/5/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/page/3/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2011/11/06/git-started-1-using-git-with-svn-server/">git started #1. Using git with a svn server</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/10/23/change/">Change</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/15/becoming-agile-manager-transforming/">Becoming an Agile Manager: Transforming the Three Dysfunctions of Management</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/01/29/setting-up-ruby-testing-environment-on/">Setting up a ruby testing environment on Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/01/25/setting-up-your-ruby-environment-on/">Setting up your ruby environment on Linux</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/alberto">@alberto</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'alberto',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("sharpbites", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/sharpbites" class="twitter-follow-button" data-show-count="false">Follow @sharpbites</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - alberto -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'sharpbites';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

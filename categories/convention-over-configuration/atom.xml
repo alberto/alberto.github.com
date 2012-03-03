@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: convention over configuration | sharp bites]]></title>
+  <link href="http://alberto.github.com/categories/convention-over-configuration/atom.xml" rel="self"/>
+  <link href="http://alberto.github.com/"/>
+  <updated>2012-03-03T20:07:36+01:00</updated>
+  <id>http://alberto.github.com/</id>
+  <author>
+    <name><![CDATA[alberto]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Java and (the lack of) CoC]]></title>
+    <link href="http://alberto.github.com/2009/10/16/java-and-lack-of-coc/"/>
+    <updated>2009-10-16T00:00:00+02:00</updated>
+    <id>http://alberto.github.com/2009/10/16/java-and-lack-of-coc</id>
+    <content type="html"><![CDATA[<div class='post'>
+<blockquote>   <p>&quot;Java is a DSL to transform big Xml documents into long exception stack traces.&quot;</p>   <cite>-- Scott Bellware</cite></blockquote>  </div>
+
+]]></content>
+  </entry>
+  
+</feed>

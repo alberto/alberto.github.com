@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: php | sharp bites]]></title>
+  <link href="http://alberto.github.com/categories/php/atom.xml" rel="self"/>
+  <link href="http://alberto.github.com/"/>
+  <updated>2012-03-03T20:07:36+01:00</updated>
+  <id>http://alberto.github.com/</id>
+  <author>
+    <name><![CDATA[alberto]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Sometimes You Have To Take A Step Back Before You Can Move Forward]]></title>
+    <link href="http://alberto.github.com/2009/11/08/sometimes-you-have-to-take-step-back/"/>
+    <updated>2009-11-08T00:00:00+01:00</updated>
+    <id>http://alberto.github.com/2009/11/08/sometimes-you-have-to-take-step-back</id>
+    <content type="html"><![CDATA[<div class='post'>
+Or how I am moving to a PHP team to free myself from WebForms.<br /><br />So expect to find some stuff (probably including some rants) here about PHP from now on.</div>
+
+]]></content>
+  </entry>
+  
+</feed>

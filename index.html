@@ -1,0 +1,572 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>sharp bites</title>
+  <meta name="author" content="alberto">
+
+  
+  <meta name="description" content="So, you already know that svn sucks and you want to switch to git because you know it&#8217;s awesome, but you are stuck in a team environment of &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://alberto.github.com">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="sharp bites" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">sharp bites</a></h1>
+  
+    <h2>standing on the shoulders of giants</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:alberto.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2011/11/06/git-started-1-using-git-with-svn-server/">git started #1. Using git with a svn server</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-06T00:00:00+01:00" pubdate data-updated="true">Nov 6<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<div dir="ltr" style="text-align: left;" trbidi="on">So, you already know that <a href="http://www.sharpbites.com/2008/09/why-svn-sucks.html">svn sucks</a> and you want to switch to git because you know it&#8217;s awesome, but you are stuck in a team environment of svn-zombies.<br /><br />What can you do? You can try to convert all the non-deads at once&#8230; or you can use git-svn and get them into git one by one.<br /><br />git-svn let&#8217;s you interact with a svn server using git as your client.&nbsp;Some git GUIs support git svn. On Mac OSX you can use <a href="http://gitx.laullon.com/">GitX(L)</a>&nbsp;or <a href="http://www.sourcetreeapp.com/">SourceTree</a>. Here is how to do it using the commandline.<br /><br />To get a copy of your svn repo (assuming you have the de facto standard structure of trunk, branches and tags dirs) do:<br /><br /><code>git svn init -s http://path/to/your/svn/project</code><br /><br />From here, use your local repo as usually, i.e. do some hacking, add your files and commit them. Rinse, repeat. <br /><br /><code>git add somefile&nbsp;</code><br /><code>git commit</code><br /><code>...</code><br /><br />When you are ready to commit your changes, get the changes from the svn repo:<br /><br /><code>git svn rebase</code><br /><br />and commit your changes:<br /><br /><code>git svn dcommit</code><br /><br />That&#8217;s it!</div></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2011/10/23/change/">Change</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-10-23T00:00:00+02:00" pubdate data-updated="true">Oct 23<span>rd</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<div dir="ltr" style="text-align: left;" trbidi="on"><blockquote>“You never change things by ﬁghting the existing reality. To change something, build a new model that makes the existing model obsolete.” <cite>— R. Buckminster Fuller</cite></blockquote></div></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2011/04/15/becoming-agile-manager-transforming/">Becoming an Agile Manager: Transforming the Three Dysfunctions of Management</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-04-15T00:00:00+02:00" pubdate data-updated="true">Apr 15<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+A terrific talk by Diana Larsen on <a href="http://www.infoq.com/presentations/Managing-Agile">how to overcome 3 dysfunctional management traps</a>:&nbsp;magical thinking, illusion of control and individual blame using Agile.</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2011/01/29/setting-up-ruby-testing-environment-on/">Setting up a ruby testing environment on Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-29T00:00:00+01:00" pubdate data-updated="true">Jan 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+Now that <a href="http://www.sharpbites.com/2011/01/setting-up-your-ruby-environment-on.html">we have setup our ruby environment on Linux</a>,&nbsp;we are going to create a setup for testing purposes by adding some useful gems.<br /><br />For that, we will use a feature from <a href="http://rvm.beginrescueend.com/">rvm</a> called&nbsp;<a href="http://rvm.beginrescueend.com/gemsets/basics/">gemsets</a>. A gemset is an independent setup for your environment. That means you can have many environments with a different set of gems (hence the name) installed independently on each one (even with different ruby versions).<br /><br />Usually, when working on a project, you would create a gemset specific for that project, but in this case, we are going to create a gemset for practicing tdd, doing katas, coderetreats, etc. If you plan to use rvm in a serious project (which you should), please read first about <a href="http://rvm.beginrescueend.com/rvm/best-practices/">rvm best practices</a>.<br /><br /><span class="Apple-style-span" style="font-size: large;">A brief introduction to gemsets</span><br />For each version of ruby, rvm creates two gemsets, the default, empty gemset and the global gemset. You can list your gemsets with:<br /><blockquote>rvm gemset list</blockquote>Gems that are installed to the @global gemset are shared to all other gemset for that ruby. We won&#8217;t install anything here. Instead we will create our own gemset and put everything there.<br /><br />Create a tdd gemset:<br /><blockquote>rvm gemset create tdd</blockquote>Switch to that gemset:<br /><blockquote>rvm use gemset 1.9.2@tdd</blockquote>If you want to make this your default gemset (the one that will be loaded by default) you can do that by doing:<br /><blockquote>rvm use gemset 1.9.2@tdd &#8211;default</blockquote>Verify you are on the new gemset:<br /><blockquote>rvm gemset name</blockquote>You should get:<br /><blockquote>tdd</blockquote><span class="Apple-style-span" style="font-size: large;">Gems for testing that rock</span><br />You can install gems <b>for your current gemset</b> using:<br /><blockquote>gem install</blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">To do unit testing in ruby, <a href="http://relishapp.com/rspec">rspec</a> is a great choice.<br /><blockquote>gem install&nbsp;rspec</blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">To start using it, create an rspec file, like example_spec.rb inside a spec folder on the root of your project:</div><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;"><span class="Apple-style-span" style="color: #222222; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 21px;"></span></div><pre style="background-color: #e0f8e0; border-bottom-width: 1px; border-color: initial; border-left-color: rgb(8, 138, 8); border-left-width: 1px; border-right-color: rgb(8, 138, 8); border-right-width: 1px; border-style: initial; border-top-color: rgb(8, 138, 8); border-top-style: solid; border-top-width: 1px; font-family: inherit; font-style: inherit; font-weight: inherit; margin-bottom: 8px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 2px; padding-left: 5px; padding-right: 5px; padding-top: 2px; vertical-align: baseline; white-space: pre;"><span class="Apple-style-span" style="color: #222222; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 21px;">describe "something" do<br />  it "does something that passes" do<br />    5.should eq(5)<br />  end<br /></span></pre><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">You can then execute it by running:</div><blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">rspec spec/</div></blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">For a nicer, colored output, pass in the &#8211;colour flag to rspec</div><blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">rspec spec/ &#8211;colour&nbsp;</div></blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">Or create a .rspec config file&nbsp;on your project root (or in your home dir if you want to always use it), to tell rspec to use the colored output by default</div><blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">echo &#8220;&#8211;colour&#8221; &gt;&gt; .rspec</div></blockquote><br /><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">Excecuting rspec by hand all the time gets boring quickly, and it turns out computers are quite good at doing tasks repeteadly, so you can instead use <a href="http://ph7spot.com/musings/getting-started-with-autotest">autotest</a>, a cool gem from the <a href="http://www.zenspider.com/ZSS/Products/ZenTest/">ZenTest suite</a>&nbsp;that will automagically execute your tests when you save your files.</div><blockquote>gem install autotest</blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">Execute it from your project root.</div><blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">autotest &#8211;style rspec2 &#8211;quiet</div></blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">The &#8211;style flag tells autotest to look for rspec kind of tests. The &#8211;quiet flag removes a bit of noise you probably don&#8217;t care about.</div><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;"><br /></div><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">If you have created the .rpec file on your project root, you can omit the style flag and autotest will still find the tests.</div><blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">autotest &#8211;quiet</div></blockquote>If you are really lazy like me, you can instruct autotest to be quiet by default by creating a .autotest file in your home:<br /><blockquote>echo &#8220;Autotest.options[:quiet] = true&#8221; &gt;&gt; ~/.autotest</blockquote>So whatever option you want to use, let&#8217;s try it.&nbsp;Modify your rspec file and save it. Awesome, isn&#8217;t it? But wait,&nbsp;there is more!<br /><br />We&#8217;ll add a nice gem called <a href="https://github.com/fnando/test_notifier">test_notifier</a>.&nbsp;This is the topping of the cake. It will notify your OS with the result of your tests.<br /><br />In order to it on GNOME, we will need to install libnotify:<br /></div><blockquote>sudo apt-get install libnotify-bin</blockquote><blockquote>gem install test_notifier</blockquote>Configure autotest to use test_notifier:<br /><blockquote>echo &#8216;require &#8220;test_notifier/runner/autotest&#8221;&#8217; &gt;&gt; .autotest</blockquote>Or add the following to your rspec/spec_helper file if you want to use it directly with rspec:<br /><blockquote>require &#8220;test_notifier/runner/spec&#8221;</blockquote>Now you should get a nice notification when you save your file.<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/_kQ7iivKjVno/TUSNLUgyTcI/AAAAAAAAARA/zA_zkMV45dk/s1600/test_notifier.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="138" src="http://1.bp.blogspot.com/_kQ7iivKjVno/TUSNLUgyTcI/AAAAAAAAARA/zA_zkMV45dk/s320/test_notifier.png" width="320" /></a></div></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2011/01/25/setting-up-your-ruby-environment-on/">Setting up your ruby environment on Linux</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-25T00:00:00+01:00" pubdate data-updated="true">Jan 25<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+Here are the instructions on how to set up a ruby environment for Linux, in case you want to start playing with it.<br /><br /><b>NOTE:</b> Don&#8217;t use the packages from your distribution. They are outdated and will cause more harm than good. Use one of the methods below.<br /><br /><span class="Apple-style-span" style="font-size: large;">The quick and easy way</span><br />If you are planning to use Rails anyways, you can use the script from <a href="https://github.com/joshfng/railsready">railsready</a>.<br />It will install rails, passenger, and a shitload dependencies it need for everything to work smoothly.<br />You can install it by running:<br /><blockquote>sudo wget &#8211;no-check-certificate https://github.com/joshfng/railsready/raw/master/railsready.sh &amp;&amp; bash railsready.sh</blockquote>The script will ask if you want to build Ruby from source or install RVM.&nbsp;Choose RVM.<br /><br />It will download around 50MB of libraries from the repositories and then download and compile rvm, ruby and download again some other gems, so it will take some time. Don&#8217;t worry, you don&#8217;t have to do anything, just wait.<br /><br /><span class="Apple-style-span" style="font-size: large;">The almost-as-quick, almost-as-easy way</span><br />If you don&#8217;t intend to use rails and don&#8217;t feel like installing all that stuff, use the following method. It&#8217;s basically doing the same thing as the previous script, except you don&#8217;t need so many dependencies, and you won&#8217;t install rails or passenger.<br /><br /><b>Installing RVM</b><br /><br /><a href="http://rvm.beginrescueend.com/">RVM</a> (Ruby Version Manager)&nbsp;is a tool which allows us to easily install, manage and work with multiple ruby environments (interpreters and gems) on the same machine. This means we can create different environments with distincts versions, of ruby, rails, or whatever gem we want, without any headaches.<br /><div><br /></div><div><div>In order to install rvm, you&#8217;ll need curl, git and some compiler tools. We can get them with the following command:</div><blockquote>sudo apt-get install git-core curl build-essential</blockquote></div><div><div>To install rvm execute:</div><blockquote>bash &lt; &lt;( curl http://rvm.beginrescueend.com/releases/rvm-install-head )</blockquote></div><div><div>This command will install rvm in your home directory.</div></div><div>You need to include a line at the end of the .bashrc file to tell it to load rvm.</div><div>Follow carefuly the instructions on your terminal, specially the part about converting the return to an if statement</div><blockquote>&#8221;[ -z &#8220;$PS1&#8221; ] &amp;&amp; return&#8221;</blockquote><div><b>NOTE:</b> The railsready script doesn&#8217;t do this, and just appends the line loading rvm at the end of the file. RVM maintainers recommend otherwise, so you better do it their way.</div><div><br /></div><div>If you find any problems, check <a href="http://rvm.beginrescueend.com/rvm/install/">rvm site troubleshooting information</a>&nbsp;(section &#8216;Trhoubleshooting your install&#8217;)</div><div><div><br /></div><div>Finally reload your envirnonment executing:</div><blockquote>source ~/.bashrc</blockquote></div><div><b>Installing ruby</b></div><div><div>Now you have rvm installed and running, you can proceed to install ruby. You&#8217;ll need some packages first, the following command will tell you which:</div><blockquote>rvm notes</blockquote></div>In my case, these were:<br /># For Ruby (MRI &amp; ree) &nbsp;you should install the following OS dependencies:<br /><blockquote>sudo apt-get install build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf</blockquote><div><div>Now, we can install ruby 1.9.2:</div><blockquote>rvm install 1.9.2</blockquote><div>This will take a while, since it is dowloading ruby sources and compiling them.</div><div><br /></div><div>You can check ruby is all fine and dandy by running</div><blockquote>ruby -v</blockquote><div>You should get something similar to:</div><blockquote>ruby 1.9.2p136 (2010-12-25 revision 30365) [x86_64-linux]</blockquote>On the next post I will explain how to setup your environment for testing using rvm.</div></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2011/01/01/new-year-resolutions/">New Year resolutions</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-01T00:00:00+01:00" pubdate data-updated="true">Jan 1<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+Here are my resolutions for the present year:<br />- Read LESS. Yes, less reading, more doing.<br />- Keep learning ruby.<br />- Practice! I&#8217;m resolved to do a kata EVERY day, one kata each month. Wanna join? Use the hashtag&nbsp;<a href="http://search.twitter.com/search?q=12months12katas">#12months12katas</a>.<br />- Rediscover enjoyment, on many aspects. This is a tough one, since I&nbsp;first&nbsp;need to find direction, then courage to act in consequence.</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2011/01/01/12-months-12-katas-january-string/">12 months, 12 katas: January. String calculator</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-01T00:00:00+01:00" pubdate data-updated="true">Jan 1<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+As recommended by <a href="http://www.twitter.com/plagelao">@plagelao</a> on twitter, the kata for January will be <a href="http://www.osherove.com/tdd-kata-1/">String Calculator</a>.<br />Here are the specs:<br /><span class="Apple-style-span" style="color: #0a0606; font-family: Tahoma, Arial, Helvetica, Geneva, sans-serif; font-size: 14px; line-height: 18px;"></span><br /><ol><li>Create a simple String calculator with a method&nbsp;<strong>int Add(string numbers)</strong><ol><li>The method can take 0, 1 or 2 numbers, and will return their sum (for an empty string it will return 0) for example<strong>&nbsp;“” or “1” or “1,2”</strong></li><li>Start with the simplest test case of an empty string and move to 1 and two numbers</li><li>Remember to solve things as simply as possible so that you force yourself to write tests you did not think about</li><li>Remember to refactor after each passing test</li></ol></li><li>Allow the Add method to handle an unknown amount of numbers</li><li>Allow the Add method to handle new lines between numbers (instead of commas).<ol><li>the following input is ok:&nbsp; “1\n2,3”&nbsp; (will equal 6)</li><li>the following input is NOT&nbsp;ok:&nbsp; “1,\n”&nbsp;</li><li>Make sure you only test for correct inputs. there is no need to test for invalid inputs for these katas</li></ol></li><li>Allow the Add method to handle a different delimiter:<ol><li>to change a delimiter, the beginning of the string will contain a separate line that looks like this:&nbsp;&nbsp; “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter is ‘;’ .</li><li>the first line is optional. all existing scenarios should still be supported</li></ol></li><li>Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed.if there are multiple negatives, show all of them in the exception message<hr /><strong>stop here if you are a beginner</strong>. Continue if you can finish the steps so far in less than 30 minutes.<hr /></li><li>Numbers bigger than 1000 should be ignored, so adding 2 + 1001 &nbsp;= 2</li><li>Delimiters can be of any length with the following format:&nbsp; “//[delimiter]\n” for example: “//[***]\n1***2***3” should return 6</li><li>Allow multiple delimiters like this:&nbsp; “//[delim1][delim2]\n” for example “//[*][%]\n1*2%3” should return 6.</li><li>make sure you can also handle multiple delimiters with length longer than one char</li></ol><br />Enjoy!</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/12/20/greed-game-koan/">Greed game koan</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-20T00:00:00+01:00" pubdate data-updated="true">Dec 20<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<a href="http://twitter.com/jjballano">@jjballano</a>&nbsp;recently&nbsp;<a href="https://gist.github.com/736614">posted</a>&nbsp;his version of the <a href="http://en.wikipedia.org/wiki/Greed_(dice_game)">Greed game</a>, as part of his learning experience with <a href="http://rubykoans.com/">Ruby Koans</a>. As I am following that very same path, I thought it could also be worth for me to share <a href="https://gist.github.com/747881">my implementation of Greed</a> for people to comment on it.<br /><br /><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">The code could surely be much prettier since I am still trying to get my head around ruby block-passing, among others, so comments (and patches!) are welcome.</div><div><br /></div><br /><script src="https://gist.github.com/747881.js?file=score.rb"></script><br /><br />UPDATE: The code seems to update automatically to the latest version on github, you can find the original <a href="https://gist.github.com/747881/3b8cb77970b0b22b2265904b3c02acf7bae84a3f#file_score.rb">here</a>.</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/11/30/writing-better-object-oriented-code/">Writing Better Object Oriented Code</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-30T00:00:00+01:00" pubdate data-updated="true">Nov 30<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<a href="http://twitter.com/#!/gregyoung">Greg Young</a> did a great presentation at <a href="http://www.oredev.org/">Oredev</a> about <a href="http://vimeo.com/17151526">writing Object Oriented code the right way</a>. It&#8217;s so full of good stuff I could not bother to make a summary out of it. Go watch the original video. Now.</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/11/26/ive-read-peopleware/">I&#8217;ve read: Peopleware</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-11-26T00:00:00+01:00" pubdate data-updated="true">Nov 26<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+&#8216;Peopleware&#8217; is one of those classic books of our profession, a must-read. Unfortunately, it&#8217;s not easy to grab a copy of it on the stores (it may have been discontinued, I&#8217;m not sure).&nbsp;After a failed attempt to borrow it from <a href="http://twitter.com/jmbeas">Jose Manuel Beas</a>,&nbsp;a few weeks ago, I finally got the chance to read it (thanks <a href="http://twitter.com/rubenbpv">Rubén</a>!).<br /><br />All I can say is, if you have the chance, read it! Just so you can have a glimpse at it, here are some notes I&nbsp;took from it. Most are direct quotes,&nbsp;although&nbsp;I reworded a few to&nbsp;synthesize.<br /><br /><span class="Apple-style-span" style="font-size: large;">Productivity</span><br /><span class="Apple-style-span" style="font-size: large;"><span class="Apple-style-span" style="font-size: small;">As long as workers are crowded into noisy, disruptive space, it&#8217;s not worth improving anything but the workspace.</span></span><br />Experiments showed projects without deadlines had the best productivity.<br />Better performance can be explained entirely by more effective ways of handling people, modifying the workplace and corporate culture.<br />Developers main work is human communication to organize the user&#8217;s expressions of needs into formal procedure.<br />People won&#8217;t work better under a lot of pressure.<br />The manager&#8217;s function is not to make people work, but to make it possible for people to work.<br />Best people outperform the worst by 10 and the median performer by 2.5.<br />Years of experience are not correlated to productivity.<br />Interrupting flow not only causes disruption but frustration.<br />There are two types of work: Individual work is noise sensitive and needs flow.&nbsp;Group work is noise producing. Adapt your workspace to make both kinds of work possible.<br />Measure and try to maximize flow time, but don&#8217;t let managers access to data.<br />Ignoring the phone must be accepted by corporate policy.<br />Ask people about their workspace conditions, what affects their productivity.<br />Listening to music uses the right part of the braing, which is responsible for creativity.<br />Encourage teams to customize their space.<br /><br /><span class="Apple-style-span" style="font-size: large;">People</span><br />People who work for you will be more or less the same at the end as they were at the beginning, so they better be right for the job from the start.<br />Find the right people, make them happy, turn them loose.<br />Success or failure is in the cards from the moment the team is formed and the initial directions set out.<br />Corporate pressure is pushing towards the company average, encouraging you to hire people that look, sound and think like everybody else.<br /><br /><span class="Apple-style-span" style="font-size: large;">Hiring</span><br />(Tell about hiring a juggler) &#8216;Don&#8217;t you want to see me juggle?&#8217;<br />Make people bring their code portfolio for interviews.<br />Make candidates prepare an audition with the team 10-to-15 minute presentation on some aspect of past work.<br /><br /><span class="Apple-style-span" style="font-size: large;">Good organizations</span><br />Late promotion is a sign of health.<br />With a low and flat hierarchy, people at the lowest level have, on average more years of experience.<br />Strive to be the best<br />Grow a community feeling.<br />Focus on long term benefits.<br />Widespread sense that you are expected to stay<br />Invest in personal growth<br />Retrain your people<br />When you automate a system, you make it deterministic, so it looses its self-healing ability. A&nbsp;<b>M</b>ethodology (capital &#8216;M&#8217; here) can produce the same results on you organization.<br />To achieve convergence of methods, use training, tools and peer review.<br />Don&#8217;t declare something a standard until it is a de facto standard.<br />Hawtorne effect (experiment of raising and lowering the light) People perform better when they are trying something new.<br />You have to make non-standard approaches to the rule. Whatever standard there is should be brief and gentle.<br />Let a hundred flowers blossom and let a hundred schools of thought contend. (Mao Tse-tung)<br /><br /><span class="Apple-style-span" style="font-size: large;">Jelled teams</span><br />Productive teams = challenge + team interaction<br />They have momentum.<br />They have a goal<br />The purpose of a team is not goal attainment but goal achievement.<br />People on jelled teams are often so involved you have to remind them&nbsp;that what they are trying to accomplish is not winning a war.<br />Jelled teams have low turnover and strong sense of identity.<br />Money, status and position for advance matter a lot less. Enjoyment is an obvious sign.<br />You can&#8217;t make teams jell, just act to improve the odds.<br />Teamicide techniques:<br /><br /><ul><li>Defensive management</li><li>Bureaucracy</li><li>Physical&nbsp;separation</li><li>Fragmentation of people&#8217;s time</li><li>Quality reduction</li><li>Phony deadlines</li><li>Clique control</li></ul><br />Good managers provide opportunities for the team to succeed together. The best success is the one in which there is no evident management. The best boss is the one who can manage without the team knowing they&#8217;ve been managed.<br /><br />Growing jelled teams:<br /><br /><ul><li>Give people autonomy and responsibility</li><li>Let them work alone, without constant supervision</li><li>They break the rules when they believe in it</li><li>Let them choose mates and projects</li><li>Let them exercise their natural authority in their area of expertise.</li></ul><br />Chemistry for team formation:<br /><br /><ul><li>Make a cult of quality</li><li>Provide satisfying confirmation</li><li>Build a sense of eliteness</li><li>Allow and encourage heterogeneity</li><li>Preserve and protect successful teams.</li><li>Provide strategic but not tactical direction</li></ul><br /><br /><span class="Apple-style-span" style="font-size: large;">Chaos (it is not that bad!)</span><br />Small amounts of disorder are benefitial<br />Pilot projects, war games, brainstorming, provocative training experiences, training, trips, conferences, celebrations, retreats,&#8230;<br /><br />If your corporation is fortunate enough to have a self-motivated superachiever on-board, it&#8217;s enough to say &#8220;Define your own job&#8221;<br />&#8220;Free electrons&#8221; have a strong role in choosing their own orbits.<br /><br /><span class="Apple-style-span" style="font-size: large;">Being a Change Agent</span><br />Focus on one thing to change. Raise people&#8217;s consciousness of it, so they help you change it.<br />Be careful with motivational posters, they can have the opposite effect.<br />Fuck overtime.<br />Competition inhibits coaching.<br />Any action that rewards team members differently is likely to foster competition.<br />The success of the individual should be tied to the success of the whole.<br />People hate change. Any change.<br />Your enemies are blindly loyals and militantly opposed to change.<br />The fundamental response to change is not logical, but emotional.<br />Celebrate the old as a way to help make change happen.<br />Be aware that chaos is an integral part of change. Otherwise, you mistake it for the new status quo and will want to change back.<br />Change always involves chaos, it is necessary and can&#8217;t be shortcut. The more painful the chaos, the greater the perceived value of the new status quo.<br />Change won&#8217;t even get started unless people feel safe when they know they won&#8217;t be demeaned for proposing or trying a change.<br />Change only has a chance of&nbsp;succeeding&nbsp;if failure is also&nbsp;OK.<br /><br /><span class="Apple-style-span" style="font-size: large;">Organizational learning</span><br />Learning is limited by an organization&#8217;s ability to keep its people.<br />If the retrained people leave, investment is lost and learning is gone.<br />Successful&nbsp;learning organizations are always characterized by strong middle management. In order for a vital learning center to form, middle managers must communicate with each other and learn to work together in effective harmony.<br /><br /><span class="Apple-style-span" style="font-size: large;">Waste</span><br />The ultimate management sin is wasting people&#8217;s time.<br />Organizations have need of ceremony.<br />Ceremony is good when it fulfills a need for appreciation by the team.<br />Early&nbsp;over-staffing&nbsp;is waste.<br />Fragmented time is waste, it breaks flow.<br /><br /><span class="Apple-style-span" style="font-size: large;">Community</span><br />Building a community makes a difference, but requires talent, courage and creativity. And an enormous invest of time, to be, at best, the catalyst.</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/page/2/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2011/11/06/git-started-1-using-git-with-svn-server/">git started #1. Using git with a svn server</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/10/23/change/">Change</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/15/becoming-agile-manager-transforming/">Becoming an Agile Manager: Transforming the Three Dysfunctions of Management</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/01/29/setting-up-ruby-testing-environment-on/">Setting up a ruby testing environment on Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/01/25/setting-up-your-ruby-environment-on/">Setting up your ruby environment on Linux</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/alberto">@alberto</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'alberto',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("sharpbites", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/sharpbites" class="twitter-follow-button" data-show-count="false">Follow @sharpbites</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - alberto -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'sharpbites';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

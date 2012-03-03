@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>AltNerdDinner: Part 1. Removing unwanted dependencies - sharp bites</title>
+  <meta name="author" content="alberto">
+
+  
+  <meta name="description" content="The first thing I have done is to set up the project on github, so if you want to have a look at the code, check the AltNerdDinner repository. Then &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://alberto.github.com/2009/10/03/altnerddinner-part-1-removing-unwanted">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="sharp bites" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">sharp bites</a></h1>
+  
+    <h2>standing on the shoulders of giants</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:alberto.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">AltNerdDinner: Part 1. Removing unwanted dependencies</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-03T00:00:00+02:00" pubdate data-updated="true">Oct 3<span>rd</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><div class='post'>
+<p>The first thing I have done is to set up the project on <a href="http://github.com/">github</a>, so if you want to have a look at the code, check the <a href="http://github.com/alberto/altnerddinner">AltNerdDinner repository</a>. Then I set up the project following the guidelines of my series <a href="http://sharpbites.blogspot.com/2009/09/road-to-continuous-integration.html">Continuous Integration series</a>.</p>  <p>Now we are set, there is some stuff I don&#8217;t want in AltNerdDinner, so I am mercilessly going to get rid of it.</p>  <h4>Bye, MSTest</h4>  <p>MSTest gives nothing useful beyond integration in VS (for which I prefer ReSharper&#8217;s Test Runner or TDD.NET). I won&#8217;t say it sucks, but <a href="http://haacked.com/archive/2007/09/04/should-microsoft-really-bundle-open-source-software.aspx">Phil Haack did</a>. It&#8217;s just there to satisfy MS-Only shops. It&#8217;s slow, and it evolves slowly too. It lags behind <a href="http://www.nunit.org/index.php">the</a>&#160;<a href="http://www.gallio.org/">alternative</a> <a href="http://www.codeplex.com/xunit">frameworks</a>. Oh, and it requires VS to be installed on your build server (crazy!), and&#8230; </p>  <p>So I replaced it with good ol&#8217;&#160; <a href="http://www.nunit.org/index.php">NUnit</a>. It basically involves replacing:</p>  <p>using Microsoft.VisualStudio.TestTools.UnitTesting; by using NUnit.Framework;</p>  <blockquote>   <p>[TestClass] and [TestMethod] by [TestFixture],&#160; and [Test]</p> </blockquote>  <p>and a bunch of calls to Assert.IsInstanceOfType(object, type); by Assert.IsInstanceOf(type, object); (pay attention to the signature change!).</p>  <h4>We don&#8217;t need no membership provider</h4>  <p>Right now I don&#8217;t want to deal with membership provider. I think it&#8217;s bloated and I don&#8217;t want to have to mess with the authentication right now, so I am going to replace it with a FakeMembershipService for the moment and leave the decision of whether revisiting it or completely replacing it (probably the latter) for a later time.</p>  <h4>LINQ to SQL is dead, long live NHibernate</h4>  <p>L2S is probably a decent option for this kind of simple app, and it&#8217;s very easy to quickly duct-tape a simple app. It has some goodies, like the visual designer and of course Linq. But it&#8217;s not the best option if your app gets bigger and you need some more advanced ORM features, like different mapping capabilities or different databases support. It&#8217;s not a bad tool, but it has <a href="http://codebetter.com/blogs/ian_cooper/archive/2008/07/01/architecting-linq-to-sql-part-10.aspx">some limitations</a> that need to be addressed and, unfortunately, the fact that <a href="http://www.infoq.com/news/2008/11/DLINQ-Future">L2S is being killed</a> means you are better not investing hard into it.</p>  <p>So I am planning to replace it with NHibernate, a mature and tested product&#160; that fits my needs. But just not yet. Right now, I will simply remove the L2S stuff and work with POCOs and an InMemoryRepository implementation (which is basically the FakeDinnerRepository present in the Tests project).</p>  <h5>The model</h5>  <p>As we can see on the picture of the original model, the domain is quite simple.<a href="http://lh3.ggpht.com/_kQ7iivKjVno/SseCJ_ZEG0I/AAAAAAAAAMQ/ehF8shEf9Dg/s1600-h/image11.png"><img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" border="0" alt="image" src="http://lh3.ggpht.com/_kQ7iivKjVno/SseCKvw9G1I/AAAAAAAAAMU/ft6vs8PlB_0/image_thumb9.png?imgmax=800" width="488" height="259" /></a></p>  <p>I have simply created POCO classes replacing the L2S generated ones.</p>  <p>After all the changes, we run all the tests and&#8230;</p>  <p><a href="http://lh5.ggpht.com/_kQ7iivKjVno/SseCLKN9WMI/AAAAAAAAAMY/KpeLlk_F18c/s1600-h/testsgreen2.jpg"><img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" border="0" alt="tests-green" src="http://lh5.ggpht.com/_kQ7iivKjVno/SseCL4M-ONI/AAAAAAAAAMc/Nr3Jv3PFVPc/testsgreen_thumb.jpg?imgmax=800" width="184" height="34" /></a></p>  <p>We&#8217;re done!</p>  </div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">alberto</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-03T00:00:00+02:00" pubdate data-updated="true">Oct 3<span>rd</span>, 2009</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/altnerddinner/'>altnerddinner</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://alberto.github.com/2009/10/03/altnerddinner-part-1-removing-unwanted/" data-via="sharpbites" data-counturl="http://alberto.github.com/2009/10/03/altnerddinner-part-1-removing-unwanted/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2009/09/28/road-to-continuous-integration-part-3/" title="Previous Post: The road to Continuous Integration. Part 3: Script it, build it, test it, break it, fix it. Commit it.">&laquo; The road to Continuous Integration. Part 3: Script it, build it, test it, break it, fix it. Commit it.</a>
+      
+      
+        <a class="basic-alignment right" href="/2009/10/06/altnerddinner-part-2-rich-man/" title="Next Post: AltNerdDinner: Part 2. Rich Man's Dependency Injection">AltNerdDinner: Part 2. Rich Man's Dependency Injection &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2011/11/06/git-started-1-using-git-with-svn-server/">git started #1. Using git with a svn server</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/10/23/change/">Change</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/15/becoming-agile-manager-transforming/">Becoming an Agile Manager: Transforming the Three Dysfunctions of Management</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/01/29/setting-up-ruby-testing-environment-on/">Setting up a ruby testing environment on Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/01/25/setting-up-your-ruby-environment-on/">Setting up your ruby environment on Linux</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/alberto">@alberto</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'alberto',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("sharpbites", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/sharpbites" class="twitter-follow-button" data-show-count="false">Follow @sharpbites</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - alberto -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'sharpbites';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://alberto.github.com/2009/10/03/altnerddinner-part-1-removing-unwanted/';
+        var disqus_url = 'http://alberto.github.com/2009/10/03/altnerddinner-part-1-removing-unwanted/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

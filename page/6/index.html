@@ -1,0 +1,574 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>sharp bites</title>
+  <meta name="author" content="alberto">
+
+  
+  <meta name="description" content="At all times, I want to produce code that is readable, maintainable and simple. [&#8230;] [I]t is considered polite to do this in a manner that &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://alberto.github.com/page/6">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="sharp bites" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">sharp bites</a></h1>
+  
+    <h2>standing on the shoulders of giants</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:alberto.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div class="blog-index">
+  
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/02/18/i-know-what-you-coded-last-summer/">I Know What You Coded Last Summer</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-02-18T00:00:00+01:00" pubdate data-updated="true">Feb 18<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<blockquote>At all times, I want to produce code that is readable, maintainable and simple. [&#8230;]                   [I]t is considered polite to do this in a manner that would make sense to the next developer that would have to touch this code. [&#8230;] A good suggestion that I take to heart is to assume that the next developer to touch your code is an axe murderer that knows where you live, and has a very short fuse.</blockquote><cite>&#8211; <a href="http://www.ayende.com">Ayende</a>, <a href="http://www.manning.com/rahien/">Building Domain Specific Languages in Boo</a></cite></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/01/24/returning-null-vs-empty/">Returning null vs. Empty Collection/Default Object</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-24T00:00:00+01:00" pubdate data-updated="true">Jan 24<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+In a nice thread on the <a href="http://tech.groups.yahoo.com/group/cli_dev/message/9849">cli_dev list (formerly altdotnet)</a> they discuss whether you should return null or an Empty Collection/Default Object when a query returns no results.<br /><br />There is a more or less common approach I agree with of returning a null collection when your query yields no results, like in GetUsers(), being therefore able to iterate it with a foreach(User user in GetUsers()) witout having to use safe-guards.<br /><br />I think Luke Breuer makes a good point too in <a href="http://tech.groups.yahoo.com/group/cli_dev/message/9855">this post</a> when talking about retrieving a particular result:<br /><blockquote>I like null checks to actually have significant meaning.  I&#8217;ve actually adopted a convention &#8211; GetAwesomeObject will return a valid object or throw; FindAwesomeObject might return null.  The idea is that a NullReferenceException means you really screwed up somewhere &#8211; you have a glaring logic error, because you didn&#8217;t account for possible emptiness. </blockquote></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/01/12/2008-will-be-year-of/">2008 will be the year of&#8230;</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-12T00:00:00+01:00" pubdate data-updated="true">Jan 12<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+Linux.<br />Hehe, I&#8217;m kidding. I think 2008 will be the year of <a href="http://www.agiledata.org/essays/tdd.html">Test Driven <span style="font-weight:bold;">Design</span></a>. I know it has been already there for a long time already, but I hope that it will become mainstream with the final release of the <a href="http://weblogs.asp.net/scottgu/archive/2007/10/14/asp-net-mvc-framework.aspx">ASP.NET MVC</a> framework Microsoft is releasing this year.<br /><br />Well, in fact, depending how long it takes for them to ship it, it may actually take a bit longer to be widely used tough, but I&#8217;m happy this is going to be finally adopted for web development.</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/01/10/aspnet-20-page-life-cycle/">ASP.NET 2.0 Page Life Cycle</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-10T00:00:00+01:00" pubdate data-updated="true">Jan 10<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<a onblur="try {parent.deselectBloggerImageGracefully();} catch(e) {}" href="http://4.bp.blogspot.com/_kQ7iivKjVno/R4ZOtzG4SNI/AAAAAAAAAD8/QeztqpeQpvs/s1600-h/Asp.Net2.0LifecycleBIG.png"><img style="display:block; margin:0px auto 10px; text-align:center;cursor:pointer; cursor:hand;" src="http://4.bp.blogspot.com/_kQ7iivKjVno/R4ZOtzG4SNI/AAAAAAAAAD8/QeztqpeQpvs/s400/Asp.Net2.0LifecycleBIG.png" border="0" alt=""id="BLOGGER_PHOTO_ID_5153893372292253906" /></a><br />Geez, I better move onto ASP.Mvc than learn the inner tricks of all that stuff. Seriously.<br /><br />Via <a href="http://spietrek.blogspot.com/2006/07/aspnet-20-page-life-cycle.html">Steve Pietrek</a></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/12/12/public-fields-vs-public-properties/">Public fields vs. Public properties</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-12T00:00:00+01:00" pubdate data-updated="true">Dec 12<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+ScottGu  blogged some time ago, among other interesting things, about the <a href="http://weblogs.asp.net/scottgu/archive/2007/03/08/new-c-orcas-language-features-automatic-properties-object-initializers-and-collection-initializers.aspx">difference between public fields and public properties</a>.<br /><br />I had always seen comments about the convenience of using public properties instead of public fields, but I hadn&#8217;t seen a real explanation until now. I tought, &#8220;why should I bother writing a getter and a setter? If I just use a public Foo field, I can refactor it into a Property if it turns out I have to.&#8221; It seems <a href="http://www.codinghorror.com/blog/archives/000654.html">I wan&#8217;t the only one that thought this very same thing</a>.<br /><br />But it turns out there are some differences:<br /><ul><li>You can&#8217;t databind against a variable. </li><li>Changing a variable to a property is <a href="http://blogs.msdn.com/abhinaba/archive/2006/04/11/572694.aspx">a breaking change</a>. <strong style="font-weight: normal;">When you change a field to a property you need to re-build all code that used that field.</strong>  </li><li>Reflection works differently on variables vs. properties, so if you rely on reflection, it&#8217;s easier to use all properties.</li></ul>There are some other relevant points in both posts.<br />From Jeff&#8217;s:<br /><ul><li>Distinguishing public and private using only case is an accident waiting to happen. I still don&#8217;t have a clear view if I should be using  _bar = bar or this.bar = bar.<br /></li><li>Is it a property or a method? A property should do less work&#8211; a <i>lot</i> less work&#8211; than a method. Properties should be lightweight. If your property incurs significant effort, it should be refactored into an explicit method.</li></ul>From Scott&#8217;s, there is some <span style="font-size:100%;">syntactic </span>sugar for C#3 (or is it 3.5?):<br /><br /><span style="font-weight: bold;">Automatic Properties</span><br />This cleans up our classes from all the innecesary private fields.</span><br /><pre name="code" class="c-sharp">public class Person {<br />public string FirstName { get; set; }<br />   public string LastName { get; set; } <br />   public int Age { get; set; }<br />}<br /></pre><br /><span style="font-weight: bold;">Object initializers</span><br />Allow you to atomically initialize an object lacking an appropiate constructor. <a href="http://community.bartdesmet.net/blogs/bart/archive/2006/12/04/C_2300_-3.0-Feature-Focus-_2D00_-Part-2-_2D00_-Object-Initializers.aspx">More on this.</a><br /><pre name="code" class="c-sharp">Person person = new Person { FirstName="Scott", LastName="Guthrie", Age=32 };<br /></pre><span style="font-weight: bold;">Collection initializers</span><br />Same annonymous methods, but applied to collections.<br /><pre name="code" class="c-sharp">   List<person> people = new List<person> {<br />    new Person { FirstName = "Scott", LastName = "Guthrie", Age = 32 },<br />    new Person { FirstName = "Bill", LastName = "Gates", Age = 50 },<br />    new Person { FirstName = "Susanne", LastName = "Guthrie", Age = 32 }<br /> };<br /></person></person></pre></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/12/12/nullable-types-and-coallescence/">Nullable Types and the Coallescence Operator</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-12T00:00:00+01:00" pubdate data-updated="true">Dec 12<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+I&#8217;m going to talk a bit about a couple of nice features introduced in <span style="font-weight:bold;">.NET 2.0</span>. It&#8217;s nothing new, but it&#8217;s sweet anyway.<br /><br /><span style="font-weight:bold;">Nullable Types</span><br />Nullable types address the scenario where you want to be able to have a primitive type with a null (or unknown) value. This is common in database scenarios, but is also useful in other situations. This is a PITA to deal with in .NET 1.1, and you have to do some boxing or wrapping to get along with it.<br /><br />Since .NET 2.0 we have Nullable Types, a much cleaner way to do it.<br />Nullable Types are declared either as:<br /><code>System.Nullable<T> variable</code><br />or the simpler way:<br /><code>T? variable</code><br />where  T is the underlying type of the nullable type. T can be any value type including struct; it cannot be a reference type.<br /><br />Examples of Nullable Types:<br /><code>int? i = 10;<br />double? d1 = 3.14;<br />bool? flag = null;<br />char? letter = 'a';<br />int?[] arr = new int?[10];</code><br /><br />To do a null check we could write:<br /><code>if (i.HasValue) {...}</code><br />but again we can just simplify it to:<br /><code>if (i != null) {...}</code><br /><br />Nevertheless, there are a few things to consider when dealing with nullable types:<br /><br />Exceptions:<br /><code>int? n = null;<br />//int m1 = n;      // Will not compile.<br />int m2 = (int)n;   // Compiles, but will create an exception if x is null.<br />int m3 = n.Value;  // Compiles, but will create an exception if x is null.</code><br /><br />Operators:<br /><code>int? a = 10;<br />int? b = null;<br />a++;         // Increment by 1, now a is 11.<br />a = a * 10;  // Multiply by 10, now a is 110.<br />a = a + b;   // Add b, now a is null.</code><br /><br />Comparisons: If one of the nullable types is null, the comparison evaluates to false<br /><code>int? num1 = 10;<br />int? num2 = null;<br />if (num1 >= num2)<br />{<br />    System.Console.WriteLine("num1 is greater than or equal to num1");<br />}<br />else<br />{<br />    // num1 is NOT less than num2. --> WRONG ASSUMPTION!!! <br />}</code><br /><br />The bool? nullable type can contain three different values: true, false and null. As such, the cannot be used in conditionals such as with if, for, or while. It would give a compilation error.<br /><code>bool? b = null;<br />if (b) // Error CS0266.<br />{<br />}</code><br /><br /><span style="font-weight:bold;">The ?? (Coalescence) Operator</span><br />The ?? operator defines a default value that is returned when a nullable type is assigned to a non-nullable type.<br /><code>int? c = null;<br />// d = c, unless c is null, in which case d = -1.<br />int d = c ?? -1;</code><br /><br />This operator can also be used with multiple nullable types. For example:<br /><code>int? e = null;<br />int? f = null;<br />// g = e or f, unless e and f are both null, in which case g = -1.<br />int g = e ?? f ?? -1;</code></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/12/12/get-build-server-and-keep-it-clean/">Get a Build Server and Keep it Clean</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-12T00:00:00+01:00" pubdate data-updated="true">Dec 12<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<a href="http://codebetter.com/blogs/jeremy.miller/archive/2007/04/26/get-a-build-server-and-keep-it-clean.aspx">One goog tip from Jeremy Miller on continuous integration</a> is to generate your builds in a separate server to detect early problems with dependencies with libraries from Visual Studio, some third-party or whatever you might have in the GAC.</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/12/12/dont-fear-unknown/">Don&#8217;t fear the unknown</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-12T00:00:00+01:00" pubdate data-updated="true">Dec 12<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<blockquote>&#8220;If we only code to what the lowest-common-denominator can do then we&#8217;re never going to get anywhere.&#8221;</blockquote><cite><a href="http://blog.jagregory.com/">James Gregory</a></cite><br /><br />In other words. If the problem is the coders, not the code, change the coders, let the code alone.</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/12/10/write-your-test-first-because-adding/">Write your test first&#8230; because adding them later sucks</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-10T00:00:00+01:00" pubdate data-updated="true">Dec 10<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+So true. As <a href="http://www.jasonbock.net/JB/Default.aspx?blog=entry.a44b94d177ed4c139029e8cca6efe90f">jason</a> points out:<br /><ul><li>It&#8217;s boring. Write the obvious tests. Check code coverage - what did I miss? Write more tests capturing more edge cases. Wash, rinse, repeat. Ugh.</li><li>It&#8217;s not trivial. I&#8217;m trying to put tests around code that was created months ago, and trying to capture the mental state of the coder and what he was doing is damn near impossible.</li></ul>If you write the test first, you get all the benefits of TDD.<br /><ul><li>You don&#8217;t get just unit testing, but instead you let your design lead your development.</li><li>As you are writing the minimum code necessary to achieve the <span style="font-weight: bold;">behaviour </span>your test is checking, you end up with full code coverage.</li><li>You can refactor as you test-and-code (and test, and code,&#8230;), and you have your tests to cover your ass as you go. If you need to refactor when it&#8217;s all finished, poor you. You are just left out in the wild.</li></ul></div>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2007/12/09/peter-principle/">The Peter Principle</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-12-09T00:00:00+01:00" pubdate data-updated="true">Dec 9<span>th</span>, 2007</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<blockquote>&#8220;In a hierarchy every employee tends to rise to his level of incompetence.&#8221;</blockquote><cite>&#8211; Laurence J. Peter. <a href="http://www.amazon.com/gp/product/B000EECRH6/">&#8216;The Peter Principle&#8217;</a>, (1969).</cite><br /><br />This principle states that in any company or organization, people who do their job right get promoted to higher responsibility jobs repeteadly, until they end up in a job they are incompetents for.<br /><br />The logic behind this theory is that recruiting people for a new vacancy look first for the people already working in the organization. If an employee is performing well in his current duties, they feel he deserves to be promoted and deduce he will be equally efective in the new role. So, this employee will keep promoting while he is competent, and therefore he will eventually end up in a post he is no longer apt for, and he will get stuck in it.<br /><br />As a consecuence, we can infer that many high-end positions are occupied by people who don&#8217;t have enough qualifications for their jobs, and this leads to big mistakes in the decision being made by people leading those organizations.<br /><br />Thus, the Peter Principle is a big warning for people involved in the recruiting process. The requirements for the new job must be defined clearly, and when analyzing the aptitudes of existing employees for the vacancy, those people should be treated as any other applicant, despite of their efficiency at their current tasks.</div>
+</div>
+  
+  
+
+
+    </article>
+  
+  <div class="pagination">
+    
+      <a class="prev" href="/page/7/">&larr; Older</a>
+    
+    <a href="/blog/archives">Blog Archives</a>
+    
+    <a class="next" href="/page/5/">Newer &rarr;</a>
+    
+  </div>
+</div>
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2011/11/06/git-started-1-using-git-with-svn-server/">git started #1. Using git with a svn server</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/10/23/change/">Change</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/15/becoming-agile-manager-transforming/">Becoming an Agile Manager: Transforming the Three Dysfunctions of Management</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/01/29/setting-up-ruby-testing-environment-on/">Setting up a ruby testing environment on Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/01/25/setting-up-your-ruby-environment-on/">Setting up your ruby environment on Linux</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  
+  <a href="https://github.com/alberto">@alberto</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'alberto',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating&#8230;</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("sharpbites", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/sharpbites" class="twitter-follow-button" data-show-count="false">Follow @sharpbites</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - alberto -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'sharpbites';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

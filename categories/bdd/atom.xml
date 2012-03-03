@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: bdd | sharp bites]]></title>
+  <link href="http://alberto.github.com/categories/bdd/atom.xml" rel="self"/>
+  <link href="http://alberto.github.com/"/>
+  <updated>2012-03-03T20:07:36+01:00</updated>
+  <id>http://alberto.github.com/</id>
+  <author>
+    <name><![CDATA[alberto]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Write your test first... because adding them later sucks]]></title>
+    <link href="http://alberto.github.com/2007/12/10/write-your-test-first-because-adding/"/>
+    <updated>2007-12-10T00:00:00+01:00</updated>
+    <id>http://alberto.github.com/2007/12/10/write-your-test-first-because-adding</id>
+    <content type="html"><![CDATA[<div class='post'>
+So true. As <a href="http://www.jasonbock.net/JB/Default.aspx?blog=entry.a44b94d177ed4c139029e8cca6efe90f">jason</a> points out:<br /><ul><li>It's boring. Write the obvious tests. Check code coverage - what did I miss? Write more tests capturing more edge cases. Wash, rinse, repeat. Ugh.</li><li>It's not trivial. I'm trying to put tests around code that was created months ago, and trying to capture the mental state of the coder and what he was doing is damn near impossible.</li></ul>If you write the test first, you get all the benefits of TDD.<br /><ul><li>You don't get just unit testing, but instead you let your design lead your development.</li><li>As you are writing the minimum code necessary to achieve the <span style="font-weight: bold;">behaviour </span>your test is checking, you end up with full code coverage.</li><li>You can refactor as you test-and-code (and test, and code,...), and you have your tests to cover your ass as you go. If you need to refactor when it's all finished, poor you. You are just left out in the wild.</li></ul></div>
+
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[What tests are for]]></title>
+    <link href="http://alberto.github.com/2007/12/04/what-tests-are-for/"/>
+    <updated>2007-12-04T00:00:00+01:00</updated>
+    <id>http://alberto.github.com/2007/12/04/what-tests-are-for</id>
+    <content type="html"><![CDATA[<div class='post'>
+<blockquote>"Tests are absolutely not for checking to see if things went wrong. They are for articulating what code should do, and proving that code does it."</blockquote><cite>-- <a href="http://gilesbowkett.blogspot.com/2007/10/debugger-support-considered-harmful.html">Giles Bowkett</a></cite></div>
+
+]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: reminder | sharp bites]]></title>
+  <link href="http://alberto.github.com/categories/reminder/atom.xml" rel="self"/>
+  <link href="http://alberto.github.com/"/>
+  <updated>2012-03-03T20:07:36+01:00</updated>
+  <id>http://alberto.github.com/</id>
+  <author>
+    <name><![CDATA[alberto]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Fix: Can't install updates on Windows XP after installing SP2]]></title>
+    <link href="http://alberto.github.com/2008/10/15/fix-cant-install-updates-on-windows-xp/"/>
+    <updated>2008-10-15T00:00:00+02:00</updated>
+    <id>http://alberto.github.com/2008/10/15/fix-cant-install-updates-on-windows-xp</id>
+    <content type="html"><![CDATA[<div class='post'>
+Just in case it happens to me (or you) again.<br /><br />1. Open command prompt (or use a for a <a href="http://sourceforge.net/projects/console/">better console</a>).<br />2. net stop wuauserv<br />3. regsvr32 %windir%\system32\wups2.dll (regsvr32 %windir%\syswow64\wups2.dll for win64)<br />4. net start wuauserv<br />5. exit<br /><br /><br />http://forums.cnet.com/5208-6142_102-0.html?forumID=5&threadID=276886&messageID=2660716<br />http://support.microsoft.com/kb/943144</div>
+
+]]></content>
+  </entry>
+  
+</feed>

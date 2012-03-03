@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Setting up your ruby environment on Linux - sharp bites</title>
+  <meta name="author" content="alberto">
+
+  
+  <meta name="description" content="Here are the instructions on how to set up a ruby environment for Linux, in case you want to start playing with it.NOTE: Don&#8217;t use the &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://alberto.github.com/2011/01/25/setting-up-your-ruby-environment-on">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="sharp bites" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">sharp bites</a></h1>
+  
+    <h2>standing on the shoulders of giants</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:alberto.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Setting up your ruby environment on Linux</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-25T00:00:00+01:00" pubdate data-updated="true">Jan 25<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><div class='post'>
+Here are the instructions on how to set up a ruby environment for Linux, in case you want to start playing with it.<br /><br /><b>NOTE:</b> Don&#8217;t use the packages from your distribution. They are outdated and will cause more harm than good. Use one of the methods below.<br /><br /><span class="Apple-style-span" style="font-size: large;">The quick and easy way</span><br />If you are planning to use Rails anyways, you can use the script from <a href="https://github.com/joshfng/railsready">railsready</a>.<br />It will install rails, passenger, and a shitload dependencies it need for everything to work smoothly.<br />You can install it by running:<br /><blockquote>sudo wget &#8211;no-check-certificate https://github.com/joshfng/railsready/raw/master/railsready.sh &amp;&amp; bash railsready.sh</blockquote>The script will ask if you want to build Ruby from source or install RVM.&nbsp;Choose RVM.<br /><br />It will download around 50MB of libraries from the repositories and then download and compile rvm, ruby and download again some other gems, so it will take some time. Don&#8217;t worry, you don&#8217;t have to do anything, just wait.<br /><br /><span class="Apple-style-span" style="font-size: large;">The almost-as-quick, almost-as-easy way</span><br />If you don&#8217;t intend to use rails and don&#8217;t feel like installing all that stuff, use the following method. It&#8217;s basically doing the same thing as the previous script, except you don&#8217;t need so many dependencies, and you won&#8217;t install rails or passenger.<br /><br /><b>Installing RVM</b><br /><br /><a href="http://rvm.beginrescueend.com/">RVM</a> (Ruby Version Manager)&nbsp;is a tool which allows us to easily install, manage and work with multiple ruby environments (interpreters and gems) on the same machine. This means we can create different environments with distincts versions, of ruby, rails, or whatever gem we want, without any headaches.<br /><div><br /></div><div><div>In order to install rvm, you&#8217;ll need curl, git and some compiler tools. We can get them with the following command:</div><blockquote>sudo apt-get install git-core curl build-essential</blockquote></div><div><div>To install rvm execute:</div><blockquote>bash &lt; &lt;( curl http://rvm.beginrescueend.com/releases/rvm-install-head )</blockquote></div><div><div>This command will install rvm in your home directory.</div></div><div>You need to include a line at the end of the .bashrc file to tell it to load rvm.</div><div>Follow carefuly the instructions on your terminal, specially the part about converting the return to an if statement</div><blockquote>&#8221;[ -z &#8220;$PS1&#8221; ] &amp;&amp; return&#8221;</blockquote><div><b>NOTE:</b> The railsready script doesn&#8217;t do this, and just appends the line loading rvm at the end of the file. RVM maintainers recommend otherwise, so you better do it their way.</div><div><br /></div><div>If you find any problems, check <a href="http://rvm.beginrescueend.com/rvm/install/">rvm site troubleshooting information</a>&nbsp;(section &#8216;Trhoubleshooting your install&#8217;)</div><div><div><br /></div><div>Finally reload your envirnonment executing:</div><blockquote>source ~/.bashrc</blockquote></div><div><b>Installing ruby</b></div><div><div>Now you have rvm installed and running, you can proceed to install ruby. You&#8217;ll need some packages first, the following command will tell you which:</div><blockquote>rvm notes</blockquote></div>In my case, these were:<br /># For Ruby (MRI &amp; ree) &nbsp;you should install the following OS dependencies:<br /><blockquote>sudo apt-get install build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf</blockquote><div><div>Now, we can install ruby 1.9.2:</div><blockquote>rvm install 1.9.2</blockquote><div>This will take a while, since it is dowloading ruby sources and compiling them.</div><div><br /></div><div>You can check ruby is all fine and dandy by running</div><blockquote>ruby -v</blockquote><div>You should get something similar to:</div><blockquote>ruby 1.9.2p136 (2010-12-25 revision 30365) [x86_64-linux]</blockquote>On the next post I will explain how to setup your environment for testing using rvm.</div></div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">alberto</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-25T00:00:00+01:00" pubdate data-updated="true">Jan 25<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/ruby/'>ruby</a>, <a class='category' href='/categories/rvm/'>rvm</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://alberto.github.com/2011/01/25/setting-up-your-ruby-environment-on/" data-via="sharpbites" data-counturl="http://alberto.github.com/2011/01/25/setting-up-your-ruby-environment-on/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2011/01/01/new-year-resolutions/" title="Previous Post: New Year resolutions">&laquo; New Year resolutions</a>
+      
+      
+        <a class="basic-alignment right" href="/2011/01/29/setting-up-ruby-testing-environment-on/" title="Next Post: Setting up a ruby testing environment on Linux">Setting up a ruby testing environment on Linux &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2011/11/06/git-started-1-using-git-with-svn-server/">git started #1. Using git with a svn server</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/10/23/change/">Change</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/15/becoming-agile-manager-transforming/">Becoming an Agile Manager: Transforming the Three Dysfunctions of Management</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/01/29/setting-up-ruby-testing-environment-on/">Setting up a ruby testing environment on Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/01/25/setting-up-your-ruby-environment-on/">Setting up your ruby environment on Linux</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/alberto">@alberto</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'alberto',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("sharpbites", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/sharpbites" class="twitter-follow-button" data-show-count="false">Follow @sharpbites</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - alberto -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'sharpbites';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://alberto.github.com/2011/01/25/setting-up-your-ruby-environment-on/';
+        var disqus_url = 'http://alberto.github.com/2011/01/25/setting-up-your-ruby-environment-on/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

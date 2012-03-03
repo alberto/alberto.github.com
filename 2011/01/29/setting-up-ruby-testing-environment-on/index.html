@@ -1,0 +1,287 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Setting up a ruby testing environment on Linux - sharp bites</title>
+  <meta name="author" content="alberto">
+
+  
+  <meta name="description" content="Now that we have setup our ruby environment on Linux,&nbsp;we are going to create a setup for testing purposes by adding some useful gems.For that, &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://alberto.github.com/2011/01/29/setting-up-ruby-testing-environment-on">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="sharp bites" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+
+  
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">sharp bites</a></h1>
+  
+    <h2>standing on the shoulders of giants</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:alberto.github.com" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Setting up a ruby testing environment on Linux</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-29T00:00:00+01:00" pubdate data-updated="true">Jan 29<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><div class='post'>
+Now that <a href="http://www.sharpbites.com/2011/01/setting-up-your-ruby-environment-on.html">we have setup our ruby environment on Linux</a>,&nbsp;we are going to create a setup for testing purposes by adding some useful gems.<br /><br />For that, we will use a feature from <a href="http://rvm.beginrescueend.com/">rvm</a> called&nbsp;<a href="http://rvm.beginrescueend.com/gemsets/basics/">gemsets</a>. A gemset is an independent setup for your environment. That means you can have many environments with a different set of gems (hence the name) installed independently on each one (even with different ruby versions).<br /><br />Usually, when working on a project, you would create a gemset specific for that project, but in this case, we are going to create a gemset for practicing tdd, doing katas, coderetreats, etc. If you plan to use rvm in a serious project (which you should), please read first about <a href="http://rvm.beginrescueend.com/rvm/best-practices/">rvm best practices</a>.<br /><br /><span class="Apple-style-span" style="font-size: large;">A brief introduction to gemsets</span><br />For each version of ruby, rvm creates two gemsets, the default, empty gemset and the global gemset. You can list your gemsets with:<br /><blockquote>rvm gemset list</blockquote>Gems that are installed to the @global gemset are shared to all other gemset for that ruby. We won&#8217;t install anything here. Instead we will create our own gemset and put everything there.<br /><br />Create a tdd gemset:<br /><blockquote>rvm gemset create tdd</blockquote>Switch to that gemset:<br /><blockquote>rvm use gemset 1.9.2@tdd</blockquote>If you want to make this your default gemset (the one that will be loaded by default) you can do that by doing:<br /><blockquote>rvm use gemset 1.9.2@tdd &#8211;default</blockquote>Verify you are on the new gemset:<br /><blockquote>rvm gemset name</blockquote>You should get:<br /><blockquote>tdd</blockquote><span class="Apple-style-span" style="font-size: large;">Gems for testing that rock</span><br />You can install gems <b>for your current gemset</b> using:<br /><blockquote>gem install</blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">To do unit testing in ruby, <a href="http://relishapp.com/rspec">rspec</a> is a great choice.<br /><blockquote>gem install&nbsp;rspec</blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">To start using it, create an rspec file, like example_spec.rb inside a spec folder on the root of your project:</div><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;"><span class="Apple-style-span" style="color: #222222; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 21px;"></span></div><pre style="background-color: #e0f8e0; border-bottom-width: 1px; border-color: initial; border-left-color: rgb(8, 138, 8); border-left-width: 1px; border-right-color: rgb(8, 138, 8); border-right-width: 1px; border-style: initial; border-top-color: rgb(8, 138, 8); border-top-style: solid; border-top-width: 1px; font-family: inherit; font-style: inherit; font-weight: inherit; margin-bottom: 8px; margin-left: 0px; margin-right: 0px; margin-top: 0px; padding-bottom: 2px; padding-left: 5px; padding-right: 5px; padding-top: 2px; vertical-align: baseline; white-space: pre;"><span class="Apple-style-span" style="color: #222222; font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif; font-size: 14px; line-height: 21px;">describe "something" do<br />  it "does something that passes" do<br />    5.should eq(5)<br />  end<br /></span></pre><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">You can then execute it by running:</div><blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">rspec spec/</div></blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">For a nicer, colored output, pass in the &#8211;colour flag to rspec</div><blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">rspec spec/ &#8211;colour&nbsp;</div></blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">Or create a .rspec config file&nbsp;on your project root (or in your home dir if you want to always use it), to tell rspec to use the colored output by default</div><blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">echo &#8220;&#8211;colour&#8221; &gt;&gt; .rspec</div></blockquote><br /><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">Excecuting rspec by hand all the time gets boring quickly, and it turns out computers are quite good at doing tasks repeteadly, so you can instead use <a href="http://ph7spot.com/musings/getting-started-with-autotest">autotest</a>, a cool gem from the <a href="http://www.zenspider.com/ZSS/Products/ZenTest/">ZenTest suite</a>&nbsp;that will automagically execute your tests when you save your files.</div><blockquote>gem install autotest</blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">Execute it from your project root.</div><blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">autotest &#8211;style rspec2 &#8211;quiet</div></blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">The &#8211;style flag tells autotest to look for rspec kind of tests. The &#8211;quiet flag removes a bit of noise you probably don&#8217;t care about.</div><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;"><br /></div><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">If you have created the .rpec file on your project root, you can omit the style flag and autotest will still find the tests.</div><blockquote><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">autotest &#8211;quiet</div></blockquote>If you are really lazy like me, you can instruct autotest to be quiet by default by creating a .autotest file in your home:<br /><blockquote>echo &#8220;Autotest.options[:quiet] = true&#8221; &gt;&gt; ~/.autotest</blockquote>So whatever option you want to use, let&#8217;s try it.&nbsp;Modify your rspec file and save it. Awesome, isn&#8217;t it? But wait,&nbsp;there is more!<br /><br />We&#8217;ll add a nice gem called <a href="https://github.com/fnando/test_notifier">test_notifier</a>.&nbsp;This is the topping of the cake. It will notify your OS with the result of your tests.<br /><br />In order to it on GNOME, we will need to install libnotify:<br /></div><blockquote>sudo apt-get install libnotify-bin</blockquote><blockquote>gem install test_notifier</blockquote>Configure autotest to use test_notifier:<br /><blockquote>echo &#8216;require &#8220;test_notifier/runner/autotest&#8221;&#8217; &gt;&gt; .autotest</blockquote>Or add the following to your rspec/spec_helper file if you want to use it directly with rspec:<br /><blockquote>require &#8220;test_notifier/runner/spec&#8221;</blockquote>Now you should get a nice notification when you save your file.<br /><div class="separator" style="clear: both; text-align: center;"><a href="http://1.bp.blogspot.com/_kQ7iivKjVno/TUSNLUgyTcI/AAAAAAAAARA/zA_zkMV45dk/s1600/test_notifier.png" imageanchor="1" style="margin-left: 1em; margin-right: 1em;"><img border="0" height="138" src="http://1.bp.blogspot.com/_kQ7iivKjVno/TUSNLUgyTcI/AAAAAAAAARA/zA_zkMV45dk/s320/test_notifier.png" width="320" /></a></div></div>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">alberto</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-29T00:00:00+01:00" pubdate data-updated="true">Jan 29<span>th</span>, 2011</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/categories/autotest/'>autotest</a>, <a class='category' href='/categories/rspec/'>rspec</a>, <a class='category' href='/categories/ruby/'>ruby</a>, <a class='category' href='/categories/rvm/'>rvm</a>, <a class='category' href='/categories/tdd/'>tdd</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://alberto.github.com/2011/01/29/setting-up-ruby-testing-environment-on/" data-via="sharpbites" data-counturl="http://alberto.github.com/2011/01/29/setting-up-ruby-testing-environment-on/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/2011/01/25/setting-up-your-ruby-environment-on/" title="Previous Post: Setting up your ruby environment on Linux">&laquo; Setting up your ruby environment on Linux</a>
+      
+      
+        <a class="basic-alignment right" href="/2011/04/15/becoming-agile-manager-transforming/" title="Next Post: Becoming an Agile Manager: Transforming the Three Dysfunctions of Management">Becoming an Agile Manager: Transforming the Three Dysfunctions of Management &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/2011/11/06/git-started-1-using-git-with-svn-server/">git started #1. Using git with a svn server</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/10/23/change/">Change</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/04/15/becoming-agile-manager-transforming/">Becoming an Agile Manager: Transforming the Three Dysfunctions of Management</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/01/29/setting-up-ruby-testing-environment-on/">Setting up a ruby testing environment on Linux</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2011/01/25/setting-up-your-ruby-environment-on/">Setting up your ruby environment on Linux</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/alberto">@alberto</a> on GitHub
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'alberto',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("sharpbites", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/sharpbites" class="twitter-follow-button" data-show-count="false">Follow @sharpbites</a>
+  
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2012 - alberto -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'sharpbites';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://alberto.github.com/2011/01/29/setting-up-ruby-testing-environment-on/';
+        var disqus_url = 'http://alberto.github.com/2011/01/29/setting-up-ruby-testing-environment-on/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

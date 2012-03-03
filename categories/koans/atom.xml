@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: koans | sharp bites]]></title>
+  <link href="http://alberto.github.com/categories/koans/atom.xml" rel="self"/>
+  <link href="http://alberto.github.com/"/>
+  <updated>2012-03-03T20:07:36+01:00</updated>
+  <id>http://alberto.github.com/</id>
+  <author>
+    <name><![CDATA[alberto]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Greed game koan]]></title>
+    <link href="http://alberto.github.com/2010/12/20/greed-game-koan/"/>
+    <updated>2010-12-20T00:00:00+01:00</updated>
+    <id>http://alberto.github.com/2010/12/20/greed-game-koan</id>
+    <content type="html"><![CDATA[<div class='post'>
+<a href="http://twitter.com/jjballano">@jjballano</a>&nbsp;recently&nbsp;<a href="https://gist.github.com/736614">posted</a>&nbsp;his version of the <a href="http://en.wikipedia.org/wiki/Greed_(dice_game)">Greed game</a>, as part of his learning experience with <a href="http://rubykoans.com/">Ruby Koans</a>. As I am following that very same path, I thought it could also be worth for me to share <a href="https://gist.github.com/747881">my implementation of Greed</a> for people to comment on it.<br /><br /><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">The code could surely be much prettier since I am still trying to get my head around ruby block-passing, among others, so comments (and patches!) are welcome.</div><div><br /></div><br /><script src="https://gist.github.com/747881.js?file=score.rb"></script><br /><br />UPDATE: The code seems to update automatically to the latest version on github, you can find the original <a href="https://gist.github.com/747881/3b8cb77970b0b22b2265904b3c02acf7bae84a3f#file_score.rb">here</a>.</div>
+
+]]></content>
+  </entry>
+  
+</feed>

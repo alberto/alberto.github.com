@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: reflections | sharp bites]]></title>
+  <link href="http://alberto.github.com/categories/reflections/atom.xml" rel="self"/>
+  <link href="http://alberto.github.com/"/>
+  <updated>2012-03-03T20:07:36+01:00</updated>
+  <id>http://alberto.github.com/</id>
+  <author>
+    <name><![CDATA[alberto]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[New Year resolutions]]></title>
+    <link href="http://alberto.github.com/2011/01/01/new-year-resolutions/"/>
+    <updated>2011-01-01T00:00:00+01:00</updated>
+    <id>http://alberto.github.com/2011/01/01/new-year-resolutions</id>
+    <content type="html"><![CDATA[<div class='post'>
+Here are my resolutions for the present year:<br />- Read LESS. Yes, less reading, more doing.<br />- Keep learning ruby.<br />- Practice! I'm resolved to do a kata EVERY day, one kata each month. Wanna join? Use the hashtag&nbsp;<a href="http://search.twitter.com/search?q=12months12katas">#12months12katas</a>.<br />- Rediscover enjoyment, on many aspects. This is a tough one, since I&nbsp;first&nbsp;need to find direction, then courage to act in consequence.</div>
+
+]]></content>
+  </entry>
+  
+</feed>
