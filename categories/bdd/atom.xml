@@ -4,7 +4,7 @@
   <title><![CDATA[Category: bdd | sharp bites]]></title>
   <link href="http://www.sharpbites.com/categories/bdd/atom.xml" rel="self"/>
   <link href="http://www.sharpbites.com/"/>
-  <updated>2012-03-03T21:15:56+01:00</updated>
+  <updated>2012-03-03T21:30:34+01:00</updated>
   <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
@@ -30,7 +30,7 @@ So true. As <a href="http://www.jasonbock.net/JB/Default.aspx?blog=entry.a44b94d
     <updated>2007-12-04T00:00:00+01:00</updated>
     <id>http://www.sharpbites.com/2007/12/04/what-tests-are-for</id>
     <content type="html"><![CDATA[<div class='post'>
-<blockquote>"Tests are absolutely not for checking to see if things went wrong. They are for articulating what code should do, and proving that code does it."</blockquote><cite>-- <a href="http://gilesbowkett.blogspot.com/2007/10/debugger-support-considered-harmful.html">Giles Bowkett</a></cite></div>
+<blockquote>"Tests are absolutely not for checking to see if things went wrong. They are for articulating what code should do, and proving that code does it."</blockquote><cite>- <a href="http://gilesbowkett.blogspot.com/2007/10/debugger-support-considered-harmful.html">Giles Bowkett</a></cite></div>
 
 ]]></content>
   </entry>
