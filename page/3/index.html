@@ -9,7 +9,7 @@
   <meta name="author" content="alberto">
 
   
-  <meta name="description" content="If you are not already doing so, put your stuff under source control. Right now. It doesn&#8217;t matter how small your project is or whether you &hellip;">
+  <meta name="description" content="As I stated in the first part of this Continuous Integration series, one of the aims of storing your stuff under source control is being able to &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,43 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/09/13/road-to-continuous-integration-part-2/">The road to Continuous Integration. Part 2: Shake your tree</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-13T00:00:00+02:00" pubdate data-updated="true">Sep 13<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<p>As I stated in the <a href="http://sharpbites.blogspot.com/2009/09/road-to-continuous-integration-part-1.html">first part</a> of this <a href="http://sharpbites.blogspot.com/2009/09/road-to-continuous-integration.html">Continuous Integration series</a>, one of the aims of storing your stuff under source control is being able to build your project from a fresh checkout, without needing to manually install or configure anything.</p>  <p>To accomplish this, it is always useful to use a standardized tree structure. You can have a look at some of the popular open source projects you use and love to get ideas on how to organize things. Now that your have <a href="http://sharpbites.blogspot.com/2009/09/road-to-continuous-integration-part-1.html">everything under source control</a> (don&#8217;t you?), we can start moving a few things around.</p>  <p><img align="right" src="http://4.bp.blogspot.com/_kQ7iivKjVno/SpghIOjZSzI/AAAAAAAAALc/SkfsSCTd74E/s400/project-structure.jpg" /> On the picture you can see a very typical structure for a project.</p>  <p>The <strong>src</strong> folder contains the different projects in their respective folders.     <br />The <strong>lib</strong> folder will contain any third-party library needed to run our project. This is, any dependency that has to be deployed with our project (e.g. NHibernate, Windsor, etc).     <br /></p>  <p>The <strong>tools</strong> folders will contain any tools needed to build our project. It will contain tools like nant, nunit or fxcop, which we will use but won&#8217;t distribute with our application.     <br /></p>  <p>The <strong>build</strong> folder will hold the artifacts of the build.</p>  <p>   <br />Again, the purpose of putting all these libraries and frameworks under source control is to make EVERITHING needed to build and run your project available. Any new developer getting into your team should then be able to checkout your code and build it successfully, without needing to download and/or install anything from the Internet or hunt down any other dependencies your project builds upon. </p>  <p>If you need further info, I would recommend you to watch <a href="http://www.dimecasts.net/Casts/CastDetails/16">this screencast</a> by <a href="http://codebetter.com/blogs/kyle.baley/">Kyle &quot;Dissociative identity disorder&quot; Baley</a>.</p>  </div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -410,43 +447,6 @@ Eric Lippert, wrote a great post about value types vs reference types, and how, 
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2009/03/14/to-plan-or-not-to-plan/">To plan or not to plan</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-03-14T00:00:00+01:00" pubdate data-updated="true">Mar 14<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<blockquote>In preparing for battle I have always found that plans are useless, but planning is indispensable.</blockquote><cite> Dwight D. Eisenhower</cite></div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/4/">&larr; Older</a>
@@ -464,6 +464,10 @@ Eric Lippert, wrote a great post about value types vs reference types, and how, 
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/03/03/movin-in/">Movin&#8217; in</a>
+      </li>
+    
+      <li class="post">
         <a href="/2011/11/06/git-started-1-using-git-with-svn-server/">git started #1. Using git with a svn server</a>
       </li>
     
@@ -477,10 +481,6 @@ Eric Lippert, wrote a great post about value types vs reference types, and how, 
     
       <li class="post">
         <a href="/2011/01/29/setting-up-ruby-testing-environment-on/">Setting up a ruby testing environment on Linux</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2011/01/25/setting-up-your-ruby-environment-on/">Setting up your ruby environment on Linux</a>
       </li>
     
   </ul>

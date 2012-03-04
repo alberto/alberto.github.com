@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: octopress | sharp bites]]></title>
+  <link href="http://www.sharpbites.com/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://www.sharpbites.com/"/>
+  <updated>2012-03-04T01:28:24+01:00</updated>
+  <id>http://www.sharpbites.com/</id>
+  <author>
+    <name><![CDATA[alberto]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Movin' in]]></title>
+    <link href="http://www.sharpbites.com/2012/03/03/movin-in/"/>
+    <updated>2012-03-03T23:00:00+01:00</updated>
+    <id>http://www.sharpbites.com/2012/03/03/movin-in</id>
+    <content type="html"><![CDATA[<p>You probably have noticed this blog got a facelift.
+I've moved from blogger to github, using a cool feature called
+ <a href="http://pages.github.com/">github-pages</a>,
+ which allows you to publish content to the web by simply pushing content
+ to one of your GitHub hosted repositories and point your custom domain to it.</p>
+
+<p>In order to generate the html pages, I'm using
+ <a href="http://octopress.org/">octopress</a>. It allows you to define layouts and
+ create posts by writing your posts in
+ <a href="http://daringfireball.net/projects/markdown/basics">markdown</a>. It also makes
+ super easy to deploy to github, heroku or to your own hosting via rsync.</p>
+
+<p>Here an example showing how this post looks like in markdown:
+<div><script src='https://gist.github.com/1969245.js?file='></script>
+<noscript><pre><code>---
+layout: post
+title: &quot;Movin' in&quot;
+date: 2012-03-03 23:00
+comments: true
+categories: [github, octopress, blogging]
+published: false
+---
+You probably have noticed this blog got a facelift.
+I've moved from blogger to github, using a cool feature called
+ [github-pages](http://pages.github.com/),
+ which allows you to publish content to the web by simply pushing content
+ to one of your GitHub hosted repositories and point your custom domain to it.
+
+
+In order to generate the html pages, I'm using
+ [octopress](http://octopress.org/). It allows you to define layouts and
+ create posts by writing your posts in
+ [markdown](http://daringfireball.net/projects/markdown/basics). It also makes
+ super easy to deploy to github, heroku or to your own hosting via rsync.
+
+Here an example showing how this post looks like in markdown:
+{% gist gist_id 1969245 %}
+
+You can import your pages from blogger, wordpress, tumblr and a few other using
+ [jekyll's blog migrations](https://github.com/mojombo/jekyll/wiki/blog-migrations)
+ (octopress is built on top of [jekyll](https://github.com/mojombo/jekyll)).</code></pre></noscript></div>
+</p>
+
+<p>You can import your pages from blogger, wordpress, tumblr and a few other using
+ <a href="https://github.com/mojombo/jekyll/wiki/blog-migrations">jekyll's blog migrations</a>
+ (octopress is built on top of <a href="https://github.com/mojombo/jekyll">jekyll</a>).</p>
+]]></content>
+  </entry>
+  
+</feed>

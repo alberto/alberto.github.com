@@ -4,7 +4,7 @@
   <title><![CDATA[sharp bites]]></title>
   <link href="http://www.sharpbites.com/atom.xml" rel="self"/>
   <link href="http://www.sharpbites.com/"/>
-  <updated>2012-03-04T01:26:26+01:00</updated>
+  <updated>2012-03-04T01:28:24+01:00</updated>
   <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
@@ -12,6 +12,61 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Movin' in]]></title>
+    <link href="http://www.sharpbites.com/2012/03/03/movin-in/"/>
+    <updated>2012-03-03T23:00:00+01:00</updated>
+    <id>http://www.sharpbites.com/2012/03/03/movin-in</id>
+    <content type="html"><![CDATA[<p>You probably have noticed this blog got a facelift.
+I&#8217;ve moved from blogger to github, using a cool feature called
+ <a href="http://pages.github.com/">github-pages</a>,
+ which allows you to publish content to the web by simply pushing content
+ to one of your GitHub hosted repositories and point your custom domain to it.</p>
+
+<p>In order to generate the html pages, I&#8217;m using
+ <a href="http://octopress.org/">octopress</a>. It allows you to define layouts and
+ create posts by writing your posts in
+ <a href="http://daringfireball.net/projects/markdown/basics">markdown</a>. It also makes
+ super easy to deploy to github, heroku or to your own hosting via rsync.</p>
+
+<p>Here an example showing how this post looks like in markdown:</p>
+
+<div><script src='https://gist.github.com/1969245.js?file='></script>
+<noscript><pre><code>---
+layout: post
+title: &quot;Movin' in&quot;
+date: 2012-03-03 23:00
+comments: true
+categories: [github, octopress, blogging]
+published: false
+---
+You probably have noticed this blog got a facelift.
+I've moved from blogger to github, using a cool feature called
+ [github-pages](http://pages.github.com/),
+ which allows you to publish content to the web by simply pushing content
+ to one of your GitHub hosted repositories and point your custom domain to it.
+
+
+In order to generate the html pages, I'm using
+ [octopress](http://octopress.org/). It allows you to define layouts and
+ create posts by writing your posts in
+ [markdown](http://daringfireball.net/projects/markdown/basics). It also makes
+ super easy to deploy to github, heroku or to your own hosting via rsync.
+
+Here an example showing how this post looks like in markdown:
+{% gist gist_id 1969245 %}
+
+You can import your pages from blogger, wordpress, tumblr and a few other using
+ [jekyll's blog migrations](https://github.com/mojombo/jekyll/wiki/blog-migrations)
+ (octopress is built on top of [jekyll](https://github.com/mojombo/jekyll)).</code></pre></noscript></div>
+
+
+<p>You can import your pages from blogger, wordpress, tumblr and a few other using
+ <a href="https://github.com/mojombo/jekyll/wiki/blog-migrations">jekyll&#8217;s blog migrations</a>
+ (octopress is built on top of <a href="https://github.com/mojombo/jekyll">jekyll</a>).</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[git started #1. Using git with a svn server]]></title>
@@ -200,16 +255,6 @@ Ideally, any new developer in your team should be able to build your project wit
     <id>http://www.sharpbites.com/2009/09/15/what-do-you-see-on-picture</id>
     <content type="html"><![CDATA[<div class='post'>
 <div class="separator" style="clear: both; float: left; text-align: center;"><a href="http://2.bp.blogspot.com/_kQ7iivKjVno/Sq9dG5dZPCI/AAAAAAAAAL8/Z4vqxop7-cY/s1600-h/monofinger.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/_kQ7iivKjVno/Sq9dG5dZPCI/AAAAAAAAAL8/Z4vqxop7-cY/s320/monofinger.jpg" /></a></div><a href="http://monotouch.net/">Monotouch</a> 1.0 was released today. I was quite shocked when I saw the logo. Look at it for a second. What do you see there?<br />It might be my perturbated mind, but I was quite shocked when I felt it was &#8220;showing me the finger&#8221;. It actually took me a minute (I said I was shocked) to realize it was not <i>that </i>finger. Still, maybe that logo deserves a revamp. Just making clear the first finger is a thumb will suffice.</div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[The road to Continuous Integration. Part 2: Shake your tree]]></title>
-    <link href="http://www.sharpbites.com/2009/09/13/road-to-continuous-integration-part-2/"/>
-    <updated>2009-09-13T00:00:00+02:00</updated>
-    <id>http://www.sharpbites.com/2009/09/13/road-to-continuous-integration-part-2</id>
-    <content type="html"><![CDATA[<div class='post'>
-<p>As I stated in the <a href="http://sharpbites.blogspot.com/2009/09/road-to-continuous-integration-part-1.html">first part</a> of this <a href="http://sharpbites.blogspot.com/2009/09/road-to-continuous-integration.html">Continuous Integration series</a>, one of the aims of storing your stuff under source control is being able to build your project from a fresh checkout, without needing to manually install or configure anything.</p>  <p>To accomplish this, it is always useful to use a standardized tree structure. You can have a look at some of the popular open source projects you use and love to get ideas on how to organize things. Now that your have <a href="http://sharpbites.blogspot.com/2009/09/road-to-continuous-integration-part-1.html">everything under source control</a> (don&#8217;t you?), we can start moving a few things around.</p>  <p><img align="right" src="http://4.bp.blogspot.com/_kQ7iivKjVno/SpghIOjZSzI/AAAAAAAAALc/SkfsSCTd74E/s400/project-structure.jpg" /> On the picture you can see a very typical structure for a project.</p>  <p>The <strong>src</strong> folder contains the different projects in their respective folders.     <br />The <strong>lib</strong> folder will contain any third-party library needed to run our project. This is, any dependency that has to be deployed with our project (e.g. NHibernate, Windsor, etc).     <br /></p>  <p>The <strong>tools</strong> folders will contain any tools needed to build our project. It will contain tools like nant, nunit or fxcop, which we will use but won&#8217;t distribute with our application.     <br /></p>  <p>The <strong>build</strong> folder will hold the artifacts of the build.</p>  <p>   <br />Again, the purpose of putting all these libraries and frameworks under source control is to make EVERITHING needed to build and run your project available. Any new developer getting into your team should then be able to checkout your code and build it successfully, without needing to download and/or install anything from the Internet or hunt down any other dependencies your project builds upon. </p>  <p>If you need further info, I would recommend you to watch <a href="http://www.dimecasts.net/Casts/CastDetails/16">this screencast</a> by <a href="http://codebetter.com/blogs/kyle.baley/">Kyle &quot;Dissociative identity disorder&quot; Baley</a>.</p>  </div>
 ]]></content>
   </entry>
   

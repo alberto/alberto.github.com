@@ -9,9 +9,7 @@
   <meta name="author" content="alberto">
 
   
-  <meta name="description" content="
-Oh, my.
-">
+  <meta name="description" content="Yes, this is yet another post on nant vs. msbuild.I had to choose which one of the two to use at the company I work for. After doing a lot of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -78,6 +76,43 @@ Oh, my.
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/09/05/nant-vs-msbuild/">nant vs. msbuild</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-09-05T00:00:00+02:00" pubdate data-updated="true">Sep 5<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+Yes, this is yet another post on <a href="http://nant.sourceforge.net/">nant</a> vs. <a href="http://msdn.microsoft.com/en-us/library/0k6kkbsd.aspx">msbuild</a>.<br />I had to choose which one of the two to use at the company I work for. After doing a lot of research, it looks like there aren&#8217;t many differences between them. Here are some of the pro/cons I found:<br /><br />- msbuild comes from Microsoft (yes, that usually matters to some (not all, like me) people)<br />- msbuild is already installed in every .net developer machine (not a big deal)<br />- msbuild has probably better integration with VS build process<br />- msbuild supports parallel builds since .net 3.5 (not that it really matters, since you usually use msbuild from nant to build your projects, anyway).<br />- msbuild evaluates filesets at startup. This seems to cause some headaches when you want to manipulate files generated during the building process.<br />- you can redefine targets in msbuild. in nant you can define general targets and just make your build files call those (or create and use hooks, which is a solution I don&#8217;t really like).<br />- nant has more examples and better documentation<br />- there is much more information about nant than about msbuild on the web, according to <a href="http://www.google.es/trends?q=msbuild%2C+nant">google trends</a> and google search results (both in english and spanish)<br />- nant has some more tasks, but with <a href="http://msbuildtasks.tigris.org/">msbuildtasks</a>/<a href="http://www.codeplex.com/sdctasks">sdc tasks</a> it&#8217;s on par with nant and <a href="http://nantcontrib.sourceforge.net/">nantcontrib</a>.<br />- nant helper functions and expressions are better ¿?<br />- I like nant syntax better.<br />- nant is more mature, msbuild was born as an alternative (alt.alt.net :D) to nant for companies with ridiculous &#8220;no open source here&#8221; and Microsoft &#8220;I can&#8217;t support an open source project I don&#8217;t control&#8221; way of life.<br />- most open source projects tend to use nant over msbuild, so there are plenty of build files and task you can make good use of or have as a reference.<br />- I have already played with nant a little, so I know it&#8217;s syntax better.<br />- I have started to use nant to automatically generate config files from templates for the different enviroments, and didn&#8217;t find the way to do so in msbuild.<br />- nant is open source, so people can contribute to it.<br />- nant is not tied to microsoft release cycle, msbuild is.<br /><br /><br />There isn&#8217;t any strong reason in itself to pick one, but adding them up, things favoured significantly nant over msbuild, so I ended up choosing the former.<br /><br />If you want to read more on the subject, here are some of the links I used in my research (in no particular order):<br />http://ayende.com/Blog/archive/2008/02/25/Zero-Friction-and-why-Defaults-Matters.aspx<br />http://www.winterdom.com/weblog/2007/09/21/MSBuildVsNAnt.aspx<br />http://www.paraesthesia.com/archive/2008/01/08/why-nant-is-better-than-msbuild.aspx<br />http://www.innoq.com/blog/hw/2007/09/24/msbuild_vs_nant.html<br />http://www.codeproject.com/KB/books/msbuild.aspx<br />http://brandonbyars.com/blog/articles/2008/01/10/Managing-Config-Files<br />http://www.paraesthesia.com/archive/2008/01/08/why-nant-is-better-than-msbuild.aspx<br />http://kentb.blogspot.com/2008/02/fail-early-with-full-builds-from-within.html<br />http://weblogs.asp.net/rosherove/archive/2008/01/18/trying-out-team-city-looks-promising.aspx<br />http://codebetter.com/blogs/jeremy.miller/archive/2007/09/20/is-there-a-good-reason-to-switch-to-msbuild.aspx<br />http://codebetter.com/blogs/jeffrey.palermo/archive/2007/09/25/demo-on-automating-your-build-with-nant-and-ccnet.aspx<br />http://www.distribucon.com/blog/WhyMSBuildSucks.aspx<br />http://www.tkachenko.com/blog/archives/000643.html</div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -412,43 +447,6 @@ Here comes a new challenge.<br /><blockquote>Given a set of versioned file, you 
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2008/04/06/you-better-dont-break-build/">You better don&#8217;t break the build</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-04-06T00:00:00+02:00" pubdate data-updated="true">Apr 6<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<blockquote>/trunk must compile and pass regression tests at all times. Committers who violate this rule are publically humiliated.</blockquote><cite> <a href="http://svn.collab.net/repos/svn/trunk/doc/user/svn-best-practices.html">svn best practices</a></cite></div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/6/">&larr; Older</a>
@@ -466,6 +464,10 @@ Here comes a new challenge.<br /><blockquote>Given a set of versioned file, you 
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/03/03/movin-in/">Movin&#8217; in</a>
+      </li>
+    
+      <li class="post">
         <a href="/2011/11/06/git-started-1-using-git-with-svn-server/">git started #1. Using git with a svn server</a>
       </li>
     
@@ -479,10 +481,6 @@ Here comes a new challenge.<br /><blockquote>Given a set of versioned file, you 
     
       <li class="post">
         <a href="/2011/01/29/setting-up-ruby-testing-environment-on/">Setting up a ruby testing environment on Linux</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2011/01/25/setting-up-your-ruby-environment-on/">Setting up your ruby environment on Linux</a>
       </li>
     
   </ul>
