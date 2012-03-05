@@ -4,7 +4,7 @@
   <title><![CDATA[Category: ruby | sharp bites]]></title>
   <link href="http://www.sharpbites.com/categories/ruby/atom.xml" rel="self"/>
   <link href="http://www.sharpbites.com/"/>
-  <updated>2012-03-04T01:28:24+01:00</updated>
+  <updated>2012-03-05T22:58:24+01:00</updated>
   <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
@@ -12,6 +12,82 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[rails.start 1.month.ago]]></title>
+    <link href="http://www.sharpbites.com/2012/03/04/rails-start-1-month-ago/"/>
+    <updated>2012-03-04T04:10:00+01:00</updated>
+    <id>http://www.sharpbites.com/2012/03/04/rails-start-1-month-ago</id>
+    <content type="html"><![CDATA[<p>It has been one month since I started doing ruby and Rails at work, so I
+ thought I'd share my experiences so far.</p>
+
+<p>Here's a list of the things I've had to deal with this month:</p>
+
+<ul>
+<li>git</li>
+<li>ruby</li>
+<li>rails</li>
+<li>rvm</li>
+<li>rubygems</li>
+<li>bundler</li>
+<li>homebrew</li>
+<li>rspec</li>
+<li>cucumber</li>
+<li>capybara</li>
+<li>guard</li>
+<li>spork</li>
+<li>jenkins</li>
+<li>log4r</li>
+<li>rest-client</li>
+<li>delayed_job</li>
+<li>rake</li>
+<li>capistrano</li>
+<li>foreman</li>
+<li>daemons</li>
+</ul>
+
+
+<p>You can tell I've been busy :D.</p>
+
+<h2>References</h2>
+
+<p>Here are some resources I've found useful in my journey so far.</p>
+
+<h3>Rails</h3>
+
+<ul>
+<li><a href="http://ruby.railstutorial.org/ruby-on-rails-tutorial-book?version=3.2">Ruby on Rails Tutorial</a>, an awesome introductory book for Rails. It teaches you about many of the things in the list above.</li>
+</ul>
+
+
+<h3>Ruby</h3>
+
+<ul>
+<li><p><a href="http://www.amazon.co.uk/gp/product/1934356085/ref=as_li_qf_sp_asin_tl?ie=UTF8&tag=wwwsharpbites-21&linkCode=as2&camp=1634&creative=6738&creativeASIN=1934356085">Programming Ruby 1.9</a><img src="http://www.assoc-amazon.co.uk/e/ir?t=wwwsharpbites-21&l=as2&o=2&a=1934356085" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />. <strong>The ruby book</strong>.
+For those who want to gain in-depth knowledge of the language.</p></li>
+<li><p>For hands-on ruby learning, try <a href="http://rubykoans.com/">rubykoans</a> and <a href="http://rubymonk.com/">rubymonk</a>.
+They are interactive online tutorials guiding you in the inners of ruby.</p></li>
+</ul>
+
+
+<h3>TDD</h3>
+
+<ul>
+<li><a href="http://www.amazon.co.uk/gp/product/1934356379/ref=as_li_tf_tl?ie=UTF8&tag=wwwsharpbites-21&linkCode=as2&camp=1634&creative=6738&creativeASIN=1934356379">The RSpec Book</a><img src="http://www.assoc-amazon.co.uk/e/ir?t=wwwsharpbites-21&l=as2&o=2&a=1934356379" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />. A
+must read. It teaches you how to do BDD/TDD right. Totally recommended even if you don't program in ruby.</li>
+</ul>
+
+
+<h3>Git</h3>
+
+<ul>
+<li>If you are new to git, I recommend you to read <a href="http://progit.org/book/">Pro Git</a>.</li>
+<li>For a more reference to-the-point style, check <a href="http://gitref.org/">Git Reference</a></li>
+<li>Finally, for a learn-by-example guide, visit <a href="http://gitimmersion.com/">Git immersion</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Setting up a ruby testing environment on Linux]]></title>

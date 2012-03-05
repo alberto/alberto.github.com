@@ -9,9 +9,7 @@
   <meta name="author" content="alberto">
 
   
-  <meta name="description" content="
-/trunk must compile and pass regression tests at all times. Committers who violate this rule are publically humiliated. svn best practices
-">
+  <meta name="description" content="Ayende challenged the whole intarweb to resolve a problem similar to the ones he uses in his job interviews. It goes like this:The task is listing &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -78,6 +76,43 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/04/09/ayendes-challenge/">Ayende&#8217;s Challenge</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-04-09T00:00:00+02:00" pubdate data-updated="true">Apr 9<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<a href="http://www.ayende.com/">Ayende</a> <a href="http://www.ayende.com/Blog/archive/2008/04/09/A-challenge-Getting-a-list-of-products.aspx">challenged</a> the whole intarweb to resolve a problem similar to the ones he uses in his job interviews. It goes like this:<br /><blockquote>The task is listing the first 10 products that we can sell to a customer. The UI is console application, and the database design and data access method are whatever you want.</blockquote><br />Additionally you have to filter those products according to some arguments given as input parameters to the application (representing different categorizations of products).<br /><br />Now, my solution. :)<br /><pre name="code" class="c-sharp"><br />    public enum Category<br />    {<br />        PG13,<br />        Vegetarian<br />    }<br /><br />    public class Product<br />    {<br />        public string Name { get; set; }<br />        public decimal Price { get; set; }<br />        public IList<Category> Categories { get; set;}<br /><br />        public override string ToString()<br />        {<br />            return string.Format("{0}\t{1}", Name, Price);<br />        }<br />    }<br /><br />    public class Filter<br />    {<br />        public static IEnumerable<Product> ApplyFilter(IEnumerable<Product> products, Category category)<br />        {<br />            return from p in products where p.Categories.Contains(category) select p; <br />        }<br />    }<br /><br />    class Program<br />    {<br />        static void Main(string[] args)<br />        {<br />            var categoryMapper = new Dictionary<string, Category><br />                                     {<br />                                         {"-pg13", Category.PG13},<br />                                         {"-vegetarian", Category.Vegetarian}<br />                                     };<br /><br />            var products = new List<Product><br />                               {<br />                                   new Product {Name = "Milk", Price = 1.0M, <br />                                       Categories = new List<Category> {Category.PG13, Category.Vegetarian}}, <br />                                   new Product {Name = "Bread", Price = 1.3M, <br />                                       Categories = new List<Category> {Category.PG13, Category.Vegetarian}},<br />                                   new Product {Name = "Sausage", Price = 2.5M, <br />                                       Categories = new List<Category> {Category.PG13}},<br />                                   new Product {Name = "Horror Movie", Price = 5.0M, <br />                                       Categories = new List<Category> {Category.Vegetarian}}<br />                               };<br /><br />            var filteredResults = (IEnumerable<Product>) products;<br />            foreach (string arg in args)<br />            {<br />                if (categoryMapper.ContainsKey(arg))<br />                {<br />                    filteredResults = Filter.ApplyFilter(filteredResults, categoryMapper[arg]);<br />                }<br />            }<br /><br />            filteredResults = filteredResults.Take(10);<br /><br />            foreach (Product product in filteredResults)<br />            {<br />                Console.Out.WriteLine(product);<br />            }<br />        }<br />    }<br /><br /></pre></div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -412,43 +447,6 @@ I&#8217;m going to talk a bit about a couple of nice features introduced in <spa
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2007/12/10/write-your-test-first-because-adding/">Write your test first&#8230; because adding them later sucks</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-12-10T00:00:00+01:00" pubdate data-updated="true">Dec 10<span>th</span>, 2007</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-So true. As <a href="http://www.jasonbock.net/JB/Default.aspx?blog=entry.a44b94d177ed4c139029e8cca6efe90f">jason</a> points out:<br /><ul><li>It&#8217;s boring. Write the obvious tests. Check code coverage - what did I miss? Write more tests capturing more edge cases. Wash, rinse, repeat. Ugh.</li><li>It&#8217;s not trivial. I&#8217;m trying to put tests around code that was created months ago, and trying to capture the mental state of the coder and what he was doing is damn near impossible.</li></ul>If you write the test first, you get all the benefits of TDD.<br /><ul><li>You don&#8217;t get just unit testing, but instead you let your design lead your development.</li><li>As you are writing the minimum code necessary to achieve the <span style="font-weight: bold;">behaviour </span>your test is checking, you end up with full code coverage.</li><li>You can refactor as you test-and-code (and test, and code,&#8230;), and you have your tests to cover your ass as you go. If you need to refactor when it&#8217;s all finished, poor you. You are just left out in the wild.</li></ul></div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/7/">&larr; Older</a>
@@ -466,6 +464,10 @@ So true. As <a href="http://www.jasonbock.net/JB/Default.aspx?blog=entry.a44b94d
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/03/04/rails-start-1-month-ago/">rails.start 1.month.ago</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/03/03/movin-in/">Movin&#8217; in</a>
       </li>
     
@@ -479,10 +481,6 @@ So true. As <a href="http://www.jasonbock.net/JB/Default.aspx?blog=entry.a44b94d
     
       <li class="post">
         <a href="/2011/04/15/becoming-agile-manager-transforming/">Becoming an Agile Manager: Transforming the Three Dysfunctions of Management</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2011/01/29/setting-up-ruby-testing-environment-on/">Setting up a ruby testing environment on Linux</a>
       </li>
     
   </ul>

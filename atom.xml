@@ -4,7 +4,7 @@
   <title><![CDATA[sharp bites]]></title>
   <link href="http://www.sharpbites.com/atom.xml" rel="self"/>
   <link href="http://www.sharpbites.com/"/>
-  <updated>2012-03-04T01:28:24+01:00</updated>
+  <updated>2012-03-05T22:58:24+01:00</updated>
   <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
@@ -12,6 +12,82 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[rails.start 1.month.ago]]></title>
+    <link href="http://www.sharpbites.com/2012/03/04/rails-start-1-month-ago/"/>
+    <updated>2012-03-04T04:10:00+01:00</updated>
+    <id>http://www.sharpbites.com/2012/03/04/rails-start-1-month-ago</id>
+    <content type="html"><![CDATA[<p>It has been one month since I started doing ruby and Rails at work, so I
+ thought I&#8217;d share my experiences so far.</p>
+
+<p>Here&#8217;s a list of the things I&#8217;ve had to deal with this month:</p>
+
+<ul>
+<li>git</li>
+<li>ruby</li>
+<li>rails</li>
+<li>rvm</li>
+<li>rubygems</li>
+<li>bundler</li>
+<li>homebrew</li>
+<li>rspec</li>
+<li>cucumber</li>
+<li>capybara</li>
+<li>guard</li>
+<li>spork</li>
+<li>jenkins</li>
+<li>log4r</li>
+<li>rest-client</li>
+<li>delayed_job</li>
+<li>rake</li>
+<li>capistrano</li>
+<li>foreman</li>
+<li>daemons</li>
+</ul>
+
+
+<p>You can tell I&#8217;ve been busy :D.</p>
+
+<h2>References</h2>
+
+<p>Here are some resources I&#8217;ve found useful in my journey so far.</p>
+
+<h3>Rails</h3>
+
+<ul>
+<li><a href="http://ruby.railstutorial.org/ruby-on-rails-tutorial-book?version=3.2">Ruby on Rails Tutorial</a>, an awesome introductory book for Rails. It teaches you about many of the things in the list above.</li>
+</ul>
+
+
+<h3>Ruby</h3>
+
+<ul>
+<li><p><a href="http://www.amazon.co.uk/gp/product/1934356085/ref=as_li_qf_sp_asin_tl?ie=UTF8&tag=wwwsharpbites-21&linkCode=as2&camp=1634&creative=6738&creativeASIN=1934356085">Programming Ruby 1.9</a><img src="http://www.assoc-amazon.co.uk/e/ir?t=wwwsharpbites-21&l=as2&o=2&a=1934356085" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />. <strong>The ruby book</strong>.
+For those who want to gain in-depth knowledge of the language.</p></li>
+<li><p>For hands-on ruby learning, try <a href="http://rubykoans.com/">rubykoans</a> and <a href="http://rubymonk.com/">rubymonk</a>.
+They are interactive online tutorials guiding you in the inners of ruby.</p></li>
+</ul>
+
+
+<h3>TDD</h3>
+
+<ul>
+<li><a href="http://www.amazon.co.uk/gp/product/1934356379/ref=as_li_tf_tl?ie=UTF8&tag=wwwsharpbites-21&linkCode=as2&camp=1634&creative=6738&creativeASIN=1934356379">The RSpec Book</a><img src="http://www.assoc-amazon.co.uk/e/ir?t=wwwsharpbites-21&l=as2&o=2&a=1934356379" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />. A
+must read. It teaches you how to do BDD/TDD right. Totally recommended even if you don&#8217;t program in ruby.</li>
+</ul>
+
+
+<h3>Git</h3>
+
+<ul>
+<li>If you are new to git, I recommend you to read <a href="http://progit.org/book/">Pro Git</a>.</li>
+<li>For a more reference to-the-point style, check <a href="http://gitref.org/">Git Reference</a></li>
+<li>Finally, for a learn-by-example guide, visit <a href="http://gitimmersion.com/">Git immersion</a></li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Movin' in]]></title>
@@ -245,16 +321,6 @@ Or how I am moving to a PHP team to free myself from WebForms.<br /><br />So exp
     <id>http://www.sharpbites.com/2009/09/28/road-to-continuous-integration-part-3</id>
     <content type="html"><![CDATA[<div class='post'>
 Ideally, any new developer in your team should be able to build your project with a single command or double-click. To accomplish that, we are going to use a build script.  <br />You can also <a href="http://nant.sourceforge.net/">pick</a> <a href="http://msdn.microsoft.com/en-us/library/0k6kkbsd.aspx">your</a> <a href="http://rake.rubyforge.org/">poison</a> here, too. I am going to stick with nant for the moment, because it&#8217;s the most mature and broadly used, and the one I know better, despite of the <i>XMHell</i> that is the angle-bracket orgy it imposes. <a href="http://codebetter.com/blogs/david_laribee/archive/2008/08/25/omg-rake.aspx">Rake seems nice</a>, and has less noise than the others, but I don&#8217;t like the fact that I have to install ruby and rake separately. As I said, I like all of my dependencies being included in source control, so that my projects are self-contained (there are some efforts to get <a href="http://www.stephenbalkum.com/archive/2009/06/09/when-all-you-need-is-a-rake.aspx">ruby and rake as a single executable</a>, though). If you are hesitating between msbuild and nant, you can check out a <a href="http://sharpbites.blogspot.com/2008/09/nant-vs-msbuild.html">comparison between nant and msbuild</a> I did a while ago.  <br /><a href="http://lh5.ggpht.com/_kQ7iivKjVno/SsEIh_i4iCI/AAAAAAAAAME/oexhq-gr7N4/s1600-h/projectstructure10.jpg"><img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" border="0" alt="project-structure" align="left" src="http://lh6.ggpht.com/_kQ7iivKjVno/SsEIiowefII/AAAAAAAAAMI/TuxGRy-ffPI/projectstructure_thumb8.jpg?imgmax=800" width="155" height="244" /></a>  <br />As you can see on the picture, I have added two build scripts to the root of <a href="http://github.com/alberto/altnerddinner">AltNerdDinner</a>. <i><a href="http://github.com/alberto/altnerddinner/blob/master/common-targets.build">common-targets.build</a></i> has, you know, common nant targets. It&#8217;s a script I reuse between projects and it has all the tasks I usually execute (compile, recompile, publish or package the project, run the tests, analyze the code or binaries, etc). <i><a href="http://github.com/alberto/altnerddinner/blob/master/AltNerdDinner.build">AltNerdDinner.build</a></i> is the specific script for this project. By virtue of <a href="http://en.wikipedia.org/wiki/Convention_over_configuration">Convention over Configuration</a> on the project structure and directory and file names, we can remove a lot of unnecessary noise. By adhering to conventions, we just have to set up a couple of properties and simply delegate on common-targets.build for most (if not all) of the tasks, just defining the dependencies between tasks and passing parameters to configure the task where needed.  <br />  <br />You can see below how simple it gets, with only 16 lines of code:  <br />  <br />  <pre class="code"><span style="color: blue"></span><span style="color: blue"></span></pre><br /><a href="http://11011.net/software/vspaste"></a><br /><br /><pre class="code"><span style="color: blue">&lt;?</span><span style="color: #a31515">xml </span><span style="color: red">version</span><span style="color: blue">=</span>&quot;<span style="color: blue">1.0</span>&quot; <span style="color: blue">?&gt;<br />&lt;</span><span style="color: #a31515">project </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">AltNerdDinner</span>&quot; <span style="color: red">default</span><span style="color: blue">=</span>&quot;<span style="color: blue">compile</span>&quot;<span style="color: blue">&gt;<br />  &lt;</span><span style="color: #a31515">property </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">dir.root</span>&quot; <span style="color: red">value</span><span style="color: blue">=</span>&quot;<span style="color: blue">${path::get-full-path('.')}</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">include </span><span style="color: red">buildfile</span><span style="color: blue">=</span>&quot;<span style="color: blue">${dir.root}/common-targets.build</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">property </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">file.solution</span>&quot; <span style="color: red">value</span><span style="color: blue">=</span>&quot;<span style="color: blue">${dir.root}/NerdDinner.sln</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">property </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">file.project</span>&quot; <span style="color: red">value</span><span style="color: blue">=</span>&quot;<span style="color: blue">${dir.root}/src/NerdDinner/NerdDinner.csproj</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">property </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">assembly.tests</span>&quot; <span style="color: red">value</span><span style="color: blue">=</span>&quot;<span style="color: blue">NerdDinner.Tests.dll</span>&quot; <span style="color: blue">/&gt;<br /><br />  &lt;</span><span style="color: #a31515">target </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">compile</span>&quot; <span style="color: red">depends</span><span style="color: blue">=</span>&quot;<span style="color: blue">common.clean, common.init, common.compile</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">target </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">test</span>&quot; <span style="color: red">depends</span><span style="color: blue">=</span>&quot;<span style="color: blue">compile, common.test</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">target </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">publish</span>&quot; <span style="color: red">depends</span><span style="color: blue">=</span>&quot;<span style="color: blue">test, common.publish</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">target </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">zip</span>&quot; <span style="color: red">depends</span><span style="color: blue">=</span>&quot;<span style="color: blue">publish, common.zip</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">target </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">analyze</span>&quot; <span style="color: red">depends</span><span style="color: blue">=</span>&quot;<span style="color: blue">publish, common.stylecop, common.ndepend</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">target </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">build</span>&quot; <span style="color: red">depends</span><span style="color: blue">=</span>&quot;<span style="color: blue">publish, analyze</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">target </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">build-full</span>&quot; <span style="color: red">depends</span><span style="color: blue">=</span>&quot;<span style="color: blue">publish, analyze, zip</span>&quot; <span style="color: blue">/&gt;<br />&lt;/</span><span style="color: #a31515">project</span><span style="color: blue">&gt;</span></pre><br /><a href="http://11011.net/software/vspaste"></a><br /><br /><p>There is also a <a href="http://github.com/alberto/altnerddinner/blob/master/go.bat">go.bat</a> script, which just calls nant, passing AltNerdDinner.build as the build file. As a side note, notice that my solution file is in the root of the project instead of in src. I like to keep it there so that I can easily refer to the root of the project from it (useful if you want to dome some pre/post build stuff on Visual Studio or for other tools than reference your solution).</p>  </div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[What do you see on the picture?]]></title>
-    <link href="http://www.sharpbites.com/2009/09/15/what-do-you-see-on-picture/"/>
-    <updated>2009-09-15T00:00:00+02:00</updated>
-    <id>http://www.sharpbites.com/2009/09/15/what-do-you-see-on-picture</id>
-    <content type="html"><![CDATA[<div class='post'>
-<div class="separator" style="clear: both; float: left; text-align: center;"><a href="http://2.bp.blogspot.com/_kQ7iivKjVno/Sq9dG5dZPCI/AAAAAAAAAL8/Z4vqxop7-cY/s1600-h/monofinger.jpg" imageanchor="1" style="clear: left; float: left; margin-bottom: 1em; margin-right: 1em;"><img border="0" src="http://2.bp.blogspot.com/_kQ7iivKjVno/Sq9dG5dZPCI/AAAAAAAAAL8/Z4vqxop7-cY/s320/monofinger.jpg" /></a></div><a href="http://monotouch.net/">Monotouch</a> 1.0 was released today. I was quite shocked when I saw the logo. Look at it for a second. What do you see there?<br />It might be my perturbated mind, but I was quite shocked when I felt it was &#8220;showing me the finger&#8221;. It actually took me a minute (I said I was shocked) to realize it was not <i>that </i>finger. Still, maybe that logo deserves a revamp. Just making clear the first finger is a thumb will suffice.</div>
 ]]></content>
   </entry>
   
