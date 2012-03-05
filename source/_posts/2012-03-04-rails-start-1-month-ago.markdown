@@ -4,7 +4,6 @@ title: "rails.start 1.month.ago"
 date: 2012-03-04 04:10
 comments: true
 categories: [ruby, rails]
-published: false
 ---
 It has been one month since I started doing ruby and Rails at work, so I
  thought I'd share my experiences so far.
