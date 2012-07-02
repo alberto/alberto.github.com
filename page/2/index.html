@@ -9,7 +9,7 @@
   <meta name="author" content="alberto">
 
   
-  <meta name="description" content="Greg Young did a great presentation at Oredev about writing Object Oriented code the right way. It&#8217;s so full of good stuff I could not bother &hellip;">
+  <meta name="description" content="@jjballano&nbsp;recently&nbsp;posted&nbsp;his version of the Greed game, as part of his learning experience with Ruby Koans. As I am following that &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,43 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2010/12/20/greed-game-koan/">Greed game koan</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2010-12-20T00:00:00+01:00" pubdate data-updated="true">Dec 20<span>th</span>, 2010</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<a href="http://twitter.com/jjballano">@jjballano</a>&nbsp;recently&nbsp;<a href="https://gist.github.com/736614">posted</a>&nbsp;his version of the <a href="http://en.wikipedia.org/wiki/Greed_(dice_game)">Greed game</a>, as part of his learning experience with <a href="http://rubykoans.com/">Ruby Koans</a>. As I am following that very same path, I thought it could also be worth for me to share <a href="https://gist.github.com/747881">my implementation of Greed</a> for people to comment on it.<br /><br /><div style="margin-bottom: 0px; margin-left: 0px; margin-right: 0px; margin-top: 0px;">The code could surely be much prettier since I am still trying to get my head around ruby block-passing, among others, so comments (and patches!) are welcome.</div><div><br /></div><br /><script src="https://gist.github.com/747881.js?file=score.rb"></script><br /><br />UPDATE: The code seems to update automatically to the latest version on github, you can find the original <a href="https://gist.github.com/747881/3b8cb77970b0b22b2265904b3c02acf7bae84a3f#file_score.rb">here</a>.</div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -410,43 +447,6 @@ Or how I am moving to a PHP team to free myself from WebForms.<br /><br />So exp
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2009/09/28/road-to-continuous-integration-part-3/">The road to Continuous Integration. Part 3: Script it, build it, test it, break it, fix it. Commit it.</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-09-28T00:00:00+02:00" pubdate data-updated="true">Sep 28<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-Ideally, any new developer in your team should be able to build your project with a single command or double-click. To accomplish that, we are going to use a build script.  <br />You can also <a href="http://nant.sourceforge.net/">pick</a> <a href="http://msdn.microsoft.com/en-us/library/0k6kkbsd.aspx">your</a> <a href="http://rake.rubyforge.org/">poison</a> here, too. I am going to stick with nant for the moment, because it&#8217;s the most mature and broadly used, and the one I know better, despite of the <i>XMHell</i> that is the angle-bracket orgy it imposes. <a href="http://codebetter.com/blogs/david_laribee/archive/2008/08/25/omg-rake.aspx">Rake seems nice</a>, and has less noise than the others, but I don&#8217;t like the fact that I have to install ruby and rake separately. As I said, I like all of my dependencies being included in source control, so that my projects are self-contained (there are some efforts to get <a href="http://www.stephenbalkum.com/archive/2009/06/09/when-all-you-need-is-a-rake.aspx">ruby and rake as a single executable</a>, though). If you are hesitating between msbuild and nant, you can check out a <a href="http://sharpbites.blogspot.com/2008/09/nant-vs-msbuild.html">comparison between nant and msbuild</a> I did a while ago.  <br /><a href="http://lh5.ggpht.com/_kQ7iivKjVno/SsEIh_i4iCI/AAAAAAAAAME/oexhq-gr7N4/s1600-h/projectstructure10.jpg"><img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" border="0" alt="project-structure" align="left" src="http://lh6.ggpht.com/_kQ7iivKjVno/SsEIiowefII/AAAAAAAAAMI/TuxGRy-ffPI/projectstructure_thumb8.jpg?imgmax=800" width="155" height="244" /></a>  <br />As you can see on the picture, I have added two build scripts to the root of <a href="http://github.com/alberto/altnerddinner">AltNerdDinner</a>. <i><a href="http://github.com/alberto/altnerddinner/blob/master/common-targets.build">common-targets.build</a></i> has, you know, common nant targets. It&#8217;s a script I reuse between projects and it has all the tasks I usually execute (compile, recompile, publish or package the project, run the tests, analyze the code or binaries, etc). <i><a href="http://github.com/alberto/altnerddinner/blob/master/AltNerdDinner.build">AltNerdDinner.build</a></i> is the specific script for this project. By virtue of <a href="http://en.wikipedia.org/wiki/Convention_over_configuration">Convention over Configuration</a> on the project structure and directory and file names, we can remove a lot of unnecessary noise. By adhering to conventions, we just have to set up a couple of properties and simply delegate on common-targets.build for most (if not all) of the tasks, just defining the dependencies between tasks and passing parameters to configure the task where needed.  <br />  <br />You can see below how simple it gets, with only 16 lines of code:  <br />  <br />  <pre class="code"><span style="color: blue"></span><span style="color: blue"></span></pre><br /><a href="http://11011.net/software/vspaste"></a><br /><br /><pre class="code"><span style="color: blue">&lt;?</span><span style="color: #a31515">xml </span><span style="color: red">version</span><span style="color: blue">=</span>&quot;<span style="color: blue">1.0</span>&quot; <span style="color: blue">?&gt;<br />&lt;</span><span style="color: #a31515">project </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">AltNerdDinner</span>&quot; <span style="color: red">default</span><span style="color: blue">=</span>&quot;<span style="color: blue">compile</span>&quot;<span style="color: blue">&gt;<br />  &lt;</span><span style="color: #a31515">property </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">dir.root</span>&quot; <span style="color: red">value</span><span style="color: blue">=</span>&quot;<span style="color: blue">${path::get-full-path('.')}</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">include </span><span style="color: red">buildfile</span><span style="color: blue">=</span>&quot;<span style="color: blue">${dir.root}/common-targets.build</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">property </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">file.solution</span>&quot; <span style="color: red">value</span><span style="color: blue">=</span>&quot;<span style="color: blue">${dir.root}/NerdDinner.sln</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">property </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">file.project</span>&quot; <span style="color: red">value</span><span style="color: blue">=</span>&quot;<span style="color: blue">${dir.root}/src/NerdDinner/NerdDinner.csproj</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">property </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">assembly.tests</span>&quot; <span style="color: red">value</span><span style="color: blue">=</span>&quot;<span style="color: blue">NerdDinner.Tests.dll</span>&quot; <span style="color: blue">/&gt;<br /><br />  &lt;</span><span style="color: #a31515">target </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">compile</span>&quot; <span style="color: red">depends</span><span style="color: blue">=</span>&quot;<span style="color: blue">common.clean, common.init, common.compile</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">target </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">test</span>&quot; <span style="color: red">depends</span><span style="color: blue">=</span>&quot;<span style="color: blue">compile, common.test</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">target </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">publish</span>&quot; <span style="color: red">depends</span><span style="color: blue">=</span>&quot;<span style="color: blue">test, common.publish</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">target </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">zip</span>&quot; <span style="color: red">depends</span><span style="color: blue">=</span>&quot;<span style="color: blue">publish, common.zip</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">target </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">analyze</span>&quot; <span style="color: red">depends</span><span style="color: blue">=</span>&quot;<span style="color: blue">publish, common.stylecop, common.ndepend</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">target </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">build</span>&quot; <span style="color: red">depends</span><span style="color: blue">=</span>&quot;<span style="color: blue">publish, analyze</span>&quot; <span style="color: blue">/&gt;<br />  &lt;</span><span style="color: #a31515">target </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">build-full</span>&quot; <span style="color: red">depends</span><span style="color: blue">=</span>&quot;<span style="color: blue">publish, analyze, zip</span>&quot; <span style="color: blue">/&gt;<br />&lt;/</span><span style="color: #a31515">project</span><span style="color: blue">&gt;</span></pre><br /><a href="http://11011.net/software/vspaste"></a><br /><br /><p>There is also a <a href="http://github.com/alberto/altnerddinner/blob/master/go.bat">go.bat</a> script, which just calls nant, passing AltNerdDinner.build as the build file. As a side note, notice that my solution file is in the root of the project instead of in src. I like to keep it there so that I can easily refer to the root of the project from it (useful if you want to dome some pre/post build stuff on Visual Studio or for other tools than reference your solution).</p>  </div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/3/">&larr; Older</a>
@@ -464,6 +464,10 @@ Ideally, any new developer in your team should be able to build your project wit
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/07/02/an-introduction-to-the-ruby-ecosystem-for-noobies/">An introduction to the ruby ecosystem for noobies</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/03/04/rails-start-1-month-ago/">rails.start 1.month.ago</a>
       </li>
     
@@ -477,10 +481,6 @@ Ideally, any new developer in your team should be able to build your project wit
     
       <li class="post">
         <a href="/2011/10/23/change/">Change</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2011/04/15/becoming-agile-manager-transforming/">Becoming an Agile Manager: Transforming the Three Dysfunctions of Management</a>
       </li>
     
   </ul>

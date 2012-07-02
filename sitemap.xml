@@ -265,11 +265,17 @@
         <lastmod>2012-03-05T22:57:25+01:00</lastmod>
     </url>
     <url>
+        <loc>
+            http://www.sharpbites.com/2012/07/02/an-introduction-to-the-ruby-ecosystem-for-noobies/
+        </loc>
+        <lastmod>2012-07-02T22:52:12+02:00</lastmod>
+    </url>
+    <url>
         <loc>http://www.sharpbites.com/blog/archives/</loc>
-        <lastmod>2012-03-05T22:57:25+01:00</lastmod>
+        <lastmod>2012-07-02T22:52:12+02:00</lastmod>
     </url>
     <url>
         <loc>http://www.sharpbites.com/</loc>
-        <lastmod>2012-03-05T22:57:25+01:00</lastmod>
+        <lastmod>2012-07-02T22:52:12+02:00</lastmod>
     </url>
 </urlset>
