@@ -9,8 +9,8 @@
   <meta name="author" content="alberto">
 
   
-  <meta name="description" content="Here is a short introductory video to some useful tools to develop in ruby.
-It covers homebrew, pow, rvm, bundler and pry. ">
+  <meta name="description" content="I spent a few hours trying to get the federated engine to work on Mysql, and since I didn&#8217;t
+find any good sources for it, I thought a blog &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -77,6 +77,81 @@ It covers homebrew, pow, rvm, bundler and pry. ">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2012/09/19/enabling-mysqls-federated-engine-slash-plugin-on-mac-os-x/">Enabling Mysql&#8217;s Federated engine/plugin on Mac OS X</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-09-19T18:36:00+02:00" pubdate data-updated="true">Sep 19<span>th</span>, 2012</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>I spent a few hours trying to get the federated engine to work on Mysql, and since I didn&#8217;t
+find any good sources for it, I thought a blog might help someone else.</p>
+
+<p>First, install mysql if you haven&#8217;t already. I used homebrew.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ brew install mysql</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The Federated plugin is not installed by default, so you&#8217;ll have to do it manually. Get into mysql as root (or a user that can alter the mysql.plugin table) and type:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysql&gt; install plugin federated soname 'ha_federated.so';</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To check if it was installed correctly run:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysql&gt; show plugins;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Exit the shell and edit /etc/my.cnf file. If you don&#8217;t have any, you&#8217;ll find an example in your mysql installation directory.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo cp $(brew --prefix mysql)/support-files/my-small.cnf /etc/my.cnf</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Edit the file, and under [mysqld] add a line that contains:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>federated</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Restart the mysqld service:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysql.server restart</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Congrats. You&#8217;re done!</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -525,43 +600,6 @@ Here are my resolutions for the present year:<br />- Read LESS. Yes, less readin
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2011/01/01/12-months-12-katas-january-string/">12 months, 12 katas: January. String calculator</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-01T00:00:00+01:00" pubdate data-updated="true">Jan 1<span>st</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-As recommended by <a href="http://www.twitter.com/plagelao">@plagelao</a> on twitter, the kata for January will be <a href="http://www.osherove.com/tdd-kata-1/">String Calculator</a>.<br />Here are the specs:<br /><span class="Apple-style-span" style="color: #0a0606; font-family: Tahoma, Arial, Helvetica, Geneva, sans-serif; font-size: 14px; line-height: 18px;"></span><br /><ol><li>Create a simple String calculator with a method&nbsp;<strong>int Add(string numbers)</strong><ol><li>The method can take 0, 1 or 2 numbers, and will return their sum (for an empty string it will return 0) for example<strong>&nbsp;“” or “1” or “1,2”</strong></li><li>Start with the simplest test case of an empty string and move to 1 and two numbers</li><li>Remember to solve things as simply as possible so that you force yourself to write tests you did not think about</li><li>Remember to refactor after each passing test</li></ol></li><li>Allow the Add method to handle an unknown amount of numbers</li><li>Allow the Add method to handle new lines between numbers (instead of commas).<ol><li>the following input is ok:&nbsp; “1\n2,3”&nbsp; (will equal 6)</li><li>the following input is NOT&nbsp;ok:&nbsp; “1,\n”&nbsp;</li><li>Make sure you only test for correct inputs. there is no need to test for invalid inputs for these katas</li></ol></li><li>Allow the Add method to handle a different delimiter:<ol><li>to change a delimiter, the beginning of the string will contain a separate line that looks like this:&nbsp;&nbsp; “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter is ‘;’ .</li><li>the first line is optional. all existing scenarios should still be supported</li></ol></li><li>Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed.if there are multiple negatives, show all of them in the exception message<hr /><strong>stop here if you are a beginner</strong>. Continue if you can finish the steps so far in less than 30 minutes.<hr /></li><li>Numbers bigger than 1000 should be ignored, so adding 2 + 1001 &nbsp;= 2</li><li>Delimiters can be of any length with the following format:&nbsp; “//[delimiter]\n” for example: “//[***]\n1***2***3” should return 6</li><li>Allow multiple delimiters like this:&nbsp; “//[delim1][delim2]\n” for example “//[*][%]\n1*2%3” should return 6.</li><li>make sure you can also handle multiple delimiters with length longer than one char</li></ol><br />Enjoy!</div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/2/">&larr; Older</a>
@@ -577,6 +615,10 @@ As recommended by <a href="http://www.twitter.com/plagelao">@plagelao</a> on twi
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/09/19/enabling-mysqls-federated-engine-slash-plugin-on-mac-os-x/">Enabling Mysql&#8217;s Federated engine/plugin on Mac OS X</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/07/02/an-introduction-to-the-ruby-ecosystem-for-noobies/">An introduction to the ruby ecosystem for noobies</a>
       </li>
     
@@ -590,10 +632,6 @@ As recommended by <a href="http://www.twitter.com/plagelao">@plagelao</a> on twi
     
       <li class="post">
         <a href="/2011/11/06/git-started-1-using-git-with-svn-server/">git started #1. Using git with a svn server</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2011/10/23/change/">Change</a>
       </li>
     
   </ul>

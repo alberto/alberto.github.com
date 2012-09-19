@@ -4,7 +4,7 @@
   <title><![CDATA[sharp bites]]></title>
   <link href="http://www.sharpbites.com/atom.xml" rel="self"/>
   <link href="http://www.sharpbites.com/"/>
-  <updated>2012-07-02T22:54:28+02:00</updated>
+  <updated>2012-09-19T18:54:43+02:00</updated>
   <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Enabling Mysql's Federated engine/plugin on Mac OS X]]></title>
+    <link href="http://www.sharpbites.com/2012/09/19/enabling-mysqls-federated-engine-slash-plugin-on-mac-os-x/"/>
+    <updated>2012-09-19T18:36:00+02:00</updated>
+    <id>http://www.sharpbites.com/2012/09/19/enabling-mysqls-federated-engine-slash-plugin-on-mac-os-x</id>
+    <content type="html"><![CDATA[<p>I spent a few hours trying to get the federated engine to work on Mysql, and since I didn&#8217;t
+find any good sources for it, I thought a blog might help someone else.</p>
+
+<p>First, install mysql if you haven&#8217;t already. I used homebrew.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ brew install mysql</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The Federated plugin is not installed by default, so you&#8217;ll have to do it manually. Get into mysql as root (or a user that can alter the mysql.plugin table) and type:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysql&gt; install plugin federated soname 'ha_federated.so';</span></code></pre></td></tr></table></div></figure>
+
+
+<p>To check if it was installed correctly run:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysql&gt; show plugins;</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Exit the shell and edit /etc/my.cnf file. If you don&#8217;t have any, you&#8217;ll find an example in your mysql installation directory.</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>$ sudo cp $(brew --prefix mysql)/support-files/my-small.cnf /etc/my.cnf</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Edit the file, and under [mysqld] add a line that contains:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>federated</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Restart the mysqld service:</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>mysql.server restart</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Congrats. You&#8217;re done!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[An introduction to the ruby ecosystem for noobies]]></title>
@@ -314,16 +362,6 @@ Or how I am moving to a PHP team to free myself from WebForms.<br /><br />So exp
     <id>http://www.sharpbites.com/2009/10/06/altnerddinner-part-2-rich-man</id>
     <content type="html"><![CDATA[<div class='post'>
 <p></p>  <p><em>This is part 2 of the <a href="http://sharpbites.blogspot.com/2009/08/introducing-altnerddinner.html">AltNerdDinner</a> Series.</em></p>  <p>The classes in <a href="http://nerddinner.codeplex.com/">NerdDinner</a> use <a href="http://martinfowler.com/articles/injection.html">dependency injection</a> (<a href="http://martinfowler.com/articles/injection.html#ConstructorInjectionWithPicocontainer">constructor injection</a>, to be more precise), which is a form of <a href="http://martinfowler.com/bliki/InversionOfControl.html">Inversion of Control</a> that allows you to break the dependencies between classes, minimizing coupling (i.e. a Good Thing &#8482;). Instead having classes with direct dependencies&#160; on other classes, and instantiating them directly, classes are dependent on interfaces, and the concrete implementation is injected via the constructor, in this case, or via a setter in the case of <a href="http://martinfowler.com/articles/injection.html#SetterInjectionWithSpring">setter injection</a>. Constructor injection is preferred for required dependencies, as it makes dependencies more explicit, and setter injection is usually reserved for optional dependencies.</p>  <p>Using this technique, the responsibility of providing the dependencies is delegated to the calling object (hence the term Inversion of Control).</p>  <h4>Poor Man&#8217;s Dependency Injection</h4>  <p>The problem with the NerdDinner codebase is that, besides the constructor that accepts the required dependencies, they added a default constructor that news up those dependencies. Here is an example:</p>  <pre class="code"><span style="color: blue">public </span>DinnersController() : <span style="color: blue">this</span>(<span style="color: blue">new </span>DinnerRepository())<br />{<br />}<br /><br /><span style="color: blue">public </span>DinnersController(<span style="color: #2b91af">IDinnerRepository </span>repository) {<br />    dinnerRepository = repository;<br />}</pre><br /><br /><p>This may look like a good compromise. You get the decoupling needed to run your tests (by means of the constructor accepting parameters) and you are also able to instantiate you classes calling the default constructor, without the added complexity of an IoC container. However this technique is considered an <a href="http://www.lostechies.com/blogs/jimmy_bogard/archive/2009/07/03/how-not-to-do-dependency-injection-in-nerddinner.aspx">anti-pattern</a> (although <a href="http://devlicio.us/blogs/tim_barcz/archive/2009/07/12/why-there-s-nothing-wrong-with-dependency-injection-in-nerddinner.aspx">not everybody agrees</a>) <a href="http://www.lostechies.com/blogs/chad_myers/archive/2009/07/14/the-usual-result-of-poor-man-s-dependency-injection.aspx">leading to many headaches</a>. By adding this constructor we&#8217;re almost at square one again. Our classes are still coupled, and if we need to add new dependencies, we&#8217;ll have to go hunting around to fix all the constructor calls.</p><br /><br /><h4>If I were a rich man</h4><br /><br /><p>So now you are convinced to use an IoC container, you can have a look this <a href="http://www.lostechies.com/blogs/jimmy_bogard/archive/2008/09/12/some-ioc-container-guidelines.aspx">container guidelines</a> by <a href="http://www.lostechies.com/blogs/jimmy_bogard/default.aspx">Jimmy Bogard</a>. He may not consider his recommendations as best practices, but I do (and so should you, IMHO). I picked <a href="http://www.castleproject.org/container/gettingstarted/index.html">Castle Windsor</a> as my framework of choice. As usual, <a href="http://structuremap.sourceforge.net/">there</a> <a href="http://code.google.com/p/autofac/">are</a> <a href="http://ninject.org/">plenty</a>&#160;<a href="http://www.spring.net/">of</a> <a href="http://www.codeplex.com/unity">alternatives</a>. Even though the API is not the cleanest of all the frameworks, I favored Windsor because it is very mature, is widely adopted, it also supports .NET 2.0, and has good integration with NHibernate. It also is the container used in <a href="http://code.google.com/p/sharp-architecture/">S#arp Architecture</a>, which is something I will probably end up using. Otherwise, my choice would be <a href="http://structuremap.sourceforge.net/">StructureMap</a>.</p><br /><br /><p>In order to use Windsor, you have to reference on your project <em>Castle.Core</em>, <em>Castle.MicroKernel</em> and <em>Castle.Windsor</em>. To ease the configuration of the container, I also downloaded <a href="http://www.codeplex.com/MVCContrib">MvcContrib</a> (which I was planning to use anyway) and added a reference to <em>MvcContrib.Castle</em>.</p><br /><br /><p>This is the code needed to register the controllers and the Repository.</p><br /><br /><pre class="code"><span style="color: blue">private void </span>RegisterComponents()<br />{<br />    _container = <span style="color: blue">new </span><span style="color: #2b91af">WindsorContainer</span>();<br />    <span style="color: #2b91af">ControllerBuilder</span>.Current.SetControllerFactory(<br />        <span style="color: blue">new </span><span style="color: #2b91af">WindsorControllerFactory</span>(_container));<br />    _container.RegisterControllers(<span style="color: #2b91af">Assembly</span>.GetExecutingAssembly());<br />    _container.Register(<br />            <span style="color: #2b91af">Component</span>.For&lt;<span style="color: #2b91af">IDinnerRepository</span>&gt;()<br />            .ImplementedBy&lt;<span style="color: #2b91af">InMemoryDinnerRepository</span>&gt;());<br />}</pre><br /><br /><p>To allow the creation of the controllers by the MVC framework, you need to supply a ControllerFactory that can instantiate them, as they now take dependencies on their constructors. MvcContrib provides one for Windsor, as well as the method RegisterControllers to, guess what, registering all the controllers in a specified assembly. I also registered my DinnerRepository, so that Windsor can resolve the references to it.</p>  </div>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[AltNerdDinner: Part 1. Removing unwanted dependencies]]></title>
-    <link href="http://www.sharpbites.com/2009/10/03/altnerddinner-part-1-removing-unwanted/"/>
-    <updated>2009-10-03T00:00:00+02:00</updated>
-    <id>http://www.sharpbites.com/2009/10/03/altnerddinner-part-1-removing-unwanted</id>
-    <content type="html"><![CDATA[<div class='post'>
-<p>The first thing I have done is to set up the project on <a href="http://github.com/">github</a>, so if you want to have a look at the code, check the <a href="http://github.com/alberto/altnerddinner">AltNerdDinner repository</a>. Then I set up the project following the guidelines of my series <a href="http://sharpbites.blogspot.com/2009/09/road-to-continuous-integration.html">Continuous Integration series</a>.</p>  <p>Now we are set, there is some stuff I don&#8217;t want in AltNerdDinner, so I am mercilessly going to get rid of it.</p>  <h4>Bye, MSTest</h4>  <p>MSTest gives nothing useful beyond integration in VS (for which I prefer ReSharper&#8217;s Test Runner or TDD.NET). I won&#8217;t say it sucks, but <a href="http://haacked.com/archive/2007/09/04/should-microsoft-really-bundle-open-source-software.aspx">Phil Haack did</a>. It&#8217;s just there to satisfy MS-Only shops. It&#8217;s slow, and it evolves slowly too. It lags behind <a href="http://www.nunit.org/index.php">the</a>&#160;<a href="http://www.gallio.org/">alternative</a> <a href="http://www.codeplex.com/xunit">frameworks</a>. Oh, and it requires VS to be installed on your build server (crazy!), and&#8230; </p>  <p>So I replaced it with good ol&#8217;&#160; <a href="http://www.nunit.org/index.php">NUnit</a>. It basically involves replacing:</p>  <p>using Microsoft.VisualStudio.TestTools.UnitTesting; by using NUnit.Framework;</p>  <blockquote>   <p>[TestClass] and [TestMethod] by [TestFixture],&#160; and [Test]</p> </blockquote>  <p>and a bunch of calls to Assert.IsInstanceOfType(object, type); by Assert.IsInstanceOf(type, object); (pay attention to the signature change!).</p>  <h4>We don&#8217;t need no membership provider</h4>  <p>Right now I don&#8217;t want to deal with membership provider. I think it&#8217;s bloated and I don&#8217;t want to have to mess with the authentication right now, so I am going to replace it with a FakeMembershipService for the moment and leave the decision of whether revisiting it or completely replacing it (probably the latter) for a later time.</p>  <h4>LINQ to SQL is dead, long live NHibernate</h4>  <p>L2S is probably a decent option for this kind of simple app, and it&#8217;s very easy to quickly duct-tape a simple app. It has some goodies, like the visual designer and of course Linq. But it&#8217;s not the best option if your app gets bigger and you need some more advanced ORM features, like different mapping capabilities or different databases support. It&#8217;s not a bad tool, but it has <a href="http://codebetter.com/blogs/ian_cooper/archive/2008/07/01/architecting-linq-to-sql-part-10.aspx">some limitations</a> that need to be addressed and, unfortunately, the fact that <a href="http://www.infoq.com/news/2008/11/DLINQ-Future">L2S is being killed</a> means you are better not investing hard into it.</p>  <p>So I am planning to replace it with NHibernate, a mature and tested product&#160; that fits my needs. But just not yet. Right now, I will simply remove the L2S stuff and work with POCOs and an InMemoryRepository implementation (which is basically the FakeDinnerRepository present in the Tests project).</p>  <h5>The model</h5>  <p>As we can see on the picture of the original model, the domain is quite simple.<a href="http://lh3.ggpht.com/_kQ7iivKjVno/SseCJ_ZEG0I/AAAAAAAAAMQ/ehF8shEf9Dg/s1600-h/image11.png"><img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" border="0" alt="image" src="http://lh3.ggpht.com/_kQ7iivKjVno/SseCKvw9G1I/AAAAAAAAAMU/ft6vs8PlB_0/image_thumb9.png?imgmax=800" width="488" height="259" /></a></p>  <p>I have simply created POCO classes replacing the L2S generated ones.</p>  <p>After all the changes, we run all the tests and&#8230;</p>  <p><a href="http://lh5.ggpht.com/_kQ7iivKjVno/SseCLKN9WMI/AAAAAAAAAMY/KpeLlk_F18c/s1600-h/testsgreen2.jpg"><img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" border="0" alt="tests-green" src="http://lh5.ggpht.com/_kQ7iivKjVno/SseCL4M-ONI/AAAAAAAAAMc/Nr3Jv3PFVPc/testsgreen_thumb.jpg?imgmax=800" width="184" height="34" /></a></p>  <p>We&#8217;re done!</p>  </div>
 ]]></content>
   </entry>
   

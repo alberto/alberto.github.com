@@ -9,7 +9,7 @@
   <meta name="author" content="alberto">
 
   
-  <meta name="description" content="@jjballano&nbsp;recently&nbsp;posted&nbsp;his version of the Greed game, as part of his learning experience with Ruby Koans. As I am following that &hellip;">
+  <meta name="description" content="As recommended by @plagelao on twitter, the kata for January will be String Calculator.Here are the specs:Create a simple String calculator with a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,43 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2011/01/01/12-months-12-katas-january-string/">12 months, 12 katas: January. String calculator</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-01-01T00:00:00+01:00" pubdate data-updated="true">Jan 1<span>st</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+As recommended by <a href="http://www.twitter.com/plagelao">@plagelao</a> on twitter, the kata for January will be <a href="http://www.osherove.com/tdd-kata-1/">String Calculator</a>.<br />Here are the specs:<br /><span class="Apple-style-span" style="color: #0a0606; font-family: Tahoma, Arial, Helvetica, Geneva, sans-serif; font-size: 14px; line-height: 18px;"></span><br /><ol><li>Create a simple String calculator with a method&nbsp;<strong>int Add(string numbers)</strong><ol><li>The method can take 0, 1 or 2 numbers, and will return their sum (for an empty string it will return 0) for example<strong>&nbsp;“” or “1” or “1,2”</strong></li><li>Start with the simplest test case of an empty string and move to 1 and two numbers</li><li>Remember to solve things as simply as possible so that you force yourself to write tests you did not think about</li><li>Remember to refactor after each passing test</li></ol></li><li>Allow the Add method to handle an unknown amount of numbers</li><li>Allow the Add method to handle new lines between numbers (instead of commas).<ol><li>the following input is ok:&nbsp; “1\n2,3”&nbsp; (will equal 6)</li><li>the following input is NOT&nbsp;ok:&nbsp; “1,\n”&nbsp;</li><li>Make sure you only test for correct inputs. there is no need to test for invalid inputs for these katas</li></ol></li><li>Allow the Add method to handle a different delimiter:<ol><li>to change a delimiter, the beginning of the string will contain a separate line that looks like this:&nbsp;&nbsp; “//[delimiter]\n[numbers…]” for example “//;\n1;2” should return three where the default delimiter is ‘;’ .</li><li>the first line is optional. all existing scenarios should still be supported</li></ol></li><li>Calling Add with a negative number will throw an exception “negatives not allowed” - and the negative that was passed.if there are multiple negatives, show all of them in the exception message<hr /><strong>stop here if you are a beginner</strong>. Continue if you can finish the steps so far in less than 30 minutes.<hr /></li><li>Numbers bigger than 1000 should be ignored, so adding 2 + 1001 &nbsp;= 2</li><li>Delimiters can be of any length with the following format:&nbsp; “//[delimiter]\n” for example: “//[***]\n1***2***3” should return 6</li><li>Allow multiple delimiters like this:&nbsp; “//[delim1][delim2]\n” for example “//[*][%]\n1*2%3” should return 6.</li><li>make sure you can also handle multiple delimiters with length longer than one char</li></ol><br />Enjoy!</div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -410,43 +447,6 @@ Or how I am moving to a PHP team to free myself from WebForms.<br /><br />So exp
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2009/10/03/altnerddinner-part-1-removing-unwanted/">AltNerdDinner: Part 1. Removing unwanted dependencies</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-10-03T00:00:00+02:00" pubdate data-updated="true">Oct 3<span>rd</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<p>The first thing I have done is to set up the project on <a href="http://github.com/">github</a>, so if you want to have a look at the code, check the <a href="http://github.com/alberto/altnerddinner">AltNerdDinner repository</a>. Then I set up the project following the guidelines of my series <a href="http://sharpbites.blogspot.com/2009/09/road-to-continuous-integration.html">Continuous Integration series</a>.</p>  <p>Now we are set, there is some stuff I don&#8217;t want in AltNerdDinner, so I am mercilessly going to get rid of it.</p>  <h4>Bye, MSTest</h4>  <p>MSTest gives nothing useful beyond integration in VS (for which I prefer ReSharper&#8217;s Test Runner or TDD.NET). I won&#8217;t say it sucks, but <a href="http://haacked.com/archive/2007/09/04/should-microsoft-really-bundle-open-source-software.aspx">Phil Haack did</a>. It&#8217;s just there to satisfy MS-Only shops. It&#8217;s slow, and it evolves slowly too. It lags behind <a href="http://www.nunit.org/index.php">the</a>&#160;<a href="http://www.gallio.org/">alternative</a> <a href="http://www.codeplex.com/xunit">frameworks</a>. Oh, and it requires VS to be installed on your build server (crazy!), and&#8230; </p>  <p>So I replaced it with good ol&#8217;&#160; <a href="http://www.nunit.org/index.php">NUnit</a>. It basically involves replacing:</p>  <p>using Microsoft.VisualStudio.TestTools.UnitTesting; by using NUnit.Framework;</p>  <blockquote>   <p>[TestClass] and [TestMethod] by [TestFixture],&#160; and [Test]</p> </blockquote>  <p>and a bunch of calls to Assert.IsInstanceOfType(object, type); by Assert.IsInstanceOf(type, object); (pay attention to the signature change!).</p>  <h4>We don&#8217;t need no membership provider</h4>  <p>Right now I don&#8217;t want to deal with membership provider. I think it&#8217;s bloated and I don&#8217;t want to have to mess with the authentication right now, so I am going to replace it with a FakeMembershipService for the moment and leave the decision of whether revisiting it or completely replacing it (probably the latter) for a later time.</p>  <h4>LINQ to SQL is dead, long live NHibernate</h4>  <p>L2S is probably a decent option for this kind of simple app, and it&#8217;s very easy to quickly duct-tape a simple app. It has some goodies, like the visual designer and of course Linq. But it&#8217;s not the best option if your app gets bigger and you need some more advanced ORM features, like different mapping capabilities or different databases support. It&#8217;s not a bad tool, but it has <a href="http://codebetter.com/blogs/ian_cooper/archive/2008/07/01/architecting-linq-to-sql-part-10.aspx">some limitations</a> that need to be addressed and, unfortunately, the fact that <a href="http://www.infoq.com/news/2008/11/DLINQ-Future">L2S is being killed</a> means you are better not investing hard into it.</p>  <p>So I am planning to replace it with NHibernate, a mature and tested product&#160; that fits my needs. But just not yet. Right now, I will simply remove the L2S stuff and work with POCOs and an InMemoryRepository implementation (which is basically the FakeDinnerRepository present in the Tests project).</p>  <h5>The model</h5>  <p>As we can see on the picture of the original model, the domain is quite simple.<a href="http://lh3.ggpht.com/_kQ7iivKjVno/SseCJ_ZEG0I/AAAAAAAAAMQ/ehF8shEf9Dg/s1600-h/image11.png"><img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" border="0" alt="image" src="http://lh3.ggpht.com/_kQ7iivKjVno/SseCKvw9G1I/AAAAAAAAAMU/ft6vs8PlB_0/image_thumb9.png?imgmax=800" width="488" height="259" /></a></p>  <p>I have simply created POCO classes replacing the L2S generated ones.</p>  <p>After all the changes, we run all the tests and&#8230;</p>  <p><a href="http://lh5.ggpht.com/_kQ7iivKjVno/SseCLKN9WMI/AAAAAAAAAMY/KpeLlk_F18c/s1600-h/testsgreen2.jpg"><img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" border="0" alt="tests-green" src="http://lh5.ggpht.com/_kQ7iivKjVno/SseCL4M-ONI/AAAAAAAAAMc/Nr3Jv3PFVPc/testsgreen_thumb.jpg?imgmax=800" width="184" height="34" /></a></p>  <p>We&#8217;re done!</p>  </div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/3/">&larr; Older</a>
@@ -464,6 +464,10 @@ Or how I am moving to a PHP team to free myself from WebForms.<br /><br />So exp
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2012/09/19/enabling-mysqls-federated-engine-slash-plugin-on-mac-os-x/">Enabling Mysql&#8217;s Federated engine/plugin on Mac OS X</a>
+      </li>
+    
+      <li class="post">
         <a href="/2012/07/02/an-introduction-to-the-ruby-ecosystem-for-noobies/">An introduction to the ruby ecosystem for noobies</a>
       </li>
     
@@ -477,10 +481,6 @@ Or how I am moving to a PHP team to free myself from WebForms.<br /><br />So exp
     
       <li class="post">
         <a href="/2011/11/06/git-started-1-using-git-with-svn-server/">git started #1. Using git with a svn server</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2011/10/23/change/">Change</a>
       </li>
     
   </ul>
