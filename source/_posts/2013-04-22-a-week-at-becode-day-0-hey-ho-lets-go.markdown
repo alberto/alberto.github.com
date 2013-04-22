@@ -8,7 +8,7 @@ categories:
   - learning
   - agile
 ---
-{% youtube ElX7x_qNUYQ 160 90 %}
+{% youtube ElX7x_qNUYQ %}
 
 This is a post series about my desksurfing at BeCode.
 
