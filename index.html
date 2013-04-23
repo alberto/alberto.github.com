@@ -9,7 +9,7 @@
   <meta name="author" content="alberto">
 
   
-  <meta name="description" content="This is a post series about my desksurfing at BeCode. We coined the term desksurfing at the Agile Spain Open Space Conference we held back in 2011 &hellip;">
+  <meta name="description" content="Today was my first day at BeCode. If you measure productivity by lines of count written, then my productivity today would be exactly 0. (Also, you &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,61 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2013/04/22/a-week-at-becode-day-1-anarchy-in-the-uk/">A week at BeCode. Day 1: Anarchy in the UK</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-04-22T22:57:00+02:00" pubdate data-updated="true">Apr 22<span>nd</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><iframe width="640" height="510" src="http://www.youtube.com/embed/pOe9PJrbo0s " frameborder="0" allowfullscreen></iframe>
+
+
+<p>Today was my first day at BeCode. If you measure productivity by lines of count written, then my productivity today would be exactly 0. (Also, you are an idiot. Stop doing that.)</p>
+
+<p>The door was open when I arrived to The Cave (more on that later). I came in and met <a href="twitter.com/xav1uzz">Xavi</a> and <a href="twitter.com/elmendalerenda">Mike</a>. <a href="https://twitter.com/semurat">Jorge</a> and <a href="https://twitter.com/jjballano">Jesús</a> were remote, so I didn&#8217;t get to talk to them. There was also a guy whose name I don&#8217;t remember (sorry mate!) who is not really part of BeCode, but is working there with them. He designs his own line of T-shirts. I spent some time talking with Xavi and Mike about BeCode and what they do now. It surprised me a lot when they told me they have decided not to work for clients anymore. They told me they now prefer to do workshops, consulting and hacking, and they would like to develop a product.</p>
+
+<p>The big WTF of the day came when Xavi kicked me in the head with the fact that Mac OS X is not case-sensititive (srsly, Apple?). He later added something about the worst thing in the world being a PHP programmer. He mentioned something after that, but I was still shocked, so you better ask him. :)</p>
+
+<p>When I woke up, I talked with Mike about a project he wants to do for his town-hall, to give people the ability to give feedback. We discussed about his motivations, what would constitute the MVP and how some of the features made sense or not. Then <a href="https://twitter.com/luislitze">Luis</a> and <a href="https://twitter.com/circun4">Sergio</a> came and we went to buy some food for lunch.</p>
+
+<p>In the afternoon, Sergio, showed me the very starting bits of a 2D videogame he wants to do. Mike told me he is going to teach a javascript course and we decided I would do it beforehand along the week and give him feedback.</p>
+
+<p>Then I decided to have a look to <a href="https://github.com/beCodeMyFriend/Cuore.js">Cuore.js</a> source code while I waited for Xavi to come back from the gym (I know, I know, me too. Maybe he wants to get into Gandia Shore or something). When he arrived he told me what he wants to work on for the next version (was that secret? I hope not) and explained me the high level architecture of Cuore and how ReST was full of crap and how SOA was vastly superior. He  probably still was high on testosterone and I didn&#8217;t want to get kicked again, so I just nodded and no one got hurt. We moved on to the code and paired, having him as the driver. I was surprised becaused I expected him to go much faster than what he did. Instead he took plenty of time with the code. We talked a lot about what we were trying to achieve, there was no rush at all. I decided I will be working with Xavi on Cuore for the rest of the week, too.</p>
+
+<p>A random girl came in (remember the door was open? It remained open for the rest of the day. It turns out it&#8217;s a rule to be approachable to passing byers) asking if we(they) fixed bikes. They don&#8217;t, but they told her she needed a new wheel and where to buy it, and they offered to teach her how to replace it. She came back after a while and Luis did it. She paid back with some pastries.</p>
+
+<p>I spent some more time talking with Xavi about his view on our so-called industry, the need to teach programming to children and other phylosophical aspects of our not-science-nor-craft field.</p>
+
+<p>Finally, Luis and &#8220;Mate&#8221; showed us a couple of videos they had been editing of Luis doing vandal cycling in Valencia and New York.</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -579,43 +634,6 @@ Now that <a href="http://www.sharpbites.com/2011/01/setting-up-your-ruby-environ
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2011/01/25/setting-up-your-ruby-environment-on/">Setting up your ruby environment on Linux</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2011-01-25T00:00:00+01:00" pubdate data-updated="true">Jan 25<span>th</span>, 2011</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-Here are the instructions on how to set up a ruby environment for Linux, in case you want to start playing with it.<br /><br /><b>NOTE:</b> Don&#8217;t use the packages from your distribution. They are outdated and will cause more harm than good. Use one of the methods below.<br /><br /><span class="Apple-style-span" style="font-size: large;">The quick and easy way</span><br />If you are planning to use Rails anyways, you can use the script from <a href="https://github.com/joshfng/railsready">railsready</a>.<br />It will install rails, passenger, and a shitload dependencies it need for everything to work smoothly.<br />You can install it by running:<br /><blockquote>sudo wget &#8211;no-check-certificate https://github.com/joshfng/railsready/raw/master/railsready.sh &amp;&amp; bash railsready.sh</blockquote>The script will ask if you want to build Ruby from source or install RVM.&nbsp;Choose RVM.<br /><br />It will download around 50MB of libraries from the repositories and then download and compile rvm, ruby and download again some other gems, so it will take some time. Don&#8217;t worry, you don&#8217;t have to do anything, just wait.<br /><br /><span class="Apple-style-span" style="font-size: large;">The almost-as-quick, almost-as-easy way</span><br />If you don&#8217;t intend to use rails and don&#8217;t feel like installing all that stuff, use the following method. It&#8217;s basically doing the same thing as the previous script, except you don&#8217;t need so many dependencies, and you won&#8217;t install rails or passenger.<br /><br /><b>Installing RVM</b><br /><br /><a href="http://rvm.beginrescueend.com/">RVM</a> (Ruby Version Manager)&nbsp;is a tool which allows us to easily install, manage and work with multiple ruby environments (interpreters and gems) on the same machine. This means we can create different environments with distincts versions, of ruby, rails, or whatever gem we want, without any headaches.<br /><div><br /></div><div><div>In order to install rvm, you&#8217;ll need curl, git and some compiler tools. We can get them with the following command:</div><blockquote>sudo apt-get install git-core curl build-essential</blockquote></div><div><div>To install rvm execute:</div><blockquote>bash &lt; &lt;( curl http://rvm.beginrescueend.com/releases/rvm-install-head )</blockquote></div><div><div>This command will install rvm in your home directory.</div></div><div>You need to include a line at the end of the .bashrc file to tell it to load rvm.</div><div>Follow carefuly the instructions on your terminal, specially the part about converting the return to an if statement</div><blockquote>&#8221;[ -z &#8220;$PS1&#8221; ] &amp;&amp; return&#8221;</blockquote><div><b>NOTE:</b> The railsready script doesn&#8217;t do this, and just appends the line loading rvm at the end of the file. RVM maintainers recommend otherwise, so you better do it their way.</div><div><br /></div><div>If you find any problems, check <a href="http://rvm.beginrescueend.com/rvm/install/">rvm site troubleshooting information</a>&nbsp;(section &#8216;Trhoubleshooting your install&#8217;)</div><div><div><br /></div><div>Finally reload your envirnonment executing:</div><blockquote>source ~/.bashrc</blockquote></div><div><b>Installing ruby</b></div><div><div>Now you have rvm installed and running, you can proceed to install ruby. You&#8217;ll need some packages first, the following command will tell you which:</div><blockquote>rvm notes</blockquote></div>In my case, these were:<br /># For Ruby (MRI &amp; ree) &nbsp;you should install the following OS dependencies:<br /><blockquote>sudo apt-get install build-essential bison openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libsqlite3-0 libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf</blockquote><div><div>Now, we can install ruby 1.9.2:</div><blockquote>rvm install 1.9.2</blockquote><div>This will take a while, since it is dowloading ruby sources and compiling them.</div><div><br /></div><div>You can check ruby is all fine and dandy by running</div><blockquote>ruby -v</blockquote><div>You should get something similar to:</div><blockquote>ruby 1.9.2p136 (2010-12-25 revision 30365) [x86_64-linux]</blockquote>On the next post I will explain how to setup your environment for testing using rvm.</div></div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/2/">&larr; Older</a>
@@ -631,6 +649,10 @@ Here are the instructions on how to set up a ruby environment for Linux, in case
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/04/22/a-week-at-becode-day-1-anarchy-in-the-uk/">A week at BeCode. Day 1: Anarchy in the UK</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/04/21/a-week-at-becode-day-0-hey-ho-lets-go/">A week at BeCode. Day 0: Hey Ho! Let&#8217;s go!</a>
       </li>
     
@@ -644,10 +666,6 @@ Here are the instructions on how to set up a ruby environment for Linux, in case
     
       <li class="post">
         <a href="/2012/03/04/rails-start-1-month-ago/">rails.start 1.month.ago</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/03/03/movin-in/">Movin&#8217; in</a>
       </li>
     
   </ul>

@@ -9,7 +9,7 @@
   <meta name="author" content="alberto">
 
   
-  <meta name="description" content="This is part 2 of the AltNerdDinner Series. The classes in NerdDinner use dependency injection (constructor injection, to be more precise), which is &hellip;">
+  <meta name="description" content="This is part 3 of the AltNerdDinner Series. One of the things I always disliked the most when exploring NHibernate was the need of declaring all the &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,43 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/10/14/altnerddinner-part-3-introducing-fluent/">AltNerdDinner: Part 3. Introducing Fluent NHibernate. Mapping, the easy way</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-10-14T00:00:00+02:00" pubdate data-updated="true">Oct 14<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<p><em>This is part 3 of the <a href="http://sharpbites.blogspot.com/2009/08/introducing-altnerddinner.html">AltNerdDinner</a> Series.</em></p>  <p>One of the things I always disliked the most when exploring NHibernate was the need of declaring all the mappings in XMhelL. And don&#8217;t know about you, but that&#8217;s not something I want to be spending my time creating, modifying, hand-refactoring or debugging tedious tons of this crap.</p>  <p>Fast forward to 2008 and say hello to <a href="http://fluentnhibernate.org/">Fluent NHibernate</a>. (And don&#8217;t forget to thank <a href="http://codebetter.com/blogs/jeremy.miller/">Jeremy Miller</a>, <a href="http://blog.jagregory.com/">James Gregory</a> <a href="http://code.google.com/p/fluent-nhibernate/people/list"><em>et al</em></a>!). It is basically a way to programmatically declare the mappings, allowing you to go from this:</p>  <pre class="code"><span style="color: blue">&lt;?</span><span style="color: #a31515">xml </span><span style="color: red">version</span><span style="color: blue">=</span>&quot;<span style="color: blue">1.0</span>&quot; <span style="color: red">encoding</span><span style="color: blue">=</span>&quot;<span style="color: blue">utf-8</span>&quot; <span style="color: blue">?&gt;  <br />&lt;</span><span style="color: #a31515">hibernate-mapping </span><span style="color: red">xmlns</span><span style="color: blue">=</span>&quot;<span style="color: blue">urn:nhibernate-mapping-2.2</span>&quot;  <br />  <span style="color: red">namespace</span><span style="color: blue">=</span>&quot;<span style="color: blue">QuickStart</span>&quot; <span style="color: red">assembly</span><span style="color: blue">=</span>&quot;<span style="color: blue">QuickStart</span>&quot;<span style="color: blue">&gt;  <br /> <br />  &lt;</span><span style="color: #a31515">class </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">Cat</span>&quot; <span style="color: red">table</span><span style="color: blue">=</span>&quot;<span style="color: blue">Cat</span>&quot;<span style="color: blue">&gt;  <br />    &lt;</span><span style="color: #a31515">id </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">Id</span>&quot;<span style="color: blue">&gt;  <br />      &lt;</span><span style="color: #a31515">generator </span><span style="color: red">class</span><span style="color: blue">=</span>&quot;<span style="color: blue">identity</span>&quot; <span style="color: blue">/&gt;  <br />    &lt;/</span><span style="color: #a31515">id</span><span style="color: blue">&gt;  <br /> <br />    &lt;</span><span style="color: #a31515">property </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">Name</span>&quot;<span style="color: blue">&gt;  <br />      &lt;</span><span style="color: #a31515">column </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">Name</span>&quot; <span style="color: red">length</span><span style="color: blue">=</span>&quot;<span style="color: blue">16</span>&quot; <span style="color: red">not-null</span><span style="color: blue">=</span>&quot;<span style="color: blue">true</span>&quot; <span style="color: blue">/&gt;  <br />    &lt;/</span><span style="color: #a31515">property</span><span style="color: blue">&gt;  <br />    &lt;</span><span style="color: #a31515">property </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">Sex</span>&quot; <span style="color: blue">/&gt;  <br />    &lt;</span><span style="color: #a31515">many-to-one </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">Mate</span>&quot; <span style="color: blue">/&gt;  <br />    &lt;</span><span style="color: #a31515">bag </span><span style="color: red">name</span><span style="color: blue">=</span>&quot;<span style="color: blue">Kittens</span>&quot;<span style="color: blue">&gt;  <br />      &lt;</span><span style="color: #a31515">key </span><span style="color: red">column</span><span style="color: blue">=</span>&quot;<span style="color: blue">mother_id</span>&quot; <span style="color: blue">/&gt;  <br />        &lt;</span><span style="color: #a31515">one-to-many </span><span style="color: red">class</span><span style="color: blue">=</span>&quot;<span style="color: blue">Cat</span>&quot; <span style="color: blue">/&gt;  <br />      &lt;/</span><span style="color: #a31515">bag</span><span style="color: blue">&gt;  <br />  &lt;/</span><span style="color: #a31515">class</span><span style="color: blue">&gt;  <br />&lt;/</span><span style="color: #a31515">hibernate-mapping</span><span style="color: blue">&gt;</span></pre><br /><br /><p>To this:</p><br /><br /><pre class="code"><span style="color: blue">public class </span><span style="color: #2b91af">CatMap </span>: ClassMap&lt;Cat&gt;<br />{<br />    <span style="color: blue">public </span>CatMap()<br />    {<br />        Id(x =&gt; x.Id);<br />        Map(x =&gt; x.Name)<br />          .Length(16)<br />          .Not.Nullable();<br />        Map(x =&gt; x.Sex);<br />        References(x =&gt; x.Mate);<br />        HasMany(x =&gt; x.Kittens);<br />    }<br />}</pre><br /><br /><p>What it gives you, you may ask? Compile-time checks and refactoring support, for a start.</p><br /><br /><h4>But wait, there is more!</h4><br /><br /><p>Fluent NHibernate is built with <a href="http://en.wikipedia.org/wiki/Convention_over_Configuration">Convention over Configuration</a> in mind. So, if you adhere to it, you can greatly reduce the amount of mapping needed, by virtue of <a href="http://wiki.fluentnhibernate.org/Auto_mapping">auto mapping</a>. And you can combine that with explicit ClassMap mappings, like the one above, they are not mutually exclusive.</p><br /><br /><p>Mapping your domain can be as simple as:</p><br /><br /><pre class="code">AutoMap.AssemblyOf&lt;Product&gt;();</pre><br /><br /><h4>And if you call within the next 5 minutes we throw in Conventions for free!</h4><br /><br /><p>&quot;Ok, that might be great for a greenfield project, but I am working in a big brown piece of &#8230; code&quot;, I hear you saying. So you may not have the choice to call your Id&#8217;s &quot;Id&quot; or name your tables exactly after your classes. <a href="http://wiki.fluentnhibernate.org/Conventions">Conventions</a> can greatly help here, allowing you to define your own conventions. That is, if your database naming follows any convention at all, and wasn&#8217;t defined by a bunch of monkeys typing at random.</p><br /><br /><p>For further info, check the <a href="http://fluentnhibernate.org/">site</a>, <a href="http://wiki.fluentnhibernate.org/">wiki</a> and <a href="http://groups.google.com/group/fluent-nhibernate">mailing list</a>.</p><br /><br /><h4>AltNerdDinner&#8217;s mappings</h4><br /><br /><p>Here are the mapping files for AltNerdDinner.</p><br /><br /><pre class="code"><span style="color: blue">public class </span><span style="color: #2b91af">DinnerMap </span>: <span style="color: #2b91af">ClassMap</span>&lt;<span style="color: #2b91af">Dinner</span>&gt;<br />{<br />    <span style="color: blue">public </span>DinnerMap()<br />    {<br />        Id(x =&gt; x.DinnerID);<br />        Map(x =&gt; x.Address).Not.Nullable();<br />        Map(x =&gt; x.ContactPhone).Not.Nullable();<br />        Map(x =&gt; x.Country).Not.Nullable();<br />        Map(x =&gt; x.Description).Not.Nullable();<br />        Map(x =&gt; x.EventDate).Not.Nullable();<br />        Map(x =&gt; x.HostedBy).Not.Nullable();<br />        Map(x =&gt; x.Latitude).Not.Nullable();<br />        Map(x =&gt; x.Longitude).Not.Nullable();<br />        Map(x =&gt; x.Title).Not.Nullable();<br />        HasMany(x =&gt; x.RSVPs).Cascade.AllDeleteOrphan();<br />    }<br />}</pre><br /><a href="http://11011.net/software/vspaste"></a><br /><br /><pre class="code"><span style="color: blue">public class </span><span style="color: #2b91af">RSVPMap </span>: <span style="color: #2b91af">ClassMap</span>&lt;<span style="color: #2b91af">RSVP</span>&gt;<br />{<br />    <span style="color: blue">public </span>RSVPMap()<br />    {<br />        Id(x =&gt; x.RsvpId);<br />        Map(x =&gt; x.AttendeeName).Not.Nullable();<br />        References(r =&gt; r.Dinner).<strong>Nullable()</strong>;            <br />    }<br />}</pre><br /><br /><p><a href="http://11011.net/software/vspaste"></a>One gotcha that had me fiddling around for a while was that Nullable part on the Dinner reference in RSVPMap. If you don&#8217;t set it to nullable, you&#8217;ll get an exception when trying to persist the entities. And even if you set it to nullable, you&#8217;ll find out, NHibernate executes two queries to insert the RSVP.</p><br /><br /><blockquote><br />  <p>&#160;&#160;&#160; INSERT INTO&#160; [RSVP] (AttendeeName, Dinner_id) VALUES (@p0, @p1); <br />    <br />&#160;&#160;&#160; select SCOPE_IDENTITY(); <br /><br />    <br />&#160;&#160;&#160; @p0 = &#8216;alberto&#8217;, <br /><br />    <br />&#160;&#160;&#160; @p1 = 9 <br /><br />    <br />&#160;&#160;&#160; UPDATE [RSVP] SET Dinner_id = @p0 WHERE RsvpId = @p1; @p0 = 9, @p1 = 21</p><br /></blockquote><br /><br /><p>You can find <a href="http://nhforge.org/doc/nh/en/index.html#example-parentchild-bidir">more info</a> about this behavior in the <a href="http://nhforge.org/">official nhibernate site</a>.</p><br /><br /><p>So, what I have done instead is to set the RSVP as the managing part of the relationship, changing it back to not nullable and using Inverse() on the Dinner&#8217;s mapping side.</p><br /><a href="http://11011.net/software/vspaste"></a><br /><br /><p>It is not possible to make the &quot;many part&quot; responsible for this. What this means is that we have to persist our entities calling:</p><br /><br /><pre class="code"><span style="color: #2b91af">Dinner </span>dinner = _dinnerRepository.GetDinner(id);<br /><span style="color: blue">var </span>rsvp = <span style="color: blue">new </span><span style="color: #2b91af">RSVP</span>{ AttendeeName = username };<br />rsvp.Dinner = dinner;<br />dinner.Rsvps.Add(rsvp);<br />_dinnerRepository.Save(dinner);</pre><br /><br /><p><a href="http://11011.net/software/vspaste"></a>That&#8217;s not very ideal, so I have included an AddRsvp() method in Dinner to handle that. Now I have:</p><br /><br /><pre class="code"><span style="color: #2b91af">Dinner </span>dinner = _dinnerRepository.GetDinner(id);<br />dinner.AddRsvp(<span style="color: blue">new </span><span style="color: #2b91af">RSVP</span>{ AttendeeName = User.Identity.Name });<br />_dinnerRepository.Save(dinner);</pre><br /><br /><p>Much cleaner! In order to avoid confusion when adding an RSVO, I have changed the type of the collection to an IEnumerable&lt;RSVP&gt;, so that the collection cannot be modified directly, but only by means of Dinner (which is a good practice if you want to follow DDD, anyway). Because of that, I had to modified the DinnerMap to use a backing field for it. In the future I might revisit this relationship to include the User in the domain again and change it to a less CRUD-y style. You can read more on <a href="http://www.udidahan.com/2008/02/15/from-crud-to-domain-driven-fluency/">Domain-Driven fluency</a> from <a href="http://www.udidahan.com/2008/02/15/from-crud-to-domain-driven-fluency/">Udi Dahan</a>.</p><br /><br /><p>Anyway, here is the final mapping I have come up with:</p><br /><br /><pre class="code"><span style="color: blue">public class </span><span style="color: #2b91af">RSVPMap </span>: <span style="color: #2b91af">ClassMap</span>&lt;<span style="color: #2b91af">RSVP</span>&gt;<br />{<br />    <span style="color: blue">public </span>RSVPMap()<br />    {<br />        Id(x =&gt; x.RsvpId);<br />        Map(x =&gt; x.AttendeeName).Not.Nullable();<br />        References(r =&gt; r.Dinner).Not.Nullable();            <br />    }<br />}</pre><br /><a href="http://11011.net/software/vspaste"></a><br /><br /><pre class="code"><span style="color: blue">public class </span><span style="color: #2b91af">DinnerMap </span>: <span style="color: #2b91af">ClassMap</span>&lt;<span style="color: #2b91af">Dinner</span>&gt;<br />{<br />    <span style="color: blue">public </span>DinnerMap()<br />    {<br />        Id(x =&gt; x.DinnerID);<br />        Map(x =&gt; x.Address).Not.Nullable();<br />        Map(x =&gt; x.ContactPhone).Not.Nullable();<br />        Map(x =&gt; x.Country).Not.Nullable();<br />        Map(x =&gt; x.Description).Not.Nullable();<br />        Map(x =&gt; x.EventDate).Not.Nullable();<br />        Map(x =&gt; x.HostedBy).Not.Nullable();<br />        Map(x =&gt; x.Latitude).Not.Nullable();<br />        Map(x =&gt; x.Longitude).Not.Nullable();<br />        Map(x =&gt; x.Title).Not.Nullable();<br />        HasMany(x =&gt; x.Rsvps).Access.CamelCaseField(<span style="color: #2b91af">Prefix</span>.Underscore)<br />            .Inverse().Cascade.AllDeleteOrphan();<br />    }<br />}</pre>  </div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -410,43 +447,6 @@ Ideally, any new developer in your team should be able to build your project wit
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2009/08/26/tdd-masterclass/">TDD Masterclass</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-08-26T00:00:00+02:00" pubdate data-updated="true">Aug 26<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<p>Roy Osherove is giving an hands-on TDD Masterclass in the UK, September 21-25. Roy is author of &#8220;The Art of Unit Testing&#8221; (<a href="http://www.artofunittesting.com/">http://www.artofunittesting.com/</a>), a leading tdd &amp; unit testing book; he maintains a blog at <a href="http://iserializable.com">http://iserializable.com</a> (which amoung other things has critiqued tests written by Microsoft for <a href="http://asp.net">asp.net</a> MVC - check out the testreviews category) and has recently been on the Scott Hanselman podcast (<a href="http://bit.ly/psgYO">http://bit.ly/psgYO</a>) where he educated Scott on best practices in Unit Testing techniques. For a further insight into Roy&#8217;s style, be sure to also check out Roy&#8217;s talk at the recent Norwegian Developer&#8217;s Conference (<a href="http://bit.ly/NuJVa">http://bit.ly/NuJVa</a>).  </p>  <p>Full Details here: <a href="http://bbits.co.uk/tddmasterclass">http://bbits.co.uk/tddmasterclass</a></p>  <p>bbits are holding a raffle for a free ticket for the event. To be eligible to win the ticket (worth £2395!) you MUST paste this text, including all links, into your blog and email <a href="mailto:Ian@bbits.co.uk">Ian@bbits.co.uk</a> with the url to the blog entry.  The draw will be made on September 1st and the winner informed by email and on <a href="http://bbits.co.uk/blog">bbits.co.uk/blog</a> </p></div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/4/">&larr; Older</a>
@@ -464,6 +464,10 @@ Ideally, any new developer in your team should be able to build your project wit
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/04/22/a-week-at-becode-day-1-anarchy-in-the-uk/">A week at BeCode. Day 1: Anarchy in the UK</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/04/21/a-week-at-becode-day-0-hey-ho-lets-go/">A week at BeCode. Day 0: Hey Ho! Let&#8217;s go!</a>
       </li>
     
@@ -477,10 +481,6 @@ Ideally, any new developer in your team should be able to build your project wit
     
       <li class="post">
         <a href="/2012/03/04/rails-start-1-month-ago/">rails.start 1.month.ago</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/03/03/movin-in/">Movin&#8217; in</a>
       </li>
     
   </ul>
