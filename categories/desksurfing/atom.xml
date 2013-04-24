@@ -4,7 +4,7 @@
   <title><![CDATA[Category: desksurfing | sharp bites]]></title>
   <link href="http://www.sharpbites.com/categories/desksurfing/atom.xml" rel="self"/>
   <link href="http://www.sharpbites.com/"/>
-  <updated>2013-04-23T09:56:10+02:00</updated>
+  <updated>2013-04-24T09:38:11+02:00</updated>
   <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
@@ -12,6 +12,21 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A week at BeCode. Day 2: God Save the Queen]]></title>
+    <link href="http://www.sharpbites.com/2013/04/23/a-week-at-becode-day-2-god-save-the-queen/"/>
+    <updated>2013-04-23T21:07:00+02:00</updated>
+    <id>http://www.sharpbites.com/2013/04/23/a-week-at-becode-day-2-god-save-the-queen</id>
+    <content type="html"><![CDATA[<p><iframe width="640" height="510" src="http://www.youtube.com/embed/xJmouowPH5k " frameborder="0" allowfullscreen></iframe></p>
+
+<p>Today I met <a href="https://twitter.com/hell03610">Emma</a> and Nico. Emma is part of BeCode, but is playing her own adventure as a <a href="http://tracxphotography.com/">photographer for technical conferences</a>. Nico is from Granada. In a past life he was a programmer and he decided he wanted to get get back into the game. He is attending a course they are teaching during the weekends and decided to take the chance to stay here for a full immersion. He also nicely recommended me a couple of places to visit in Navarre (shame on me!).</p>
+
+<p>I spent the morning pairing with Xavi on Cuore again and managed to get a few pomodoros done, cleaning up the codebase by reintroducing the classes while questioning the existence and expresiveness of every line of code.</p>
+
+<p>In the afternoon, after talking to Nico about his learning path I decided to pair with him, using the <a href="http://www.durangobill.com/N_Queens.html">N-Queens problem</a> as the playground. We where doing quite well until Xavi told us our approach was retarded, and how we should try to solve it bottom-up, from the core of the problem domain. The conversation deviated into the difference between emergent and exploratory design, design patterns, programming languages (with a small rant on ruby), and the kinds of tests he does. He also mentioned his disdain for Clean Code and Working Effectively with Legacy Code (put that in your pipe and smoke it). We decided to ignore the old-rambling-man and finish the implementation. After that, we talked about how the code could be modified to take different chess pieces into account, but left it there and called it a day.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A week at BeCode. Day 1: Anarchy in the UK]]></title>
