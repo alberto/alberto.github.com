@@ -4,7 +4,7 @@
   <title><![CDATA[Category: agile | sharp bites]]></title>
   <link href="http://www.sharpbites.com/categories/agile/atom.xml" rel="self"/>
   <link href="http://www.sharpbites.com/"/>
-  <updated>2013-04-25T09:44:55+02:00</updated>
+  <updated>2013-04-27T09:38:39+02:00</updated>
   <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A week at BeCode. Day 5: I wanna be sedated]]></title>
+    <link href="http://www.sharpbites.com/2013/04/27/a-week-at-becode-day-5-i-wanna-be-sedated/"/>
+    <updated>2013-04-27T00:13:00+02:00</updated>
+    <id>http://www.sharpbites.com/2013/04/27/a-week-at-becode-day-5-i-wanna-be-sedated</id>
+    <content type="html"><![CDATA[<p><iframe width="640" height="510" src="http://www.youtube.com/embed/Eajk2uDWaP0 " frameborder="0" allowfullscreen></iframe></p>
+
+<p>Yesterday I started pairing on the 8-Queens Kata with Xavi. We solved the logic of the queen, and we talked about the innability of BDD to help designing an algorithm. We talked about how it could be solved.</p>
+
+<p>Today I got back on the problem and miserably failed at it. I tried to model it throught tests, I tried to spike it, I tried to to divide it in chunks, but I didn't get anywhere close to solving it. Boy, was it frustrating!</p>
+
+<p>In the afternoon I paired with Xavi and he just dictated me a declarative solution of the algorithm in 20 lines of code. From there it was pretty straightforward. I still managed to mess it up. I wanted so badly to give up. Almost as much as I wanted to solve it. It finally worked, but unsurprisingly it didn't make me feel much better.</p>
+
+<p>After that, we went to have some beer-driven conversation about BeCode culture, its past, present and future, mentoring, meritocracy, software as crafstmanship/engineering/art.</p>
+
+<p>And finally, I got my BeCode T-shirt!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A week at BeCode. Day 3: Psycho Killer]]></title>
@@ -93,17 +112,6 @@
 <p>What am I going to do this week? I’m not sure yet, and I just don’t really care (well, I was curious, so after I insisted Xavi I got some more info and he proposed a couple of interesting options to work with them, we'll see).</p>
 
 <p>Then, why did I decide to come? AFAIK they are raw, honest, transparent and strong in their beliefs. And that resonates with me. I came here to live that, to see how they do things, to breathe their culture (and to share mine if they are interested). To have fun.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Change]]></title>
-    <link href="http://www.sharpbites.com/2011/10/23/change/"/>
-    <updated>2011-10-23T00:00:00+02:00</updated>
-    <id>http://www.sharpbites.com/2011/10/23/change</id>
-    <content type="html"><![CDATA[<div class='post'>
-<div dir="ltr" style="text-align: left;" trbidi="on"><blockquote>“You never change things by ﬁghting the existing reality. To change something, build a new model that makes the existing model obsolete.” <cite> R. Buckminster Fuller</cite></blockquote></div></div>
-
 ]]></content>
   </entry>
   

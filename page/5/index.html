@@ -9,7 +9,7 @@
   <meta name="author" content="alberto">
 
   
-  <meta name="description" content="Ward Cunniham, of Ward&#8217;s Wiki fame, was the coiner of the term &#8220;technical debt&#8221;. He made an interesting clarification in the &hellip;">
+  <meta name="description" content="If you try to migrate a solution to VS2008 and you are using nant, you&#8217;ll probably find a few problems. This is one of them I am documenting &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,43 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/03/10/targetting-net-20-with-nant-and-visual/">Targetting .NET 2.0 with Nant and Visual Studio 2008</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-03-10T00:00:00+01:00" pubdate data-updated="true">Mar 10<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+If you try to migrate a solution to VS2008 and you are using nant, you&#8217;ll probably find a few problems. This is one of them I am documenting for you.<br />I wanted to use VS2008 and nant, but still want target the .net 2.0 framework. I read somewhere I needed to install the .net 2.0 sdk, but I was still having issues, where msbuild was complaining it didn&#8217;t recognize the format of the solution file.<br />It turns out you need to change nant.settings.currentframework to &#8220;net-3.5&#8221;, so that it is the version of msbuild that comes with msbuild who compiles the solution (so I am not sure anymore you need the .net 2.0 sdk). It will still target the .net 2.0 framework for your projects if you set that that way in VS, as msbuild uses that info for the target.<br /><br />Hope it helps someone out there.</div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -410,43 +447,6 @@ Yes, this is yet another post on <a href="http://nant.sourceforge.net/">nant</a>
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2008/06/18/how-does-project-get-to-be-year-behind/">How does a project get to be a year behind schedule?</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-06-18T00:00:00+02:00" pubdate data-updated="true">Jun 18<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<blockquote>One day at a time.<br /><cite> <a href="http://www.cs.unc.edu/~brooks/">Fred Brooks</a>, <a href="http://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959">The Mythical Man-Month</a>.</cite></blockquote></div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/6/">&larr; Older</a>
@@ -464,6 +464,10 @@ Yes, this is yet another post on <a href="http://nant.sourceforge.net/">nant</a>
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/04/27/a-week-at-becode-day-5-i-wanna-be-sedated/">A week at BeCode. Day 5: I wanna be sedated</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/04/25/a-week-at-becode-day-3-psycho-killer/">A week at BeCode. Day 3: Psycho Killer</a>
       </li>
     
@@ -477,10 +481,6 @@ Yes, this is yet another post on <a href="http://nant.sourceforge.net/">nant</a>
     
       <li class="post">
         <a href="/2013/04/21/a-week-at-becode-day-0-hey-ho-lets-go/">A week at BeCode. Day 0: Hey Ho! Let&#8217;s go!</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/09/19/enabling-mysqls-federated-engine-slash-plugin-on-mac-os-x/">Enabling Mysql&#8217;s Federated engine/plugin on Mac OS X</a>
       </li>
     
   </ul>

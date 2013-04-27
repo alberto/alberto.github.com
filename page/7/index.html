@@ -9,7 +9,7 @@
   <meta name="author" content="alberto">
 
   
-  <meta name="description" content="Linux.Hehe, I&#8217;m kidding. I think 2008 will be the year of Test Driven Design. I know it has been already there for a long time already, but I &hellip;">
+  <meta name="description" content="In a nice thread on the cli_dev list (formerly altdotnet) they discuss whether you should return null or an Empty Collection/Default Object when a &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,43 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/01/24/returning-null-vs-empty/">Returning null vs. Empty Collection/Default Object</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-01-24T00:00:00+01:00" pubdate data-updated="true">Jan 24<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+In a nice thread on the <a href="http://tech.groups.yahoo.com/group/cli_dev/message/9849">cli_dev list (formerly altdotnet)</a> they discuss whether you should return null or an Empty Collection/Default Object when a query returns no results.<br /><br />There is a more or less common approach I agree with of returning a null collection when your query yields no results, like in GetUsers(), being therefore able to iterate it with a foreach(User user in GetUsers()) witout having to use safe-guards.<br /><br />I think Luke Breuer makes a good point too in <a href="http://tech.groups.yahoo.com/group/cli_dev/message/9855">this post</a> when talking about retrieving a particular result:<br /><blockquote>I like null checks to actually have significant meaning.  I&#8217;ve actually adopted a convention &#8211; GetAwesomeObject will return a valid object or throw; FindAwesomeObject might return null.  The idea is that a NullReferenceException means you really screwed up somewhere &#8211; you have a glaring logic error, because you didn&#8217;t account for possible emptiness. </blockquote></div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -410,43 +447,6 @@ It seems <a href="http://www.jpboodhoo.com/blog/Handling3rdPartyDependenciesIncl
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2007/12/07/software-is-art/">Software is art</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2007-12-07T00:00:00+01:00" pubdate data-updated="true">Dec 7<span>th</span>, 2007</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<blockquote>&#8220;Software design is an art, and like any art it cannot be taught and <br />learned as a precise science, by means of theorems and formulas.&#8221;</blockquote><cite> Domain-Driven Design Quickly, by Abel Avram & Floyd Marinescu</cite></div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/8/">&larr; Older</a>
@@ -464,6 +464,10 @@ It seems <a href="http://www.jpboodhoo.com/blog/Handling3rdPartyDependenciesIncl
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/04/27/a-week-at-becode-day-5-i-wanna-be-sedated/">A week at BeCode. Day 5: I wanna be sedated</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/04/25/a-week-at-becode-day-3-psycho-killer/">A week at BeCode. Day 3: Psycho Killer</a>
       </li>
     
@@ -477,10 +481,6 @@ It seems <a href="http://www.jpboodhoo.com/blog/Handling3rdPartyDependenciesIncl
     
       <li class="post">
         <a href="/2013/04/21/a-week-at-becode-day-0-hey-ho-lets-go/">A week at BeCode. Day 0: Hey Ho! Let&#8217;s go!</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/09/19/enabling-mysqls-federated-engine-slash-plugin-on-mac-os-x/">Enabling Mysql&#8217;s Federated engine/plugin on Mac OS X</a>
       </li>
     
   </ul>

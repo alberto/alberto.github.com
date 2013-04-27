@@ -9,7 +9,9 @@
   <meta name="author" content="alberto">
 
   
-  <meta name="description" content="Here&#8217;s an easy way to launch on time and on budget: keep them fixed. Never throw more time or money at a problem, just scale back the scope &hellip;">
+  <meta name="description" content="
+One day at a time. Fred Brooks, The Mythical Man-Month.
+">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +78,43 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2008/06/18/how-does-project-get-to-be-year-behind/">How does a project get to be a year behind schedule?</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2008-06-18T00:00:00+02:00" pubdate data-updated="true">Jun 18<span>th</span>, 2008</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<blockquote>One day at a time.<br /><cite> <a href="http://www.cs.unc.edu/~brooks/">Fred Brooks</a>, <a href="http://www.amazon.com/Mythical-Man-Month-Software-Engineering-Anniversary/dp/0201835959">The Mythical Man-Month</a>.</cite></blockquote></div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -410,43 +449,6 @@ Here comes a new challenge.<br /><blockquote>Given a set of versioned file, you 
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2008/01/24/returning-null-vs-empty/">Returning null vs. Empty Collection/Default Object</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2008-01-24T00:00:00+01:00" pubdate data-updated="true">Jan 24<span>th</span>, 2008</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-In a nice thread on the <a href="http://tech.groups.yahoo.com/group/cli_dev/message/9849">cli_dev list (formerly altdotnet)</a> they discuss whether you should return null or an Empty Collection/Default Object when a query returns no results.<br /><br />There is a more or less common approach I agree with of returning a null collection when your query yields no results, like in GetUsers(), being therefore able to iterate it with a foreach(User user in GetUsers()) witout having to use safe-guards.<br /><br />I think Luke Breuer makes a good point too in <a href="http://tech.groups.yahoo.com/group/cli_dev/message/9855">this post</a> when talking about retrieving a particular result:<br /><blockquote>I like null checks to actually have significant meaning.  I&#8217;ve actually adopted a convention &#8211; GetAwesomeObject will return a valid object or throw; FindAwesomeObject might return null.  The idea is that a NullReferenceException means you really screwed up somewhere &#8211; you have a glaring logic error, because you didn&#8217;t account for possible emptiness. </blockquote></div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/7/">&larr; Older</a>
@@ -464,6 +466,10 @@ In a nice thread on the <a href="http://tech.groups.yahoo.com/group/cli_dev/mess
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/2013/04/27/a-week-at-becode-day-5-i-wanna-be-sedated/">A week at BeCode. Day 5: I wanna be sedated</a>
+      </li>
+    
+      <li class="post">
         <a href="/2013/04/25/a-week-at-becode-day-3-psycho-killer/">A week at BeCode. Day 3: Psycho Killer</a>
       </li>
     
@@ -477,10 +483,6 @@ In a nice thread on the <a href="http://tech.groups.yahoo.com/group/cli_dev/mess
     
       <li class="post">
         <a href="/2013/04/21/a-week-at-becode-day-0-hey-ho-lets-go/">A week at BeCode. Day 0: Hey Ho! Let&#8217;s go!</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2012/09/19/enabling-mysqls-federated-engine-slash-plugin-on-mac-os-x/">Enabling Mysql&#8217;s Federated engine/plugin on Mac OS X</a>
       </li>
     
   </ul>

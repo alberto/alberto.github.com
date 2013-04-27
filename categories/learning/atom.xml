@@ -4,7 +4,7 @@
   <title><![CDATA[Category: learning | sharp bites]]></title>
   <link href="http://www.sharpbites.com/categories/learning/atom.xml" rel="self"/>
   <link href="http://www.sharpbites.com/"/>
-  <updated>2013-04-25T09:44:55+02:00</updated>
+  <updated>2013-04-27T09:38:39+02:00</updated>
   <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
@@ -12,6 +12,25 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[A week at BeCode. Day 5: I wanna be sedated]]></title>
+    <link href="http://www.sharpbites.com/2013/04/27/a-week-at-becode-day-5-i-wanna-be-sedated/"/>
+    <updated>2013-04-27T00:13:00+02:00</updated>
+    <id>http://www.sharpbites.com/2013/04/27/a-week-at-becode-day-5-i-wanna-be-sedated</id>
+    <content type="html"><![CDATA[<p><iframe width="640" height="510" src="http://www.youtube.com/embed/Eajk2uDWaP0 " frameborder="0" allowfullscreen></iframe></p>
+
+<p>Yesterday I started pairing on the 8-Queens Kata with Xavi. We solved the logic of the queen, and we talked about the innability of BDD to help designing an algorithm. We talked about how it could be solved.</p>
+
+<p>Today I got back on the problem and miserably failed at it. I tried to model it throught tests, I tried to spike it, I tried to to divide it in chunks, but I didn't get anywhere close to solving it. Boy, was it frustrating!</p>
+
+<p>In the afternoon I paired with Xavi and he just dictated me a declarative solution of the algorithm in 20 lines of code. From there it was pretty straightforward. I still managed to mess it up. I wanted so badly to give up. Almost as much as I wanted to solve it. It finally worked, but unsurprisingly it didn't make me feel much better.</p>
+
+<p>After that, we went to have some beer-driven conversation about BeCode culture, its past, present and future, mentoring, meritocracy, software as crafstmanship/engineering/art.</p>
+
+<p>And finally, I got my BeCode T-shirt!</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[A week at BeCode. Day 3: Psycho Killer]]></title>
