@@ -9,7 +9,7 @@
   <meta name="author" content="alberto">
 
   
-  <meta name="description" content="CultureView more presentations from Reed Hastings.Some highlights:&#8220;The real company values, as opposed to the nice-sounding values, are shown &hellip;">
+  <meta name="description" content="If you are not already doing so, put your stuff under source control. Right now. It doesn&#8217;t matter how small your project is or whether you &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,43 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2009/09/11/road-to-continuous-integration-part-1/">The road to Continuous Integration. Part 1: Get your source under control!</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2009-09-11T00:00:00+02:00" pubdate data-updated="true">Sep 11<span>th</span>, 2009</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<p><a href="http://lh6.ggpht.com/_kQ7iivKjVno/Sqq2s0-EiHI/AAAAAAAAAL0/DFQJE0sWIhc/s1600-h/timemachine6.jpg"><img style="border-right-width: 0px; border-top-width: 0px; border-bottom-width: 0px; border-left-width: 0px" border="0" alt="time-machine" align="right" src="http://lh3.ggpht.com/_kQ7iivKjVno/Sqq2tpkGKTI/AAAAAAAAAL4/g1pf0RP_k7Q/timemachine_thumb6.jpg?imgmax=800" width="115" height="115" /></a> If you are not already doing so, put your stuff under source control. Right now. It doesn&#8217;t matter how small your project is or whether you are working alone. If it&#8217;s worth your time, it&#8217;s worth putting it under source control. </p>  <h4>What is Source Control?</h4>  <p>Source control, often referred to as VCS (Version Control System) or SCM (Source Code Management) is the management of changes in files. It&#8217;s a time machine that lets you see how your project looked like at any given point in time.</p>  <p>For a more detailed introduction, see <a href="http://www.ericsink.com/scm/source_control.html">Eric Sink&#8217;s Source Control HOWTO</a> or the <a href="http://svnbook.red-bean.com/nightly/en/index.html">SVN book</a>.</p>  <h4>Why you should use a SCM tool</h4>  <p>It gives you an infinite undo-button. No matter how much you have screwed up, you can always go back to a stable point.</p>  <p>You can share code with other people.</p>  <p>You can keep track of your changes over time. This allows you to know who changed what, when and (luckily, if you use meaningful comments) why.</p>  <p>You can maintain multiple code bases of your software. Even if you only have one active version at a time, it&#8217;s useful to start new development independently.</p>  <h4>What should you store?</h4>  <p>Everything you need to build your product. That includes your sources, of course, but also any libraries your projects depends on (avoid referencing GAC&#8217;ed or installed libraries), any tools you use and any scripts that you need as part of the process. Nothing should be dependent of your machine installation.</p>  <p>The goal is to be able to get into a clean machine, get a copy of the codebase from your source repository, build it (automatically) and voil&#224;, you are done and ready to start working!</p>  <h4>WHICH SCM ARE YOU?</h4>  <p><a href="http://subversion.tigris.org/">There</a> <a href="http://www.git-scm.org/">are</a> <a href="http://www.selenic.com/mercurial/">many</a> <a href="http://bazaar-vcs.org/">alternatives</a>, just pick one, (oh well, <a href="http://www.codinghorror.com/blog/archives/000660.html">not THAT one</a>). If you don&#8217;t want to set up and maintain a server, you can use <a href="http://code.google.com/">one</a> <a href="http://sourceforge.net">of</a> <a href="http://www.assembla.com">the</a> <a href="http://github.com/">many</a> <a href="http://bitbucket.org/">online</a> <a href="http://www.launchpad.net">services</a> <a href="http://www.codeplex.com">available</a> (some of them are just for open source projects, and some have free and paid plans). Which one is best will depend on your specific needs:</p>  <h5>If you&#8230;</h5>  <ul>   <li>want an easy to install, easy to start tool -&gt; svn </li>    <li>want a powerful tool, at the expense of a bit steeper learning curve -&gt; git, mercurial, bazaar </li>    <li>need to use a mature GUI/integration with Visual Studio -&gt; svn, tfs </li>    <li>need good branching and merging support -&gt; git, mercurial, bazaar </li>    <li>need an all-in-one tool (source control, bug tracking system, continuous integration) completely integrated, even if the individual tools are not-so-great for the -&gt; tfs </li>    <li>are a Microsoft-only shop -&gt; tfs </li> </ul>  <p>For the clients there are also a myriad of tools available for all platforms. You have command-line interfaces, standalone GUI tools (<a href="http://tortoisesvn.net/">tortoisesvn</a>, <a href="http://bitbucket.org/tortoisehg/stable/wiki/Home">tortoisehg</a>, <a href="http://code.google.com/p/tortoisegit/">tortoisegit</a>) and IDE integrated (<a href="http://www.visualsvn.com/">VisualSVN</a>, <a href="http://ankhsvn.open.collab.net/">AnhkSVN</a>, <a href="http://code.google.com/p/gitextensions/">Git Extensions</a>).</p>  </div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -410,43 +447,6 @@ Eric Lippert, wrote a great post about value types vs reference types, and how, 
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2009/03/12/price-of-change/">The price of change</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2009-03-12T00:00:00+01:00" pubdate data-updated="true">Mar 12<span>th</span>, 2009</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<blockquote>Change is expensive, no question about it. However, consider the alternative—stagnation.</blockquote><cite> Jim Highsmith</cite></div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/5/">&larr; Older</a>
@@ -464,7 +464,11 @@ Eric Lippert, wrote a great post about value types vs reference types, and how, 
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/2013/04/27/a-week-at-becode-day-5-i-wanna-be-sedated/">A week at BeCode. Day 5: I wanna be sedated</a>
+        <a href="/2013/04/27/a-week-at-becode-day-6-should-i-stay-or-should-i-go/">A week at BeCode. Day 6: Should I stay or should I go</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/04/26/a-week-at-becode-day-5-i-wanna-be-sedated/">A week at BeCode. Day 5: I wanna be sedated</a>
       </li>
     
       <li class="post">
@@ -477,10 +481,6 @@ Eric Lippert, wrote a great post about value types vs reference types, and how, 
     
       <li class="post">
         <a href="/2013/04/22/a-week-at-becode-day-1-anarchy-in-the-uk/">A week at BeCode. Day 1: Anarchy in the UK</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/04/21/a-week-at-becode-day-0-hey-ho-lets-go/">A week at BeCode. Day 0: Hey Ho! Let&#8217;s go!</a>
       </li>
     
   </ul>

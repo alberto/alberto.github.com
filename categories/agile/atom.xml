@@ -4,7 +4,7 @@
   <title><![CDATA[Category: agile | sharp bites]]></title>
   <link href="http://www.sharpbites.com/categories/agile/atom.xml" rel="self"/>
   <link href="http://www.sharpbites.com/"/>
-  <updated>2013-04-27T09:38:39+02:00</updated>
+  <updated>2013-04-28T09:40:45+02:00</updated>
   <id>http://www.sharpbites.com/</id>
   <author>
     <name><![CDATA[alberto]]></name>
@@ -14,10 +14,30 @@
 
   
   <entry>
+    <title type="html"><![CDATA[A week at BeCode. Day 6: Should I stay or should I go]]></title>
+    <link href="http://www.sharpbites.com/2013/04/27/a-week-at-becode-day-6-should-i-stay-or-should-i-go/"/>
+    <updated>2013-04-27T00:09:00+02:00</updated>
+    <id>http://www.sharpbites.com/2013/04/27/a-week-at-becode-day-6-should-i-stay-or-should-i-go</id>
+    <content type="html"><![CDATA[<p><iframe width="640" height="510" src="http://www.youtube.com/embed/RK34uNGvMbs " frameborder="0" allowfullscreen></iframe>
+Today Xavi invited me to attend a lecture he was imparting at UPV as part of the course in Agile Methodologies. He talked about Implementation Patters, which turns out to be one of his favorite books (the other one being Refactoring). It now next on my reading list (and it should be in yours too!).</p>
+
+<p>From there we went to the old town and did a small touring visit on our way to the Central Market, where we met Luis. We bought some food there, and went to cook it at Xavi's, where Luis kindly prepared it for all of us. He also told us about some of his marketing strategy for <a href="http://www.harveysclothing.com/">Harveys</a> and his plans to go to the Alps this Summer for a month of bike trainning.</p>
+
+<p>It was also amusing to get to know Xavi a bit better through his flat and belongings. All the books, the dust, the paintings he and his girlfried draw, the stuff he collects, the music, his punchbag, the furniture...</p>
+
+<p>While Luis had an nap, we spent the rest of the afternoon knowing each other, talking about our past, present and foreseeable future. The time flied and I had to part ways to get my stuff ready for the leave.</p>
+
+<p>I feel sad to go. These guys made me feel so at home and I enjoyed this week so much, I'd love to stay longer.</p>
+
+<p>Thank you!</p>
+]]></content>
+  </entry>
+  
+  <entry>
     <title type="html"><![CDATA[A week at BeCode. Day 5: I wanna be sedated]]></title>
-    <link href="http://www.sharpbites.com/2013/04/27/a-week-at-becode-day-5-i-wanna-be-sedated/"/>
-    <updated>2013-04-27T00:13:00+02:00</updated>
-    <id>http://www.sharpbites.com/2013/04/27/a-week-at-becode-day-5-i-wanna-be-sedated</id>
+    <link href="http://www.sharpbites.com/2013/04/26/a-week-at-becode-day-5-i-wanna-be-sedated/"/>
+    <updated>2013-04-26T00:13:00+02:00</updated>
+    <id>http://www.sharpbites.com/2013/04/26/a-week-at-becode-day-5-i-wanna-be-sedated</id>
     <content type="html"><![CDATA[<p><iframe width="640" height="510" src="http://www.youtube.com/embed/Eajk2uDWaP0 " frameborder="0" allowfullscreen></iframe></p>
 
 <p>Yesterday I started pairing on the 8-Queens Kata with Xavi. We solved the logic of the queen, and we talked about the innability of BDD to help designing an algorithm. We talked about how it could be solved.</p>
@@ -86,32 +106,6 @@
 <p>I spent some more time talking with Xavi about his view on our so-called industry, the need to teach programming to children and other phylosophical aspects of our not-science-nor-craft field.</p>
 
 <p>Finally, Luis and "Mate" showed us a couple of videos they had been editing of Luis doing vandal cycling in Valencia and New York.</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[A week at BeCode. Day 0: Hey Ho! Let's go!]]></title>
-    <link href="http://www.sharpbites.com/2013/04/21/a-week-at-becode-day-0-hey-ho-lets-go/"/>
-    <updated>2013-04-21T23:22:00+02:00</updated>
-    <id>http://www.sharpbites.com/2013/04/21/a-week-at-becode-day-0-hey-ho-lets-go</id>
-    <content type="html"><![CDATA[<p><iframe width="640" height="510" src="http://www.youtube.com/embed/ElX7x_qNUYQ " frameborder="0" allowfullscreen></iframe></p>
-
-<p>This is a post series about my desksurfing at BeCode.</p>
-
-<p>We coined the term <a href="http://www.desk-surfing.org/">desksurfing</a>  at the <a href="http://agile-spain.org/">Agile Spain</a> Open Space Conference we held back in 2011 in Pamplona (my hometown!). It’s akin to what some fellows like <a href="http://coreyhaines.com/">Corey Haines</a> and other journeymen were already doing. You go visiting another company to spend some time sharing experiences, programming and learning from each other. Cross-pollination for your brain.</p>
-
-<p>Today, I traveled to Valencia for a week of desksurfing at <a href="http://www.becodemyfriend.com/?lang=en_us">BeCode</a>. They describe themselves as a “punk incubator”, and you can certainly tell they are not very “enterprisey”!</p>
-
-<ul>
-<li><p>They are so underground they don’t put their office address (or the cave as they call it) on their web. I had to look for it to know where it is. Fuck! I just realized they don’t even tell what they are or do, except for a few sample projects!</p></li>
-<li><p>When I mailed them telling I wanted to go there, <a href="https://twitter.com/XaV1uzz">Xavi</a>’s answer was (quite literally): “awesome, call me when you get here”. That. Was. It. Then, when I arrived he didn’t answer the phone (he later told me <a href="https://twitter.com/XaV1uzz/status/326042040225890305">he was having a paella</a>, wtf! :D).</p></li>
-<li><p>They hold free workshops in their office as part of their “neighbourhood development plan”, with topics as disparate as how to fix your bike or teaching kids html or programming with <a href="http://scratch.mit.edu/">scratch</a>. I think anyone can give a workshop there, they just have to ask for the space.</p></li>
-</ul>
-
-
-<p>What am I going to do this week? I’m not sure yet, and I just don’t really care (well, I was curious, so after I insisted Xavi I got some more info and he proposed a couple of interesting options to work with them, we'll see).</p>
-
-<p>Then, why did I decide to come? AFAIK they are raw, honest, transparent and strong in their beliefs. And that resonates with me. I came here to live that, to see how they do things, to breathe their culture (and to share mine if they are interested). To have fun.</p>
 ]]></content>
   </entry>
   

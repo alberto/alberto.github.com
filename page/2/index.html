@@ -9,7 +9,7 @@
   <meta name="author" content="alberto">
 
   
-  <meta name="description" content="“You never change things by ﬁghting the existing reality. To change something, build a new model that makes the existing model obsolete.” R. &hellip;">
+  <meta name="description" content="So, you already know that svn sucks and you want to switch to git because you know it&#8217;s awesome, but you are stuck in a team environment of &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -76,6 +76,43 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/2011/11/06/git-started-1-using-git-with-svn-server/">git started #1. Using git with a svn server</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2011-11-06T00:00:00+01:00" pubdate data-updated="true">Nov 6<span>th</span>, 2011</time>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><div class='post'>
+<div dir="ltr" style="text-align: left;" trbidi="on">So, you already know that <a href="http://www.sharpbites.com/2008/09/why-svn-sucks.html">svn sucks</a> and you want to switch to git because you know it&#8217;s awesome, but you are stuck in a team environment of svn-zombies.<br /><br />What can you do? You can try to convert all the non-deads at once&#8230; or you can use git-svn and get them into git one by one.<br /><br />git-svn let&#8217;s you interact with a svn server using git as your client.&nbsp;Some git GUIs support git svn. On Mac OSX you can use <a href="http://gitx.laullon.com/">GitX(L)</a>&nbsp;or <a href="http://www.sourcetreeapp.com/">SourceTree</a>. Here is how to do it using the commandline.<br /><br />To get a copy of your svn repo (assuming you have the de facto standard structure of trunk, branches and tags dirs) do:<br /><br /><code>git svn init -s http://path/to/your/svn/project</code><br /><br />From here, use your local repo as usually, i.e. do some hacking, add your files and commit them. Rinse, repeat. <br /><br /><code>git add somefile&nbsp;</code><br /><code>git commit</code><br /><code>...</code><br /><br />When you are ready to commit your changes, get the changes from the svn repo:<br /><br /><code>git svn rebase</code><br /><br />and commit your changes:<br /><br /><code>git svn dcommit</code><br /><br />That&#8217;s it!</div></div>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -410,43 +447,6 @@ As recommended by <a href="http://www.twitter.com/plagelao">@plagelao</a> on twi
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/2010/02/27/bash-completion-for-symfony/">Bash completion for symfony</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2010-02-27T00:00:00+01:00" pubdate data-updated="true">Feb 27<span>th</span>, 2010</time>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><div class='post'>
-<a href="http://www.tatai.es/">Fran</a>&nbsp;(a.k.a. tatai), one of my teammates at Biko, was kind enough to make us a nice (and unreadable) script to get <a href="http://github.com/biko2/symfony_complete">symfony bash completion</a>. Get it while it&#8217;s hot!<br /><br />You can read more about the script on <a href="http://www.tatai.es/2010/02/26/bash-completion-for-symfony/">tatai&#8217;s blog</a>.<br /><br />Kudos @tatai for your work!</div>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/page/3/">&larr; Older</a>
@@ -464,7 +464,11 @@ As recommended by <a href="http://www.twitter.com/plagelao">@plagelao</a> on twi
   <ul id="recent_posts">
     
       <li class="post">
-        <a href="/2013/04/27/a-week-at-becode-day-5-i-wanna-be-sedated/">A week at BeCode. Day 5: I wanna be sedated</a>
+        <a href="/2013/04/27/a-week-at-becode-day-6-should-i-stay-or-should-i-go/">A week at BeCode. Day 6: Should I stay or should I go</a>
+      </li>
+    
+      <li class="post">
+        <a href="/2013/04/26/a-week-at-becode-day-5-i-wanna-be-sedated/">A week at BeCode. Day 5: I wanna be sedated</a>
       </li>
     
       <li class="post">
@@ -477,10 +481,6 @@ As recommended by <a href="http://www.twitter.com/plagelao">@plagelao</a> on twi
     
       <li class="post">
         <a href="/2013/04/22/a-week-at-becode-day-1-anarchy-in-the-uk/">A week at BeCode. Day 1: Anarchy in the UK</a>
-      </li>
-    
-      <li class="post">
-        <a href="/2013/04/21/a-week-at-becode-day-0-hey-ho-lets-go/">A week at BeCode. Day 0: Hey Ho! Let&#8217;s go!</a>
       </li>
     
   </ul>
